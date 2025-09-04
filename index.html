@@ -127,9 +127,9 @@ footer {
 </head>
 <body>
 <style>
-@keyframes logoFadeIn {
-  0% { opacity: 0; transform: translateY(-20px); }
-  100% { opacity: 1; transform: translateY(0); }
+@keyframes logoBounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
 }
 
 header img.logo {
@@ -140,7 +140,7 @@ header img.logo {
   background: white;
   border-radius: 8px;
   padding: 5px;
-  animation: logoFadeIn 1.5s ease forwards;
+  animation: logoBounce 2s infinite;
 }
 </style>
 
@@ -404,6 +404,7 @@ sections.forEach(section => { observer.observe(section); });
 
 </body>
 </html>
+
 
 
 
