@@ -34,7 +34,16 @@ header::after {
 header * { position: relative; z-index: 2; }
 header img.logo { width: 120px; position: absolute; top: 20px; left: 20px; background: white; border-radius: 8px; padding: 5px; }
 header h1 { font-size: 2.2rem; margin: 0; }
-header p { font-size: 1rem; margin-top: 10px; }
+header p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffcc00; /* bright color to highlight */
+    background: rgba(0,0,0,0.3); /* optional subtle highlight */
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
 header a.btn { display: inline-block; margin-top: 15px; padding: 10px 20px; background: #ffcc00; color: #003366; font-weight: bold; text-decoration: none; border-radius: 6px; transition: background 0.3s; }
 header a.btn:hover { background: #ffd633; }
 
