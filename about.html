@@ -4,14 +4,163 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us - Tangent Group</title>
-<link rel="stylesheet" href="style.css"> <!-- Use same CSS as main page -->
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    background:#f9f9f9;
+    overflow-x:hidden;
+}
+
+/* Header */
+header {
+    position: relative;
+    background: url('https://powergroupintl.com/wp-content/uploads/2024/09/entegre-tesis-yonetimi-1-1400x700-1.png') no-repeat center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+header img.logo {
+    width: 120px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: white;
+    border-radius: 8px;
+    padding: 5px;
+    z-index: 2;
+}
+header::before {
+    content: "";
+    position: absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+}
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+}
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+header p.highlight-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffdd33;
+    background: rgba(0,0,0,0.45);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    text-shadow: none;
+}
+
+/* Navigation */
+nav {
+    background:#003366;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+nav a {
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:color 0.3s;
+}
+nav a:hover { color:#ffcc00; }
+
+/* Sections */
+section {
+    padding:60px 20px;
+    max-width:1100px;
+    margin:40px auto;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+h2 {
+    color:#004080;
+    text-align:center;
+    margin-bottom:20px;
+    font-size:2rem;
+}
+p { line-height:1.6; }
+
+/* Stats Section */
+.stats {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:40px;
+    background:#004080;
+    color:white;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+}
+.stats div { min-width:150px; margin:0; }
+.stats h2 { font-size:2rem; margin:0; }
+
+/* Footer */
+footer {
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:40px 20px 20px;
+}
+.social-icons { margin-top:20px; }
+.social-icons a {
+    color:white;
+    margin:0 15px;
+    font-size:2.2rem;
+    transition:transform 0.3s,color 0.3s;
+    display:inline-block;
+}
+.social-icons a:hover { color:#ffcc00; transform:scale(1.2) translateY(-5px); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 { font-size:1.8rem; }
+    header p.highlight-text { font-size:1.2rem; padding:8px 15px; }
+    header img.logo { width:100px; top:15px; left:15px; }
+    section { margin:30px 15px; padding:30px 15px; }
+    .stats { flex-direction:column; gap:20px; }
+}
+</style>
 </head>
 <body>
+
+<!-- Header -->
 <header>
   <img src="tangent-logo.jpg" alt="Tangent Logo" class="logo">
-  <h1>About Us - Tangent Group</h1>
+  <div class="header-content">
+    <h1>About Us - Tangent Group</h1>
+    <p class="highlight-text">27 Years of Excellence in SolutionsRecruitment & Workforce</p>
+  </div>
 </header>
 
+<!-- Navigation -->
 <nav>
   <a href="index.html">Home</a>
   <a href="about.html">About Us</a>
@@ -22,13 +171,38 @@
   <a href="index.html#contact">Contact</a>
 </nav>
 
+<!-- About Section -->
 <section>
   <h2>About Tangent Group</h2>
-  <p>Founded 27 years ago in the UAE, Tangent Group is a trusted recruitment agency specializing in overseas and local manpower supply. Our team provides strategic business consulting, application services, technology solutions, and Management Services. <strong>35,000 employees</strong> across the UAE in various industries. Our reputation is built on integrity, professionalism, and a global network of talent partners.</p>
+  <p>Founded 27 years ago in the UAE, Tangent Group is a trusted recruitment agency specializing in overseas and local manpower supply. Our team provides strategic business consulting, application services, technology solutions, and management services. We have extensive experience in successfully executing HR and Recruitment projects throughout the UAE and other GCC countries including Oman, Qatar, Saudi Arabia, and Kuwait. <strong>35,000 employees</strong> across the UAE in various industries. Our reputation is built on integrity, professionalism, and a global network of talent partners.</p>
 </section>
 
+<!-- Stats Section -->
+<section class="stats">
+  <div>
+    <h2>27+</h2>
+    <p>Years of Experience</p>
+  </div>
+  <div>
+    <h2>35,000+</h2>
+    <p>Employees Deployed</p>
+  </div>
+  <div>
+    <h2>15+</h2>
+    <p>Global Offices</p>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer>
-  <p>&copy; 2025 Tangent Group | All Rights Reserved</p>
+<p>&copy; 2025 Tangent Group | All Rights Reserved</p>
+<div class="social-icons">
+  <a href="https://www.facebook.com/profile.php?id=61577614177171" target="_blank"><i class="fab fa-facebook"></i></a>
+  <a href="https://www.linkedin.com/in/rahuldxbcareers2u/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://www.instagram.com/tangent_hr_solution/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.tiktok.com/@tangenthrjobs?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a>
+</div>
 </footer>
+
 </body>
 </html>
