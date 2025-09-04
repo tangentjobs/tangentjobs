@@ -126,6 +126,23 @@ footer {
 </style>
 </head>
 <body>
+<style>
+@keyframes logoFadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+header img.logo {
+  width: 120px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: white;
+  border-radius: 8px;
+  padding: 5px;
+  animation: logoFadeIn 1.5s ease forwards;
+}
+</style>
 
 <header>
   <img src="images/tangent-logo.jpeg" alt="Tangent Logo" class="logo">
@@ -387,6 +404,7 @@ sections.forEach(section => { observer.observe(section); });
 
 </body>
 </html>
+
 
 
 
