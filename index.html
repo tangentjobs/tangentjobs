@@ -85,17 +85,30 @@ input, textarea, button { padding: 12px; font-size: 1rem; border-radius: 6px; bo
 button { background: #004080; color: white; cursor: pointer; font-weight: bold; border: none; transition: transform 0.3s, background 0.3s; }
 button:hover { background: #003366; transform: scale(1.05); }
 
-footer { background: #003366; color: white; text-align: center; padding: 40px 20px 20px 20px; margin-top: 30px; }
-.social-icons { margin-top: 20px; }
-.social-icons a { color: white; margin: 0 15px; font-size: 2.2rem; transition: transform 0.3s, color 0.3s; display: inline-block; }
-.social-icons a:hover { color: #ffcc00; transform: scale(1.2) translateY(-5px); }
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px 20px 15px 20px; /* reduced footer height */
+  margin-top: 30px;
+  border-radius: 0 0 12px 12px;
+}
+.social-icons { margin-top: 15px; }
+.social-icons a { 
+  color: white; 
+  margin: 0 12px; 
+  font-size: 2rem; /* slightly smaller icons */
+  transition: transform 0.3s, color 0.3s; 
+  display: inline-block; 
+}
+.social-icons a:hover { color: #ffcc00; transform: scale(1.15) translateY(-3px); }
 
 .contact-container { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: flex-start; }
 .contact-info, .contact-form { background: #f0f4f8; padding: 20px; border-radius: 12px; flex: 1 1 auto; max-width: 500px; }
 .contact-info p { margin: 10px 0; font-size: 1rem; }
 .contact-info i { color: #004080; margin-right: 8px; }
 
-/* Contact section specific - auto height based on content */
+/* Contact section auto height based on content */
 #contact {
   padding: 20px;
   margin: 40px auto;
@@ -124,7 +137,7 @@ footer { background: #003366; color: white; text-align: center; padding: 40px 20
 
 <section id="about">
 <h2>About Us</h2>
-<p>Founded 27 years ago in the UAE, Tangent Group is a trusted recruitment agency specializing in overseas and local manpower supply. Our team provide strategic business consulting, application services, technology solutions and Management Services. <strong>35,000 employees</strong> across the UAE in various industries. Our reputation is built on integrity, professionalism, and a global network of talent partners.</p>
+<p>Founded 27 years ago in the UAE, Tangent Group is a trusted recruitment agency specializing in overseas and local manpower supply. Our team provides strategic business consulting, application services, technology solutions and Management Services. <strong>35,000 employees</strong> across the UAE in various industries. Our reputation is built on integrity, professionalism, and a global network of talent partners.</p>
 </section>
 
 <section class="stats visible">
@@ -147,34 +160,10 @@ footer { background: #003366; color: white; text-align: center; padding: 40px 20
 <section id="sectors">
 <h2>Industries We Serve</h2>
 <div class="sectors">
-<div>
-        <img src="https://images.unsplash.com/photo-1590490360182-663fc1a2a64e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Construction Workers">
-        <h3>Construction Workers</h3>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hospitality">
-        <h3>Hospitality Industry</h3>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1594322436404-5a0521e2e9cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Facilities Management">
-        <h3>Facilities Management</h3>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1603899122459-0f2f69b3cbb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Security">
-        <h3>Security Services</h3>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1595433562696-a8c0d3b3d57d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cleaning">
-        <h3>Cleaning Services</h3>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Office Management">
-        <h3>Office Management</h3>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1581092795360-469b6a3b17f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Oil & Gas">
-        <h3>Oil & Gas Field</h3>
-      </div>
+<div><img src="https://images.unsplash.com/photo-1590490360182-663fc1a2a64e?auto=format&fit=crop&w=800&q=80" alt="Construction Workers"><h3>Construction Workers</h3></div>
+<div><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Hospitality"><h3>Hospitality Industry</h3></div>
+<div><img src="https://images.unsplash.com/photo-1594322436404-5a0521e2e9cb?auto=format&w=800&q=80" alt="Facilities Management"><h3>Facilities Management</h3></div>
+<div><img src="https://images.unsplash.com/photo-1603899122459-0f2f69b3cbb5?auto=format&w=800&q=80" alt="Security"><h3>Security Services</h3></div>
 </div>
 </section>
 
