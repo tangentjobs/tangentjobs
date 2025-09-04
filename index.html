@@ -12,23 +12,13 @@
 
 <style>
 body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #f9f9f9; overflow-x: hidden; }
-header {
-  background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
-  color: white;
-  height: 60vh; /* Reduced from 100vh to 60vh */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-}
+header { background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover; color: white; height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; }
 header::after { content: ""; position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); }
 header * { position: relative; z-index: 2; }
 header img.logo { width: 120px; position: absolute; top: 20px; left: 20px; background: white; border-radius: 8px; padding: 5px; }
-header h1 { font-size: 3rem; margin: 0; }
-header p { font-size: 1.3rem; margin-top: 10px; }
-header a.btn { display: inline-block; margin-top: 20px; padding: 12px 25px; background: #ffcc00; color: #003366; font-weight: bold; text-decoration: none; border-radius: 6px; transition: background 0.3s; }
+header h1 { font-size: 2.2rem; margin: 0; }
+header p { font-size: 1rem; margin-top: 10px; }
+header a.btn { display: inline-block; margin-top: 15px; padding: 10px 20px; background: #ffcc00; color: #003366; font-weight: bold; text-decoration: none; border-radius: 6px; transition: background 0.3s; }
 header a.btn:hover { background: #ffd633; }
 nav { background: #003366; display: flex; justify-content: center; gap: 20px; padding: 15px; position: sticky; top: 0; z-index: 1000; }
 nav a { color: white; text-decoration: none; font-weight: bold; transition: color 0.3s; }
@@ -36,22 +26,41 @@ nav a:hover { color: #ffcc00; }
 section { padding: 60px 20px; max-width: 1100px; margin: auto; background: white; margin-top: 40px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); opacity: 0; transform: translateY(30px); transition: all 1s ease; }
 section.visible { opacity: 1; transform: translateY(0); }
 h2 { color: #004080; margin-bottom: 20px; text-align: center; font-size: 2rem; }
-.stats { display: flex; flex-wrap: wrap; justify-content: space-around; background: #004080; color: white; padding: 30px; border-radius: 10px; margin: 20px 0; }
-.stats div { text-align: center; margin: 10px; }
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the stats */
+  gap: 40px; /* Space between items */
+  background: #004080;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px 0;
+  text-align: center;
+}
+.stats div {
+  min-width: 150px;
+  margin: 0;
+}
 .stats h2 { color: white; font-size: 2rem; margin: 0; }
+
 .sectors { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
 .sectors div { text-align: center; border: 1px solid #ddd; border-radius: 10px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); transition: transform 0.4s, box-shadow 0.4s; }
 .sectors div:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 8px 16px rgba(0,0,0,0.15); }
 .sectors img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; }
 .sectors h3 { margin-top: 10px; color: #004080; }
+
 form { display: flex; flex-direction: column; gap: 15px; }
 input, textarea, button { padding: 12px; font-size: 1rem; border-radius: 6px; border: 1px solid #ccc; }
 button { background: #004080; color: white; cursor: pointer; font-weight: bold; border: none; transition: transform 0.3s, background 0.3s; }
 button:hover { background: #003366; transform: scale(1.05); }
+
 footer { background: #003366; color: white; text-align: center; padding: 40px 20px 20px 20px; margin-top: 30px; }
 .social-icons { margin-top: 20px; }
 .social-icons a { color: white; margin: 0 15px; font-size: 2.2rem; transition: transform 0.3s, color 0.3s; display: inline-block; }
 .social-icons a:hover { color: #ffcc00; transform: scale(1.2) translateY(-5px); }
+
 .contact-container { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: flex-start; }
 .contact-info, .contact-form { background: #f0f4f8; padding: 20px; border-radius: 12px; flex: 1 1 300px; max-width: 500px; }
 .contact-info p { margin: 15px 0; font-size: 1rem; }
@@ -79,13 +88,15 @@ footer { background: #003366; color: white; text-align: center; padding: 40px 20
 
 <section id="about">
 <h2>About Us</h2>
-<p>Founded 27 years ago in the UAE, Tangent Group is a trusted recruitment agency specializing in overseas and local manpower supply. We are a single-stop solution provider for all business-related needs inclusive of HR & Recruitment. With a global reach and a local touch, we have successfully deployed <strong>35,000 employees</strong> across the UAE and GCC.</p>
+<p>Founded 27 years ago in the UAE, Tangent Group is a trusted recruitment agency specializing in overseas and local manpower supply. Over the years, we have successfully deployed more than We are the world leaders in an innovative workforce, a single stop solution provider for all the Business related needs inclusive but not limited to HR & Recruitment. Tangent connects the human potentials to the power of business advisory for clients and candidates. We serve both large and small organizations across all industry sectors through different brands. Tangent operates a worldwide network of offices in different continents ,“A Global reach with a local touch”
+
+Our team provide strategic business consulting, application services, technology solutions and Management Services.We have extensive experience in successfully executing HR and Recruitment projects throughout the UAE and other GCC countries including Oman, Qatar, Saudi Arabia and Kuwait. <strong>35,000 employees</strong> across the UAE in various industries. Our reputation is built on integrity, professionalism, and a global network of talent partners.</p>
 </section>
 
-<section class="stats">
-<div><h2>27+</h2><p>Years of Experience</p></div>
-<div><h2>35,000+</h2><p>Employees Deployed</p></div>
-<div><h2>15+</h2><p>Global Offices</p></div>
+<section class="stats visible">
+  <div><h2>27+</h2><p>Years of Experience</p></div>
+  <div><h2>35,000+</h2><p>Employees Deployed</p></div>
+  <div><h2>15+</h2><p>Global Offices</p></div>
 </section>
 
 <section id="services">
@@ -104,14 +115,14 @@ footer { background: #003366; color: white; text-align: center; padding: 40px 20
 <div class="sectors">
 <div><img src="https://images.unsplash.com/photo-1590490360182-663fc1a2a64e?auto=format&fit=crop&w=800&q=80" alt="Construction Workers"><h3>Construction Workers</h3></div>
 <div><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Hospitality"><h3>Hospitality Industry</h3></div>
-<div><img src="https://images.unsplash.com/photo-1594322436404-5a0521e2e9cb?auto=format&fit=crop&w=800&q=80" alt="Facilities Management"><h3>Facilities Management</h3></div>
-<div><img src="https://images.unsplash.com/photo-1603899122459-0f2f69b3cbb5?auto=format&fit=crop&w=800&q=80" alt="Security"><h3>Security Services</h3></div>
+<div><img src="https://images.unsplash.com/photo-1594322436404-5a0521e2e9cb?auto=format&w=800&q=80" alt="Facilities Management"><h3>Facilities Management</h3></div>
+<div><img src="https://images.unsplash.com/photo-1603899122459-0f2f69b3cbb5?auto=format&w=800&q=80" alt="Security"><h3>Security Services</h3></div>
 </div>
 </section>
 
 <section id="inquiry">
 <h2>Job Inquiry / Submit CV</h2>
-<form action="mailto:dxbcareers2u@gmail.com" method="post" enctype="multipart/form-data">
+<form action="mailto:dxbjobs2u@gmail.com" method="post" enctype="multipart/form-data">
 <input type="text" name="name" placeholder="Full Name" required>
 <input type="email" name="email" placeholder="Email Address" required>
 <input type="tel" name="phone" placeholder="Phone Number" required>
@@ -129,6 +140,15 @@ footer { background: #003366; color: white; text-align: center; padding: 40px 20
     <p><i class="fas fa-envelope"></i> <a href="mailto:hrteam@emirates.net.ae">hrteam@emirates.net.ae</a></p>
     <p><i class="fas fa-globe"></i> <a href="http://www.tangentdubai.com" target="_blank">www.tangentdubai.com</a></p>
     <p><i class="fas fa-map-marker-alt"></i> Dubai, United Arab Emirates</p>
+  </div>
+  <div class="contact-form">
+    <form action="mailto:dxbjobs2u@gmail.com" method="post" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+      <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+    </form>
   </div>
 </div>
 </section>
@@ -158,4 +178,3 @@ sections.forEach(section => { observer.observe(section); });
 
 </body>
 </html>
-
