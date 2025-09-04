@@ -226,19 +226,19 @@ Our team provide strategic business consulting, application services, technology
   <h2>Contact Us</h2>
   <div class="contact-container">
     <div class="contact-card">
-      <i class="fas fa-phone contact-icon"></i>
+      <div class="icon-circle"><i class="fas fa-phone"></i></div>
       <p>+971 4 3979686 | 04 - 3465669</p>
     </div>
     <div class="contact-card">
-      <i class="fas fa-envelope contact-icon"></i>
+      <div class="icon-circle"><i class="fas fa-envelope"></i></div>
       <p><a href="mailto:hrteam@emirates.net.ae">hrteam@emirates.net.ae</a></p>
     </div>
     <div class="contact-card">
-      <i class="fas fa-globe contact-icon"></i>
+      <div class="icon-circle"><i class="fas fa-globe"></i></div>
       <p><a href="http://www.tangentdubai.com" target="_blank">www.tangentdubai.com</a></p>
     </div>
     <div class="contact-card">
-      <i class="fas fa-map-marker-alt contact-icon"></i>
+      <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
       <p>Dubai, UAE</p>
     </div>
   </div>
@@ -246,61 +246,65 @@ Our team provide strategic business consulting, application services, technology
 
 <style>
 .contact-section {
-  padding: 40px 20px;
-  background: #f5f7fa;
-  text-align: center;
+  padding: 60px 20px;
+  background: #f0f4f8;
   font-family: 'Segoe UI', sans-serif;
+  text-align: center;
 }
 
 .contact-section h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
   color: #333;
 }
 
-/* Inline container */
 .contact-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  -webkit-overflow-scrolling: touch;
+  gap: 25px;
+  flex-wrap: wrap; /* wraps nicely on small screens */
 }
 
-/* Cards stacked vertically */
+/* Individual Cards */
 .contact-card {
   background: #fff;
-  padding: 20px 15px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-radius: 15px;
+  padding: 20px 25px;
+  min-width: 200px;
+  max-width: 220px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  min-width: 180px;
   display: flex;
-  flex-direction: column; /* stack icon above text */
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  text-align: center;
+  gap: 12px;
 }
 
 .contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
-/* Icons */
-.contact-icon {
+/* Icon Circle */
+.icon-circle {
+  background: #0077ff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
   font-size: 1.5rem;
-  color: #0077ff;
 }
 
 /* Text */
 .contact-card p {
+  margin: 0;
+  text-align: center;
   font-size: 1rem;
   color: #555;
-  margin: 0;
-  word-break: break-word; /* wraps long text */
+  word-break: break-word;
 }
 
 .contact-card a {
@@ -316,13 +320,11 @@ Our team provide strategic business consulting, application services, technology
 /* Responsive */
 @media (max-width: 768px) {
   .contact-container {
-    gap: 15px;
-  }
-  .contact-card {
-    min-width: 150px;
+    gap: 20px;
   }
 }
 </style>
+
 
 
 
@@ -351,5 +353,6 @@ sections.forEach(section => { observer.observe(section); });
 
 </body>
 </html>
+
 
 
