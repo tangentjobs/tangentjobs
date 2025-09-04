@@ -222,22 +222,25 @@ Our team provide strategic business consulting, application services, technology
   <p><strong>Associate Offices:</strong> Philippines, Sri Lanka, Indonesia, Myanmar, Egypt, Sudan, Ghana, Kenya, Uganda</p>
 </section>
 
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
 <section id="contact" class="contact-section">
   <h2>Contact Us</h2>
-  <div class="contact-container">
-    <div class="contact-card">
+  <div class="contact-bar">
+    <div class="contact-item">
       <div class="icon-circle"><i class="fas fa-phone"></i></div>
       <p>+971 4 3979686 | 04 - 3465669</p>
     </div>
-    <div class="contact-card">
+    <div class="contact-item">
       <div class="icon-circle"><i class="fas fa-envelope"></i></div>
       <p><a href="mailto:hrteam@emirates.net.ae">hrteam@emirates.net.ae</a></p>
     </div>
-    <div class="contact-card">
+    <div class="contact-item">
       <div class="icon-circle"><i class="fas fa-globe"></i></div>
       <p><a href="http://www.tangentdubai.com" target="_blank">www.tangentdubai.com</a></p>
     </div>
-    <div class="contact-card">
+    <div class="contact-item">
       <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
       <p>Dubai, UAE</p>
     </div>
@@ -246,86 +249,99 @@ Our team provide strategic business consulting, application services, technology
 
 <style>
 .contact-section {
-  padding: 60px 20px;
+  padding: 40px 20px;
   background: #f0f4f8;
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
 }
 
 .contact-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+  font-size: 2rem;
+  margin-bottom: 30px;
   color: #333;
 }
 
-.contact-container {
+/* Inline horizontal layout, no wrap */
+.contact-bar {
   display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap; /* wraps nicely on small screens */
+  justify-content: space-between; /* space evenly */
+  gap: 20px;
+  flex-wrap: nowrap; /* no wrapping */
+  max-width: 1000px; /* optional: limits total width */
+  margin: 0 auto;   /* center the bar */
 }
 
-/* Individual Cards */
-.contact-card {
+/* Individual inline cards */
+.contact-item {
   background: #fff;
   border-radius: 15px;
-  padding: 20px 25px;
-  min-width: 200px;
-  max-width: 220px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
+  flex: 1;          /* equal width */
+  min-width: 200px; /* ensures cards don’t get too small */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
 }
 
-.contact-card:hover {
-  transform: translateY(-8px);
+.contact-item:hover {
+  transform: translateY(-6px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
-/* Icon Circle */
+/* Icon circle */
 .icon-circle {
-  background: #0077ff;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
+  background: #0077ff;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   color: #fff;
   font-size: 1.5rem;
 }
 
 /* Text */
-.contact-card p {
+.contact-item p {
   margin: 0;
-  text-align: center;
   font-size: 1rem;
   color: #555;
   word-break: break-word;
 }
 
-.contact-card a {
+.contact-item a {
   color: #0077ff;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.contact-card a:hover {
+.contact-item a:hover {
   color: #0056b3;
 }
 
-/* Responsive */
+/* Responsive: shrink cards but keep inline */
+@media (max-width: 1024px) {
+  .contact-bar {
+    gap: 15px;
+  }
+  .contact-item {
+    min-width: 180px;
+  }
+}
+
 @media (max-width: 768px) {
-  .contact-container {
-    gap: 20px;
+  .contact-bar {
+    gap: 10px;
+  }
+  .contact-item {
+    min-width: 150px;
   }
 }
 </style>
-
-
 
 
 <footer>
@@ -353,6 +369,7 @@ sections.forEach(section => { observer.observe(section); });
 
 </body>
 </html>
+
 
 
 
