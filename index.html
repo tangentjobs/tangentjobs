@@ -17,37 +17,13 @@
     </span>
   </div>
 
-  <!-- Reach Us -->
-  <div style="position:relative; font-size:1.5em; cursor:pointer; user-select:none;">
-    <span id="reachBtn" style="color:#0d47a1; font-weight:bold; transition:0.3s;">
-      📞 Reach Us
-    </span>
-    <span id="phoneNumber" style="position:absolute; top:110%; left:55%; transform:translateX(-50%); color:#0d47a1; font-weight:bold; font-size:1em; white-space:nowrap; opacity:0; transition:0.3s;">
-      +971 50 263 625
-    </span>
-  </div>
-
 </header>
 
-<script>
-  const reachBtn = document.getElementById('reachBtn');
-  const phone = document.getElementById('phoneNumber');
-
-  // Show on hover (desktop)
-  reachBtn.addEventListener('mouseenter', () => { phone.style.opacity = 1; });
-  reachBtn.addEventListener('mouseleave', () => { phone.style.opacity = 0; });
-
-  // Toggle on click (mobile)
-  reachBtn.addEventListener('click', () => {
-    phone.style.opacity = phone.style.opacity == 1 ? 0 : 1;
-  });
-</script>
-
 <!-- Slider Section -->
-<section id="home" style="position:relative; height:100vh; overflow:hidden; margin-top:0;">
-  <div id="slider" style="display:flex; width:500%; height:100%; transition: transform 0.8s ease-in-out;">
+<section id="home" style="position:relative; height:60vh; overflow:hidden; margin-top:0;">
+  <div id="slider" style="display:flex; width:500%; height:60%; transition: transform 0.8s ease-in-out;">
     <!-- Slide 1 -->
-    <div class="slide" style="flex:0 0 20%; height:100%; background:url('images/office.jpeg') center/cover no-repeat; position:relative;">
+    <div class="slide" style="flex:0 0 20%; height:60%; background:url('images/office.jpeg') center/cover no-repeat; position:relative;">
   <div class="slide-content" style="position:absolute; bottom:15%; left:10%; color:white;">
     <h2 style="margin:0 0 10px 0; font-size:2.5em;">Tangent Group - UAE</h2>
     <p style="margin:0 0 15px 0; font-size:1.2em;">27 Years of Excellence in Recruitment & Workforce Solutions</p>
@@ -56,7 +32,7 @@
 </div>
 
     <!-- Slide 2 -->
-    <div class="slide" style="flex:0 0 20%; height:100%; background:url('images/cosnt2.jpg') center/cover no-repeat; position:relative;">
+    <div class="slide" style="flex:0 0 20%; height:60%; background:url('images/cosnt2.jpg') center/cover no-repeat; position:relative;">
       <div class="slide-content" style="position:absolute; bottom:15%; left:10%; color:white;">
         <h2 style="margin:0 0 10px 0; font-size:2.5em;">Engineering & Contracting Sector</h2>
         <p style="margin:0 0 15px 0; font-size:1.2em;">Expert staffing and innovative solutions for engineering and construction projects.</p>
@@ -64,7 +40,7 @@
       </div>
     </div>
     <!-- Slide 3 -->
-    <div class="slide" style="flex:0 0 20%; height:100%; background:url('images/eng.jpg') center/cover no-repeat; position:relative;">
+    <div class="slide" style="flex:0 0 20%; height:60%; background:url('images/eng.jpg') center/cover no-repeat; position:relative;">
       <div class="slide-content" style="position:absolute; bottom:15%; left:10%; color:white;">
         <h2 style="margin:0 0 10px 0; font-size:2.5em;">Interior Decoration</h2>
         <p style="margin:0 0 15px 0; font-size:1.2em;">Expert staffing and innovative solutions for engineering & construction projects.</p>
@@ -72,7 +48,7 @@
       </div>
     </div>
     <!-- Slide 4 -->
-    <div class="slide" style="flex:0 0 20%; height:100%; background:url('images/hospitality.jpeg') center/cover no-repeat; position:relative;">
+    <div class="slide" style="flex:0 0 20%; height:60%; background:url('images/hospitality.jpeg') center/cover no-repeat; position:relative;">
       <div class="slide-content" style="position:absolute; bottom:15%; left:10%; color:white;">
         <h2 style="margin:0 0 10px 0; font-size:2.5em;">FMCG & Hospitality</h2>
         <p style="margin:0 0 15px 0; font-size:1.2em;">Skilled staffing and solutions for FMCG & hospitality sectors.</p>
@@ -80,7 +56,7 @@
       </div>
     </div>
     <!-- Slide 5 -->
-    <div class="slide" style="flex:0 0 20%; height:100%; background:url('images/Guard.jpg') center/cover no-repeat; position:relative;">
+    <div class="slide" style="flex:0 0 20%; height:60%; background:url('images/Guard.jpg') center/cover no-repeat; position:relative;">
       <div class="slide-content" style="position:absolute; bottom:15%; left:10%; color:white;">
         <h2 style="margin:0 0 10px 0; font-size:2.5em;">Security & Cleaning Sector</h2>
         <p style="margin:0 0 15px 0; font-size:1.2em;">Reliable staffing and solutions for security & cleaning services.</p>
@@ -451,6 +427,7 @@ document.querySelectorAll('#mainNav a').forEach(link => {
 
 </body>
 </html>
+
 
 
 
