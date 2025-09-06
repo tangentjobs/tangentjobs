@@ -7,305 +7,161 @@
 </head>
 <body style="margin:0; font-family:Arial, sans-serif; color:#333; scroll-behavior:smooth;">
 
-<header style="position:fixed; top:0; left:0; width:100%; background:#fff; color:#000; padding:15px 30px; z-index:1000; display:flex; justify-content:space-between; align-items:center; box-shadow:0 4px 10px rgba(0,0,0,0.15); font-family:Arial, sans-serif;">
-
-  <!-- Logo and Heading -->
+<!-- Header -->
+<header style="position:fixed; top:0; left:0; width:100%; background:#fff; color:#000; padding:15px 30px; z-index:1000; display:flex; justify-content:space-between; align-items:center; box-shadow:0 4px 10px rgba(0,0,0,0.15);">
   <div style="display:flex; align-items:center; gap:20px;">
-    <img src="images/logo group.png" alt="Tangent Logo" class="logo" style="height:60px; width:auto;">
-    <span style="font-size:3em; font-weight:bold; color:red; -webkit-text-stroke:1px blue; text-stroke:1px blue; text-transform:uppercase; letter-spacing:2px; line-height:1;">
-      Tangent Group
-    </span>
+    <img src="images/logo group.png" alt="Tangent Logo" style="height:60px; width:auto;">
+    <span style="font-size:3em; font-weight:bold; color:red; -webkit-text-stroke:1px blue; text-stroke:1px blue; text-transform:uppercase; letter-spacing:2px; line-height:1;">Tangent Group</span>
   </div>
-
 </header>
 
 <!-- Slider Section -->
-<section id="home" style="position:relative; height:60vh; overflow:hidden; margin-top:0;">
+<section id="home" style="position:relative; height:60vh; overflow:hidden; margin-bottom:0;">
   <div id="slider" style="display:flex; width:500%; height:100%; transition: transform 0.8s ease-in-out;">
-    
-    <!-- Slide 1 -->
-    <div class="slide" style="flex:0 0 20%; height:100%; background:url('images/office.jpeg') center/cover no-repeat; position:relative;">
-      <div class="slide-content" style="position:absolute; bottom:15%; left:10%; color:white;">
+    <!-- Slides -->
+    <div style="flex:0 0 20%; height:100%; background:url('images/office.jpeg') center/cover no-repeat; position:relative;">
+      <div style="position:absolute; bottom:15%; left:10%; color:white;">
         <h2 style="margin:0 0 10px 0; font-size:2.5em;">Tangent Group - UAE</h2>
         <p style="margin:0 0 15px 0; font-size:1.2em;">27 Years of Excellence in Recruitment & Workforce Solutions</p>
         <button style="padding:10px 20px; background:#0d47a1; color:white; border:none; cursor:pointer;">Learn More</button>
       </div>
     </div>
-
-    <!-- Slide 2 -->
-    <div class="slide" style="flex:0 0 20%; height:100%; background:url('images/const2.jpg') center/cover no-repeat; position:relative;">
-      <div class="slide-content" style="position:absolute; bottom:15%; left:10%; color:white;">
+    <div style="flex:0 0 20%; height:100%; background:url('images/const2.jpg') center/cover no-repeat; position:relative;">
+      <div style="position:absolute; bottom:15%; left:10%; color:white;">
         <h2 style="margin:0 0 10px 0; font-size:2.5em;">Engineering & Contracting Sector</h2>
         <p style="margin:0 0 15px 0; font-size:1.2em;">Expert staffing and innovative solutions for engineering and construction projects.</p>
         <button style="padding:10px 20px; background:#0d47a1; color:white; border:none; cursor:pointer;">Learn More</button>
       </div>
     </div>
-
-    <!-- Slide 3 -->
-    <div class="slide" style="flex:0 0 20%; height:100%; background:url('images/eng.jpg') center/cover no-repeat; position:relative;">
-      <div class="slide-content" style="position:absolute; bottom:15%; left:10%; color:white;">
+    <div style="flex:0 0 20%; height:100%; background:url('images/eng.jpg') center/cover no-repeat; position:relative;">
+      <div style="position:absolute; bottom:15%; left:10%; color:white;">
         <h2 style="margin:0 0 10px 0; font-size:2.5em;">Interior Decoration</h2>
         <p style="margin:0 0 15px 0; font-size:1.2em;">Expert staffing and solutions for interior projects.</p>
         <button style="padding:10px 20px; background:#0d47a1; color:white; border:none; cursor:pointer;">Learn More</button>
       </div>
     </div>
-
-    <!-- Slide 4 -->
-    <div class="slide" style="flex:0 0 20%; height:100%; background:url('images/hospitality.jpeg') center/cover no-repeat; position:relative;">
-      <div class="slide-content" style="position:absolute; bottom:15%; left:10%; color:white;">
+    <div style="flex:0 0 20%; height:100%; background:url('images/hospitality.jpeg') center/cover no-repeat; position:relative;">
+      <div style="position:absolute; bottom:15%; left:10%; color:white;">
         <h2 style="margin:0 0 10px 0; font-size:2.5em;">FMCG & Hospitality</h2>
         <p style="margin:0 0 15px 0; font-size:1.2em;">Skilled staffing and solutions for FMCG & hospitality sectors.</p>
         <button style="padding:10px 20px; background:#0d47a1; color:white; border:none; cursor:pointer;">Learn More</button>
       </div>
     </div>
-
-    <!-- Slide 5 -->
-    <div class="slide" style="flex:0 0 20%; height:100%; background:url('images/Guard.jpg') center/cover no-repeat; position:relative;">
-      <div class="slide-content" style="position:absolute; bottom:15%; left:10%; color:white;">
+    <div style="flex:0 0 20%; height:100%; background:url('images/Guard.jpg') center/cover no-repeat; position:relative;">
+      <div style="position:absolute; bottom:15%; left:10%; color:white;">
         <h2 style="margin:0 0 10px 0; font-size:2.5em;">Security & Cleaning Sector</h2>
         <p style="margin:0 0 15px 0; font-size:1.2em;">Reliable staffing and solutions for security & cleaning services.</p>
         <button style="padding:10px 20px; background:#0d47a1; color:white; border:none; cursor:pointer;">Learn More</button>
       </div>
     </div>
-
   </div>
-
   <!-- Slider Arrows -->
   <button id="prev" style="position:absolute; top:50%; left:20px; transform:translateY(-50%); font-size:2em; background:rgba(0,0,0,0.3); color:white; border:none; cursor:pointer; z-index:10; padding:5px 10px;">&#10094;</button>
   <button id="next" style="position:absolute; top:50%; right:20px; transform:translateY(-50%); font-size:2em; background:rgba(0,0,0,0.3); color:white; border:none; cursor:pointer; z-index:10; padding:5px 10px;">&#10095;</button>
 </section>
 
-<script>
-let slider = document.getElementById('slider');
-let slides = slider.children.length;
-let currentIndex = 0;
-
-function showSlide(index){
-  slider.style.transform = `translateX(-${index * 20}%)`;
-}
-
-document.getElementById('next').addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % slides;
-  showSlide(currentIndex);
-});
-
-document.getElementById('prev').addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + slides) % slides;
-  showSlide(currentIndex);
-});
-
-// Auto-slide every 5s
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % slides;
-  showSlide(currentIndex);
-}, 5000);
-</script>
-
-<!-- Elegant Navigation Menu -->
-<nav id="mainNav" style="width:100%; background:#0d47a1; display:flex; justify-content:center; gap:25px; padding:15px 0; position:sticky; top:70px; z-index:999; font-family:Arial, sans-serif;">
-  <a href="#home" style="color:white; text-decoration:none; font-weight:bold; font-size:1em; padding:8px 15px; position:relative; transition:0.3s;">Home</a>
-  <a href="#about" style="color:white; text-decoration:none; font-weight:bold; font-size:1em; padding:8px 15px; position:relative; transition:0.3s;">About Us</a>
-  <a href="#services" style="color:white; text-decoration:none; font-weight:bold; font-size:1em; padding:8px 15px; position:relative; transition:0.3s;">Our Services</a>
-  <a href="#board" style="color:white; text-decoration:none; font-weight:bold; font-size:1em; padding:8px 15px; position:relative; transition:0.3s;">Board of Directors</a>
-  <a href="#clients" style="color:white; text-decoration:none; font-weight:bold; font-size:1em; padding:8px 15px; position:relative; transition:0.3s;">Our Clients</a>
-  <a href="#jobs" style="color:white; text-decoration:none; font-weight:bold; font-size:1em; padding:8px 15px; position:relative; transition:0.3s;">Job Openings</a>
-  <a href="#contact" style="color:white; text-decoration:none; font-weight:bold; font-size:1em; padding:8px 15px; position:relative; transition:0.3s;">Contact Us</a>
+<!-- Navigation Menu -->
+<nav id="mainNav" style="width:100%; background:#0d47a1; display:flex; justify-content:center; gap:25px; padding:15px 0; position:sticky; top:60px; z-index:999; font-family:Arial, sans-serif;">
+  <a href="#home" style="color:white; text-decoration:none; font-weight:bold; font-size:1em; padding:8px 15px;">Home</a>
+  <a href="#about" style="color:white; text-decoration:none; font-weight:bold; font-size:1em; padding:8px 15px;">About Us</a>
+  <a href="#sectors" style="color:white; text-decoration:none; font-weight:bold; font-size:1em; padding:8px 15px;">Industries</a>
+  <a href="#offices" style="color:white; text-decoration:none; font-weight:bold; font-size:1em; padding:8px 15px;">Offices</a>
+  <a href="#clients" style="color:white; text-decoration:none; font-weight:bold; font-size:1em; padding:8px 15px;">Clients</a>
+  <a href="#testimonial" style="color:white; text-decoration:none; font-weight:bold; font-size:1em; padding:8px 15px;">Gallery</a>
+  <a href="#contact" style="color:white; text-decoration:none; font-weight:bold; font-size:1em; padding:8px 15px;">Contact</a>
 </nav>
 
-<script>
-const navLinks = document.querySelectorAll('#mainNav a');
-
-navLinks.forEach(link => {
-  link.addEventListener('mouseenter', () => {
-    link.style.color = '#ffd700'; // soft yellow text on hover
-    link.style.borderBottom = '2px solid #ffd700';
-  });
-  link.addEventListener('mouseleave', () => {
-    link.style.color = 'white';
-    link.style.borderBottom = 'none';
-  });
-});
-</script>
-
-
-
-<!-- Content Sections -->
-<section id="about" style="padding:60px 20px; background-color:#ffffff; text-align:center; transition:all 0.6s ease; transform:translateY(50px); opacity:0;">
+<!-- About Section -->
+<section id="about" style="padding:60px 20px; background-color:#ffffff; text-align:center; transition:all 0.6s ease; transform:translateY(50px); opacity:0; margin-top:60vh;">
   <h2>Who We Are</h2>
-  <p>
-    Founded 27 years ago in the UAE, Tangent Group is a trusted recruitment agency specializing in overseas and local manpower supply. 
-    Over the years, we have successfully deployed more than We are the world leaders in an innovative workforce, a single stop solution provider for all
-    the Business related needs inclusive but not limited to HR & Recruitment. Tangent connects the human potentials to the power of business advisory for clients and candidates.
-    We serve both large and small organizations across all industry sectors through different brands. Tangent operates a worldwide network of offices in different continents, 
-    “A Global reach with a local touch”.
-  </p>
-  <p>
-    Our team provide strategic business consulting, application services, technology solutions and Management Services. We have extensive experience in successfully executing HR 
-    and Recruitment projects throughout the UAE and other GCC countries including Oman, Qatar, Saudi Arabia and Kuwait. <strong>35,000 employees</strong> across the UAE in
-    various industries. Our reputation is built on integrity, professionalism, and a global network of talent partners.
-  </p>
+  <p>Founded 27 years ago in the UAE, Tangent Group is a trusted recruitment agency specializing in overseas and local manpower supply. We connect human potential to the power of business advisory for clients and candidates.</p>
+  <p>We serve organizations across all industry sectors with 35,000 employees deployed in UAE and GCC countries. Our reputation is built on integrity, professionalism, and a global network of talent partners.</p>
 </section>
-<!-- Stats Section with Circles -->
-<section class="stats" style="padding:60px 20px; background:#0d47a1; display:flex; justify-content:center; gap:40px; text-align:center; flex-wrap:wrap; transition:all 0.6s ease; transform:translateY(50px); opacity:0;">
 
-  <!-- Stat 1 -->
-  <div style="background:linear-gradient(135deg,#1976d2,#42a5f5); width:180px; height:180px; border-radius:50%; display:flex; flex-direction:column; justify-content:center; align-items:center; box-shadow:0 8px 20px rgba(0,0,0,0.3); transition:all 0.3s; cursor:pointer;"
-       onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.4)';" 
-       onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';">
+<!-- Stats Section -->
+<section class="stats" style="padding:60px 20px; background:#0d47a1; display:flex; justify-content:center; gap:40px; text-align:center; flex-wrap:wrap; transition:all 0.6s ease; transform:translateY(50px); opacity:0; margin-top:60px;">
+  <div style="background:linear-gradient(135deg,#1976d2,#42a5f5); width:180px; height:180px; border-radius:50%; display:flex; flex-direction:column; justify-content:center; align-items:center; box-shadow:0 8px 20px rgba(0,0,0,0.3); cursor:pointer;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.4)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';">
     <h2 style="font-size:2.5em; margin:0; color:white;">27+</h2>
     <p style="margin:5px 0 0 0; font-size:1em; color:white;">Years of Experience</p>
   </div>
-
-  <!-- Stat 2 -->
-  <div style="background:linear-gradient(135deg,#1976d2,#42a5f5); width:180px; height:180px; border-radius:50%; display:flex; flex-direction:column; justify-content:center; align-items:center; box-shadow:0 8px 20px rgba(0,0,0,0.3); transition:all 0.3s; cursor:pointer;"
-       onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.4)';" 
-       onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';">
+  <div style="background:linear-gradient(135deg,#1976d2,#42a5f5); width:180px; height:180px; border-radius:50%; display:flex; flex-direction:column; justify-content:center; align-items:center; box-shadow:0 8px 20px rgba(0,0,0,0.3); cursor:pointer;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.4)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';">
     <h2 style="font-size:2.5em; margin:0; color:white;">35,000+</h2>
     <p style="margin:5px 0 0 0; font-size:1em; color:white;">Employees Deployed</p>
   </div>
-
-  <!-- Stat 3 -->
-  <div style="background:linear-gradient(135deg,#1976d2,#42a5f5); width:180px; height:180px; border-radius:50%; display:flex; flex-direction:column; justify-content:center; align-items:center; box-shadow:0 8px 20px rgba(0,0,0,0.3); transition:all 0.3s; cursor:pointer;"
-       onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.4)';" 
-       onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';">
+  <div style="background:linear-gradient(135deg,#1976d2,#42a5f5); width:180px; height:180px; border-radius:50%; display:flex; flex-direction:column; justify-content:center; align-items:center; box-shadow:0 8px 20px rgba(0,0,0,0.3); cursor:pointer;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.4)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';">
     <h2 style="font-size:2.5em; margin:0; color:white;">15+</h2>
     <p style="margin:5px 0 0 0; font-size:1em; color:white;">Global Offices</p>
   </div>
-
 </section>
 
-<!-- Industries We Serve Section -->
+<!-- Industries Section -->
 <section id="sectors" style="padding:60px 20px; background:#f4f4f4; text-align:center; transition:all 0.6s ease; transform:translateY(50px); opacity:0;">
   <h2 style="font-size:2.5em; margin-bottom:40px;">Industries We Serve</h2>
   <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
-    
-    <!-- Sector Card -->
-    <div style="flex:1 1 250px; max-width:250px; background:white; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-10px)';" 
-         onmouseout="this.style.transform='translateY(0)';">
+    <div style="flex:1 1 250px; max-width:250px; background:white; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); cursor:pointer;" onmouseover="this.style.transform='translateY(-10px)';" onmouseout="this.style.transform='translateY(0)';">
       <img src="images/cosnt2.jpg" alt="Construction Workers" style="width:100%; height:160px; object-fit:cover;">
       <h3 style="padding:15px; margin:0; font-size:1.2em;">Engineering & Contracting Sector</h3>
     </div>
-
-    <div style="flex:1 1 250px; max-width:250px; background:white; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-10px)';" 
-         onmouseout="this.style.transform='translateY(0)';">
+    <div style="flex:1 1 250px; max-width:250px; background:white; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); cursor:pointer;" onmouseover="this.style.transform='translateY(-10px)';" onmouseout="this.style.transform='translateY(0)';">
       <img src="images/eng.jpg" alt="Hospitality" style="width:100%; height:160px; object-fit:cover;">
       <h3 style="padding:15px; margin:0; font-size:1.2em;">Interior Decoration</h3>
     </div>
-
-    <div style="flex:1 1 250px; max-width:250px; background:white; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-10px)';" 
-         onmouseout="this.style.transform='translateY(0)';">
+    <div style="flex:1 1 250px; max-width:250px; background:white; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); cursor:pointer;" onmouseover="this.style.transform='translateY(-10px)';" onmouseout="this.style.transform='translateY(0)';">
       <img src="images/hospitality.jpeg" alt="Facilities Management" style="width:100%; height:160px; object-fit:cover;">
       <h3 style="padding:15px; margin:0; font-size:1.2em;">FMCG & Hospitality</h3>
     </div>
-
-    <div style="flex:1 1 250px; max-width:250px; background:white; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-10px)';" 
-         onmouseout="this.style.transform='translateY(0)';">
+    <div style="flex:1 1 250px; max-width:250px; background:white; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); cursor:pointer;" onmouseover="this.style.transform='translateY(-10px)';" onmouseout="this.style.transform='translateY(0)';">
       <img src="images/Guard.jpg" alt="Security" style="width:100%; height:160px; object-fit:cover;">
       <h3 style="padding:15px; margin:0; font-size:1.2em;">Security & Cleaning Sector</h3>
     </div>
-
-    <div style="flex:1 1 250px; max-width:250px; background:white; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-10px)';" 
-         onmouseout="this.style.transform='translateY(0)';">
-      <img src="images/hospitality2.jpg" style="width:100%; height:160px; object-fit:cover;">
-      <h3 style="padding:15px; margin:0; font-size:1.2em;">Healthcare Industry</h3>
-    </div>
-
-    <div style="flex:1 1 250px; max-width:250px; background:white; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-10px)';" 
-         onmouseout="this.style.transform='translateY(0)';">
-      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Office Management" style="width:100%; height:160px; object-fit:cover;">
-      <h3 style="padding:15px; margin:0; font-size:1.2em;">Office Management</h3>
-    </div>
-
-    <div style="flex:1 1 250px; max-width:250px; background:white; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s; cursor:pointer;"
-         onmouseover="this.style.transform='translateY(-10px)';" 
-         onmouseout="this.style.transform='translateY(0)';">
-      <img src="https://www.ca.endress.com/__image/a/9053317/k/e040f75c15f887b71a78fe6ffc959176ad687266/ar/1-1/w/928/t/jpg/b/ffffff/fn/E+H_Oil_and_gas.jpg" alt="Oil & Gas" style="width:100%; height:160px; object-fit:cover;">
-      <h3 style="padding:15px; margin:0; font-size:1.2em;">Oil & Gas Field</h3>
-    </div>
-
   </div>
 </section>
 
-<section id="offices" style="padding:60px 20px; background-color:#f4f4f4; text-align:center;">
+<!-- Offices Section -->
+<section id="offices" style="padding:60px 20px; background:#f4f4f4; text-align:center; transition:all 0.6s ease; transform:translateY(50px); opacity:0;">
   <h2 style="font-size:2.5em; margin-bottom:40px; color:#0d47a1;">Our Global Presence</h2>
-  
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; max-width:1000px; margin:0 auto;">
-    
-    <!-- Main Office -->
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
     <div style="flex:1 1 280px; background:#fff; padding:25px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
       <h3 style="margin-bottom:15px; color:#0d47a1;">Main Office</h3>
-      <p style="font-size:1.1em; margin:0;">UAE</p>
+      <p>UAE</p>
     </div>
-
-    <!-- Branch Offices -->
     <div style="flex:1 1 280px; background:#fff; padding:25px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
       <h3 style="margin-bottom:15px; color:#0d47a1;">Branch Offices</h3>
-      <p style="font-size:1.1em; margin:0;">India, Nepal, Pakistan, Bangladesh, Africa</p>
+      <p>India, Nepal, Pakistan, Bangladesh, Africa</p>
     </div>
-
-    <!-- Associate Offices -->
     <div style="flex:1 1 280px; background:#fff; padding:25px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
       <h3 style="margin-bottom:15px; color:#0d47a1;">Associate Offices</h3>
-      <p style="font-size:1.1em; margin:0;">
-        Philippines, Sri Lanka, Indonesia, Myanmar, Egypt, Sudan, Ghana, Kenya, Uganda
-      </p>
+      <p>Philippines, Sri Lanka, Indonesia, Myanmar, Egypt, Sudan, Ghana, Kenya, Uganda</p>
     </div>
-
   </div>
 </section>
 
-<section id="clients" style="padding:60px 20px; background:#ffffff; text-align:center;">
+<!-- Clients Section -->
+<section id="clients" style="padding:60px 20px; background:#ffffff; text-align:center; transition:all 0.6s ease; transform:translateY(50px); opacity:0;">
   <h2 style="font-size:2.5em; margin-bottom:30px; color:#0d47a1;">Our Clients</h2>
-  
-  <!-- Slider Container -->
   <div style="overflow:hidden; position:relative; width:100%; max-width:1200px; margin:0 auto;">
     <div style="display:flex; gap:40px; width:max-content; animation:scrollClients 80s linear infinite;">
-
-      <!-- Client Logos -->
       <img src="https://via.placeholder.com/150x80?text=Client+1" alt="Client 1" style="height:80px; flex-shrink:0;">
       <img src="https://via.placeholder.com/150x80?text=Client+2" alt="Client 2" style="height:80px; flex-shrink:0;">
       <img src="https://via.placeholder.com/150x80?text=Client+3" alt="Client 3" style="height:80px; flex-shrink:0;">
       <img src="https://via.placeholder.com/150x80?text=Client+4" alt="Client 4" style="height:80px; flex-shrink:0;">
       <img src="https://via.placeholder.com/150x80?text=Client+5" alt="Client 5" style="height:80px; flex-shrink:0;">
       <img src="https://via.placeholder.com/150x80?text=Client+6" alt="Client 6" style="height:80px; flex-shrink:0;">
-
-      <!-- Duplicate logos for infinite loop -->
+      <!-- duplicate logos -->
       <img src="https://via.placeholder.com/150x80?text=Client+1" alt="Client 1" style="height:80px; flex-shrink:0;">
       <img src="https://via.placeholder.com/150x80?text=Client+2" alt="Client 2" style="height:80px; flex-shrink:0;">
       <img src="https://via.placeholder.com/150x80?text=Client+3" alt="Client 3" style="height:80px; flex-shrink:0;">
-      <img src="https://via.placeholder.com/150x80?text=Client+4" alt="Client 4" style="height:80px; flex-shrink:0;">
-      <img src="https://via.placeholder.com/150x80?text=Client+5" alt="Client 5" style="height:80px; flex-shrink:0;">
-      <img src="https://via.placeholder.com/150x80?text=Client+6" alt="Client 6" style="height:80px; flex-shrink:0;">
-
     </div>
   </div>
+  <style>
+    @keyframes scrollClients {from{transform:translateX(0);} to{transform:translateX(-50%);}}
+  </style>
 </section>
 
-<!-- Inline keyframes -->
-<style>
-@keyframes scrollClients {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
-}
-</style>
-
-
-
-
-<!-- Candidate Testimonial Video Section -->
-<section id="candidate-testimonial" style="padding:60px 20px; background:#f4f4f4; text-align:center; font-family:Arial, sans-serif;">
+<!-- Candidate Testimonial Section -->
+<section id="testimonial" style="padding:60px 20px; background:#f4f4f4; text-align:center; transition:all 0.6s ease; transform:translateY(50px); opacity:0;">
   <h2 style="font-size:2.5em; margin-bottom:20px; color:#0d47a1;">Our Gallery & Videos</h2>
-  <p style="font-size:1.2em; max-width:800px; margin:0 auto 40px auto; color:#333;">
-    Hear from one of our selected candidates about their experience with our recruitment process and how they discovered the opportunities at Tangent Group.
-  </p>
-
-  <!-- Video Embed -->
+  <p style="font-size:1.2em; max-width:800px; margin:0 auto 40px auto; color:#333;">Hear from one of our selected candidates about their experience with our recruitment process.</p>
   <div style="max-width:800px; margin:0 auto;">
     <video controls style="width:100%; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
       <source src="your-video.mp4" type="video/mp4">
@@ -314,93 +170,61 @@ navLinks.forEach(link => {
   </div>
 </section>
 
-
-
-
 <!-- Footer -->
 <footer style="background:#0d47a1; color:#fff; padding:60px 20px; font-family:Arial, sans-serif;">
-  <div style="display:flex; flex-wrap:wrap; justify-content:space-between; max-width:1200px; margin:0 auto; gap:30px; align-items:flex-start;">
-    
-    <!-- Logo & About -->
+  <div style="display:flex; flex-wrap:wrap; justify-content:space-between; max-width:1200px; margin:0 auto; gap:30px;">
     <div style="flex:1; min-width:220px; text-align:center;">
-      <img src="images/logo group.png" alt="Tangent Group Logo" 
-           style="max-width:150px; margin-bottom:15px; cursor:pointer;"
-           onclick="this.style.filter='hue-rotate(45deg)';">
-      <p style="line-height:1.6;">"The right choice of a successful organization is not in your future employees but in the team helping you discover them."</p>
-      
-      <!-- Social Icons -->
-      <div style="display:flex; gap:10px; justify-content:center; margin-top:15px; font-size:18px;">
-        <a href="https://www.facebook.com/profile.php?id=61577614177171" target="_blank"
-           style="display:inline-flex; width:40px; height:40px; border-radius:50%; background:#3b5998; align-items:center; justify-content:center; text-decoration:none; color:#fff;"
-           onmouseover="this.style.color='yellow'" onmouseout="this.style.color='white'">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/in/rahuldxbcareers2u/" target="_blank"
-           style="display:inline-flex; width:40px; height:40px; border-radius:50%; background:#0077b5; align-items:center; justify-content:center; text-decoration:none; color:#fff;"
-           onmouseover="this.style.color='yellow'" onmouseout="this.style.color='white'">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-
-        <a href="https://www.instagram.com/tangent_hr_solution/" target="_blank"
-           style="display:inline-flex; width:40px; height:40px; border-radius:50%; background:#e1306c; align-items:center; justify-content:center; text-decoration:none; color:#fff;"
-           onmouseover="this.style.color='yellow'" onmouseout="this.style.color='white'">
-          <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="https://www.tiktok.com/@tangenthrjobs?lang=en" target="_blank"
-           style="display:inline-flex; width:40px; height:40px; border-radius:50%; background:#000; align-items:center; justify-content:center; text-decoration:none; color:#fff;"
-           onmouseover="this.style.color='yellow'" onmouseout="this.style.color='white'">
-          <i class="fab fa-tiktok"></i>
-        </a>
-      </div>
+      <img src="images/logo group.png" alt="Tangent Group Logo" style="max-width:100%; margin-bottom:15px;">
+      <p>"The right choice of a successful organization is in the team helping you discover the right employees."</p>
     </div>
-
-    <!-- Quick Links -->
     <div style="flex:1; min-width:180px; text-align:center;">
-      <h3 style="margin-bottom:15px;">Quick Links</h3>
+      <h3>Quick Links</h3>
       <ul style="list-style:none; padding:0; margin:0; line-height:2;">
         <li><a href="#home" style="color:#fff; text-decoration:none;">Home</a></li>
         <li><a href="#about" style="color:#fff; text-decoration:none;">About Us</a></li>
-        <li><a href="#services" style="color:#fff; text-decoration:none;">Our Services</a></li>
-        <li><a href="#offices" style="color:#fff; text-decoration:none;">Board Of Directors</a></li>
-        <li><a href="#sectors" style="color:#fff; text-decoration:none;">Job Openings</a></li>
-        <li><a href="#contact" style="color:#fff; text-decoration:none;">Contact</a></li>
+        <li><a href="#sectors" style="color:#fff; text-decoration:none;">Industries</a></li>
+        <li><a href="#offices" style="color:#fff; text-decoration:none;">Offices</a></li>
+        <li><a href="#clients" style="color:#fff; text-decoration:none;">Clients</a></li>
+        <li><a href="#testimonial" style="color:#fff; text-decoration:none;">Gallery</a></li>
       </ul>
     </div>
-
-    <!-- Contact Info -->
     <div style="flex:1; min-width:240px; text-align:center;">
-      <h3 style="margin-bottom:15px;">Contact Information</h3>
-      <p style="margin:0 0 10px 0;"><i class="fas fa-map-marker-alt" style="margin-right:8px;"></i> DMCC, Fortune Tower - Cluster C - Jumeirah Lake Towers - Dubai, UAE</p>
-      <p style="margin:0 0 10px 0;"><i class="fas fa-phone" style="margin-right:8px;"></i> +971 4 3979686 | 04 - 3465669</p>
-      <p style="margin:0;"><i class="fas fa-envelope" style="margin-right:8px;"></i> 
-        <a href="mailto:hrteam@emirates.net.ae" style="color:#ffeb3b;">hrteam@emirates.net.ae</a>
-      </p>
+      <h3>Contact Info</h3>
+      <p>DMCC, Fortune Tower, Jumeirah Lake Towers, Dubai, UAE</p>
+      <p>+971 4 3979686 | 04 - 3465669</p>
+      <p><a href="mailto:hrteam@emirates.net.ae" style="color:#ffeb3b;">hrteam@emirates.net.ae</a></p>
     </div>
-
   </div>
-
-  <!-- Footer Bottom -->
-  <div style="margin-top:40px; border-top:1px solid #1556b0; padding-top:20px; text-align:center; font-size:14px; color:#ddd;">
-    © 2025 Tangent Group | All Rights Reserved
-  </div>
+  <div style="margin-top:40px; border-top:1px solid #1556b0; padding-top:20px; text-align:center; font-size:14px; color:#ddd;">© 2025 Tangent Group | All Rights Reserved</div>
 </footer>
 
-<!-- FontAwesome 6 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+<!-- Scripts -->
+<script>
+let slider = document.getElementById('slider');
+let slides = 5;
+let currentIndex = 0;
+function showSlide(index){ slider.style.transform = `translateX(-${index*20}%)`; }
+document.getElementById('next').addEventListener('click', ()=>{ currentIndex = (currentIndex+1)%slides; showSlide(currentIndex); });
+document.getElementById('prev').addEventListener('click', ()=>{ currentIndex = (currentIndex-1+slides)%slides; showSlide(currentIndex); });
+setInterval(()=>{ currentIndex = (currentIndex+1)%slides; showSlide(currentIndex); },5000);
 
+// Scroll animation
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){ entry.target.style.transform='translateY(0)'; entry.target.style.opacity='1'; }
+  });
+},{threshold:0.2});
+sections.forEach(sec => observer.observe(sec));
+
+// Highlight nav on click
+document.querySelectorAll('#mainNav a').forEach(link=>{
+  link.addEventListener('click', function(){
+    document.querySelectorAll('#mainNav a').forEach(l=>l.style.color='white');
+    this.style.color='yellow';
+  });
+});
+</script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
