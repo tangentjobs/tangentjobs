@@ -243,7 +243,7 @@ counters.forEach(counter => observer.observe(counter));
 </script>
 
 <!-- Our Services Section -->
-<div class="container-fluid py-5" style="background:#f9f9f9;">
+<div class="container-fluid py-5" style="background:#f2f2f2;">
   <!-- Centered Heading and Description -->
   <div style="text-align:center; margin-bottom:50px;">
     <h2 class="section-title">OUR SERVICES</h2>
@@ -253,86 +253,108 @@ counters.forEach(counter => observer.observe(counter));
   </div>
 
   <!-- Services Cards -->
-  <div class="services-row" style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
-    <div class="service-card fadeInUp"><h3>Overseas Recruitment</h3></div>
-    <div class="service-card fadeInUp"><h3>Local Recruitment & Staffing</h3></div>
-    <div class="service-card fadeInUp"><h3>Skilled & Unskilled Manpower Supply</h3></div>
-    <div class="service-card fadeInUp"><h3>HR Consultancy & Workforce Planning</h3></div>
-    <div class="service-card fadeInUp"><h3>Executive Search & Head Hunting</h3></div>
+  <div class="services-row">
+    <div class="service-card card-red fadeInUp">
+      <h3>Overseas Recruitment</h3>
+    </div>
+    <div class="service-card card-blue fadeInUp">
+      <h3>Local Recruitment & Staffing</h3>
+    </div>
+    <div class="service-card card-red fadeInUp">
+      <h3>Skilled & Unskilled Manpower Supply</h3>
+    </div>
+    <div class="service-card card-blue fadeInUp">
+      <h3>HR Consultancy & Workforce Planning</h3>
+    </div>
+    <div class="service-card card-red fadeInUp">
+      <h3>Executive Search & Head Hunting</h3>
+    </div>
   </div>
 </div>
 
 <style>
+/* Heading and Description */
 .section-title {
   font-size: 2.5em;
-  color: #003366;
+  color: #d32f2f; /* Red accent */
   font-weight: 700;
   margin-bottom: 10px;
-  text-align: center; /* ensures heading is centered */
+  text-align: center;
+  position: relative;
 }
 .section-title::after {
   content: "";
   display: block;
   width: 60px;
   height: 3px;
-  background: #0077b6;
+  background: #1976d2; /* Blue underline */
   margin: 10px auto 0;
   border-radius: 2px;
 }
 .section-desc {
   font-size: 1.1em;
-  color: #555;
+  color: #333;
   max-width: 650px;
   margin: 0 auto 40px;
-  line-height: 1.5;
-  text-align: center; /* ensures description is centered */
+  line-height: 1.6;
+  text-align: center;
 }
 
+/* Services Row */
 .services-row {
   max-width: 1200px;
-  margin: 0 auto; /* centers the whole row */
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
 
+/* Service Cards */
 .service-card {
-  background: #fff;
   border-radius: 12px;
-  padding: 25px 20px;
+  padding: 30px 20px;
   text-align: center;
-  color: #003366;
-  font-weight: 500;
+  color: #fff;
+  font-weight: 600;
   transition: all 0.3s ease;
   width: 260px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  border: 1px solid #e0e0e0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border: none;
+}
+
+.card-red {
+  background: linear-gradient(135deg, #d32f2f, #ff6659);
+}
+.card-blue {
+  background: linear-gradient(135deg, #1976d2, #4dabf5);
 }
 
 .service-card h3 {
   margin: 0;
-  font-size: 1.15em;
+  font-size: 1.2em;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
 }
 
+/* Animation */
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px);}
   100% { opacity: 1; transform: translateY(0);}
 }
-
 .fadeInUp {
   animation: fadeInUp 0.8s ease forwards;
 }
 
+/* Responsive */
 @media(max-width:768px){
   .service-card { width: 90%; }
 }
 </style>
+
 
 <section id="sectors" style="overflow:hidden; padding:60px 0; background:#f4f4f4;">
   <h2 style="text-align:center; font-size:2.5em; margin-bottom:40px; color:#003366;">Industries We Serve</h2>
@@ -525,9 +547,8 @@ scrollIndustries();
 </style>
 
 
-<!-- Footer Section -->
 <footer style="background:#003366; color:#fff; padding:40px 20px; width:100%;">
-  <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; width:100%;">
+  <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; max-width:1200px; margin:0 auto;">
 
     <!-- Tangent Group Info -->
     <div style="flex:1; min-width:220px; text-align:center;">
@@ -549,56 +570,49 @@ scrollIndustries();
     </div>
 
     <!-- Contact Info -->
-   <div class="contact-section" style="text-align:center; padding:40px 20px; background:#f4f4f4;">
-  <h2 style="font-size:2em; color:#003366; margin-bottom:30px;">Contact Us</h2>
-
-  <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:30px;">
-    
-    <div style="display:flex; align-items:center; gap:15px; flex:1 1 250px; max-width:350px;">
-      <div style="width:50px; height:50px; border-radius:50%; background:linear-gradient(135deg,#003366,#ff3333); color:#fff; display:flex; align-items:center; justify-content:center; font-size:22px;">
-        <i class="fas fa-phone"></i>
+    <div style="flex:1; min-width:220px; text-align:center;">
+      <h3 style="color:#ff3333; font-size:1.3em; margin-bottom:20px;">Contact Us</h3>
+      <div style="display:flex; flex-direction:column; gap:15px; align-items:center;">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="width:45px; height:45px; border-radius:50%; background:linear-gradient(135deg,#003366,#ff3333); color:#fff; display:flex; align-items:center; justify-content:center; font-size:20px;">
+            <i class="fas fa-phone"></i>
+          </div>
+          <p style="margin:0; font-size:1em;">+971 4 3979686 | 04 - 3465669</p>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="width:45px; height:45px; border-radius:50%; background:linear-gradient(135deg,#003366,#ff3333); color:#fff; display:flex; align-items:center; justify-content:center; font-size:20px;">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <p style="margin:0; font-size:1em;"><a href="mailto:hrteam@emirates.net.ae" style="color:#fff; text-decoration:none;">hrteam@emirates.net.ae</a></p>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="width:45px; height:45px; border-radius:50%; background:linear-gradient(135deg,#003366,#ff3333); color:#fff; display:flex; align-items:center; justify-content:center; font-size:20px;">
+            <i class="fas fa-globe"></i>
+          </div>
+          <p style="margin:0; font-size:1em;"><a href="http://www.tangentdubai.com" target="_blank" style="color:#fff; text-decoration:none;">www.tangentdubai.com</a></p>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="width:45px; height:45px; border-radius:50%; background:linear-gradient(135deg,#003366,#ff3333); color:#fff; display:flex; align-items:center; justify-content:center; font-size:20px;">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <p style="margin:0; font-size:1em;">Fortune Tower - Nearest metro Station - DMCC - Exit 1 Cluster - C, JLT</p>
+        </div>
       </div>
-      <p style="margin:0; font-size:1.1em;">+971 4 3979686 | 04 - 3465669</p>
-    </div>
-
-    <div style="display:flex; align-items:center; gap:15px; flex:1 1 250px; max-width:350px;">
-      <div style="width:50px; height:50px; border-radius:50%; background:linear-gradient(135deg,#003366,#ff3333); color:#fff; display:flex; align-items:center; justify-content:center; font-size:22px;">
-        <i class="fas fa-envelope"></i>
-      </div>
-      <p style="margin:0; font-size:1.1em;"><a href="mailto:hrteam@emirates.net.ae" style="color:#003366; text-decoration:none;">hrteam@emirates.net.ae</a></p>
-    </div>
-
-    <div style="display:flex; align-items:center; gap:15px; flex:1 1 250px; max-width:350px;">
-      <div style="width:50px; height:50px; border-radius:50%; background:linear-gradient(135deg,#003366,#ff3333); color:#fff; display:flex; align-items:center; justify-content:center; font-size:22px;">
-        <i class="fas fa-globe"></i>
-      </div>
-      <p style="margin:0; font-size:1.1em;"><a href="http://www.tangentdubai.com" target="_blank" style="color:#003366; text-decoration:none;">www.tangentdubai.com</a></p>
-    </div>
-
-    <div style="display:flex; align-items:center; gap:15px; flex:1 1 250px; max-width:350px;">
-      <div style="width:50px; height:50px; border-radius:50%; background:linear-gradient(135deg,#003366,#ff3333); color:#fff; display:flex; align-items:center; justify-content:center; font-size:22px;">
-        <i class="fas fa-map-marker-alt"></i>
-      </div>
-      <p style="margin:0; font-size:1.1em;">Fortune Tower - Nearest metro Station - DMCC - Exit 1 Cluster - C, JLT</p>
     </div>
 
   </div>
-</div>
 
-
+  <!-- Footer Bottom -->
+  <div style="border-top:1px solid rgba(255,255,255,0.2); margin-top:30px; padding-top:15px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; font-size:0.85em; color:#e0e0e0; max-width:1200px; margin:0 auto;">
+    <span>&copy; 2025 Tangent Group. All Rights Reserved.</span>
+    <div class="social-icons" style="display:flex; gap:20px; justify-content:center;">
+      <a href="#" style="color:#ff3333; font-size:24px; text-decoration:none;"><i class="fab fa-facebook"></i></a>
+      <a href="#" style="color:#003366; font-size:24px; text-decoration:none;"><i class="fab fa-linkedin"></i></a>
+      <a href="#" style="color:#ff3333; font-size:24px; text-decoration:none;"><i class="fab fa-instagram"></i></a>
+      <a href="#" style="color:#003366; font-size:24px; text-decoration:none;"><i class="fab fa-tiktok"></i></a>
+    </div>
   </div>
-
- <!-- Footer Bottom -->
-<div style="border-top:1px solid rgba(255,255,255,0.2); margin-top:25px; padding-top:15px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; font-size:0.85em; color:#e0e0e0; width:100%;">
-  <span>&copy; 2025 Tangent Group. All Rights Reserved.</span>
-  <div class="social-icons" style="display:flex; gap:20px; justify-content:center;">
-    <a href="#" style="color:#ff3333; font-size:24px; text-decoration:none;"><i class="fab fa-facebook"></i></a>
-    <a href="#" style="color:#003366; font-size:24px; text-decoration:none;"><i class="fab fa-linkedin"></i></a>
-    <a href="#" style="color:#ff3333; font-size:24px; text-decoration:none;"><i class="fab fa-instagram"></i></a>
-    <a href="#" style="color:#003366; font-size:24px; text-decoration:none;"><i class="fab fa-tiktok"></i></a>
-  </div>
-</div>
-
+</footer>
 
 <style>
 footer a {
@@ -620,10 +634,15 @@ footer a:hover {
     gap:20px;
     text-align:center;
   }
+  .social-icons {
+    margin-top:10px;
+  }
 }
 </style>
+
 </body>
 </html>
+
 
 
 
