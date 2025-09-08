@@ -122,40 +122,19 @@ window.addEventListener('load', animateOnScroll);
 <!-- Marquee -->
 <div class="marquee-container">
   <div class="marquee">
-    <span>✨ Tangent Group - UAE ✨</span>
-    <span>💼 27 Years of Excellence in Recruitment & Workforce Solutions 💼</span>
+    <span class="highlight-text">Tangent Group - UAE</span>
+    <span class="highlight-text">27 Years of Excellence in Recruitment & Workforce Solutions</span>
   </div>
 </div>
 
 <style>
-.marquee-container {
-  overflow: hidden;
-  white-space: nowrap;
-  background-color: #f0f8ff; /* light blue background */
-  padding: 10px 0;
-  border: 2px solid #0077b6; /* blue border */
-  border-radius: 10px;
-}
-
-.marquee {
-  display: inline-block;
-  animation: scroll 15s linear infinite;
-}
-
-.marquee span {
-  display: inline-block;
-  margin-right: 50px;
-  font-weight: bold;
-  font-size: 1.2em;
-  color: #d62828; /* bright red */
-  text-shadow: 1px 1px 2px #000; /* subtle shadow for highlight */
-}
-
-@keyframes scroll {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+.highlight-text {
+  font-size: 1.5em;       /* make text bigger */
+  font-weight: 700;       /* bold text */
+  color: #d62828;         /* optional: make color stand out */
 }
 </style>
+
 
 <!-- About Us & Stats -->
 <section class="about-section" style="padding:60px 20px; text-align:center; background:#f4f4f4;">
@@ -537,6 +516,7 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
 
