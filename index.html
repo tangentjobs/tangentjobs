@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blue & Red Website</title>
+<title>Tangent Group - Recruitment Agency UAE</title>
 <style>
   * { box-sizing: border-box; margin:0; padding:0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
   body { background:#f5f5f5; color:#333;}
@@ -74,16 +74,13 @@
     <img src="https://via.placeholder.com/60x60/ff3333/ffffff?text=L" alt="Logo">
     <h1>My Website</h1>
   </div>
-  <nav>
-    <a href="#" onclick="highlightNav(this)">Home</a>
-    <a href="#" onclick="highlightNav(this)">About</a>
-    <a href="#" onclick="highlightNav(this)">Services</a>
-    <a href="#" onclick="highlightNav(this)">Contact</a>
-    <div class="social-icons">
-      <a href="#" title="Facebook">&#xf09a;</a>
-      <a href="#" title="Twitter">&#xf099;</a>
-      <a href="#" title="Instagram">&#xf16d;</a>
-    </div>
+  <nav style="display:flex; align-items:center; gap:20px;">
+    <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Home</a>
+    <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">About</a>
+    <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Our Services</a>
+    <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Board Of Directors</a>
+    <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Job Openings</a>
+    <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Contact</a>
   </nav>
 </header>
 
@@ -114,22 +111,52 @@ window.addEventListener('load', animateOnScroll);
 <!-- Slider -->
 <div class="slider">
   <div class="slides">
-    <img src="https://via.placeholder.com/1200x250/003366/ffffff?text=Slide+1" alt="Slide 1">
-    <img src="https://via.placeholder.com/1200x250/ff3333/ffffff?text=Slide+2" alt="Slide 2">
-    <img src="https://via.placeholder.com/1200x250/3366ff/ffffff?text=Slide+3" alt="Slide 3">
-    <img src="https://via.placeholder.com/1200x250/ff9900/ffffff?text=Slide+4" alt="Slide 4">
-    <img src="https://via.placeholder.com/1200x250/00cc99/ffffff?text=Slide+5" alt="Slide 5">
+    <img src="images/TANGENT HOME PAGE.jpg" alt="Slide 1">
+    <img src="images/cosnt2.jpg" alt="Slide 2">
+    <img src="images/eng.jpg" alt="Slide 3">
+    <img src="images/hospitality.jpeg" alt="Slide 4">
+    <img src="images/Guard.jpg" alt="Slide 5">
   </div>
 </div>
 
 <!-- Marquee -->
 <div class="marquee-container">
   <div class="marquee">
-    <span>🔥 Latest Updates: Check our new services!</span>
-    <span>🌟 Offer: 30% off this month!</span>
-    <span>🚀 Subscribe for updates!</span>
+    <span>✨ Tangent Group - UAE ✨</span>
+    <span>💼 27 Years of Excellence in Recruitment & Workforce Solutions 💼</span>
   </div>
 </div>
+
+<style>
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #f0f8ff; /* light blue background */
+  padding: 10px 0;
+  border: 2px solid #0077b6; /* blue border */
+  border-radius: 10px;
+}
+
+.marquee {
+  display: inline-block;
+  animation: scroll 15s linear infinite;
+}
+
+.marquee span {
+  display: inline-block;
+  margin-right: 50px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #d62828; /* bright red */
+  text-shadow: 1px 1px 2px #000; /* subtle shadow for highlight */
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+</style>
+
 <!-- About Us & Stats -->
 <section class="about-section" style="padding:60px 20px; text-align:center; background:#f4f4f4;">
   <h2 style="font-size:2.5em; color:#003366; margin-bottom:40px;">About Us</h2>
@@ -482,6 +509,7 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
 
