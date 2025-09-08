@@ -524,8 +524,8 @@ scrollIndustries();
 
 
 <!-- Footer Section -->
-<footer style="background:#003366; color:#fff; padding:40px 20px;">
-  <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px;">
+<footer style="background:#003366; color:#fff; padding:40px 20px; width:100%;">
+  <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; width:100%;">
 
     <!-- Tangent Group Info -->
     <div style="flex:1; min-width:220px; text-align:center;">
@@ -537,12 +537,12 @@ scrollIndustries();
     <div style="flex:1; min-width:220px; text-align:center;">
       <h3 style="color:#ff3333; font-size:1.3em; margin-bottom:8px;">Quick Links</h3>
       <nav style="display:flex; flex-direction:column; gap:6px;">
-        <a href="#" style="color:#fff; text-decoration:none;">Home</a>
-        <a href="#" style="color:#fff; text-decoration:none;">About</a>
-        <a href="#" style="color:#fff; text-decoration:none;">Our Services</a>
-        <a href="#" style="color:#fff; text-decoration:none;">Board Of Directors</a>
-        <a href="#" style="color:#fff; text-decoration:none;">Job Openings</a>
-        <a href="#" style="color:#fff; text-decoration:none;">Contact</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Our Services</a>
+        <a href="#">Board Of Directors</a>
+        <a href="#">Job Openings</a>
+        <a href="#">Contact</a>
       </nav>
     </div>
 
@@ -560,7 +560,7 @@ scrollIndustries();
   </div>
 
   <!-- Footer Bottom -->
-  <div style="border-top:1px solid rgba(255,255,255,0.2); margin-top:25px; padding-top:15px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; font-size:0.85em; color:#e0e0e0; max-width:1200px; margin-left:auto; margin-right:auto;">
+  <div style="border-top:1px solid rgba(255,255,255,0.2); margin-top:25px; padding-top:15px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; font-size:0.85em; color:#e0e0e0; width:100%;">
     <span>&copy; 2025 Tangent Group. All Rights Reserved.</span>
     <div class="social-icons" style="display:flex; gap:15px; justify-content:center;">
       <a href="#" style="color:#fff; font-size:18px; text-decoration:none;">&#xf09a;</a>
@@ -573,7 +573,9 @@ scrollIndustries();
 
 <style>
 footer a {
-  transition: 0.3s;
+  color:#fff;
+  text-decoration:none;
+  transition:0.3s;
 }
 footer a:hover {
   color:#ff3333;
@@ -582,52 +584,15 @@ footer a:hover {
 
 /* Responsive Footer */
 @media (max-width:768px) {
-  footer > div:first-child {
+  footer > div:first-child, 
+  footer > div:last-child {
     flex-direction:column;
     align-items:center;
     gap:20px;
     text-align:center;
   }
-
-  .social-icons {
-    margin-top:10px;
-  }
-
-  footer > div:last-child {
-    flex-direction:column;
-    align-items:center;
-    gap:10px;
-  }
 }
 </style>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
