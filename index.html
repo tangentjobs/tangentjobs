@@ -244,7 +244,6 @@ counters.forEach(counter => observer.observe(counter));
 
 <!-- Our Services Section -->
 <div class="container-fluid py-5" style="background:#f2f2f2;">
-  <!-- Centered Heading and Description -->
   <div style="text-align:center; margin-bottom:50px;">
     <h2 class="section-title">OUR SERVICES</h2>
     <p class="section-desc">
@@ -252,42 +251,30 @@ counters.forEach(counter => observer.observe(counter));
     </p>
   </div>
 
-  <!-- Services Cards -->
-  <div class="services-row">
-    <div class="service-card card-red fadeInUp">
-      <h3>Overseas Recruitment</h3>
-    </div>
-    <div class="service-card card-blue fadeInUp">
-      <h3>Local Recruitment & Staffing</h3>
-    </div>
-    <div class="service-card card-red fadeInUp">
-      <h3>Skilled & Unskilled Manpower Supply</h3>
-    </div>
-    <div class="service-card card-blue fadeInUp">
-      <h3>HR Consultancy & Workforce Planning</h3>
-    </div>
-    <div class="service-card card-red fadeInUp">
-      <h3>Executive Search & Head Hunting</h3>
-    </div>
+  <!-- Services Cards in One Line -->
+  <div class="services-row-one-line">
+    <div class="service-card card-red fadeInUp"><h3>Overseas Recruitment</h3></div>
+    <div class="service-card card-blue fadeInUp"><h3>Local Recruitment & Staffing</h3></div>
+    <div class="service-card card-red fadeInUp"><h3>Skilled & Unskilled Manpower Supply</h3></div>
+    <div class="service-card card-blue fadeInUp"><h3>HR Consultancy & Workforce Planning</h3></div>
+    <div class="service-card card-red fadeInUp"><h3>Executive Search & Head Hunting</h3></div>
   </div>
 </div>
 
 <style>
-/* Heading and Description */
 .section-title {
   font-size: 2.5em;
-  color: #d32f2f; /* Red accent */
+  color: #d32f2f;
   font-weight: 700;
   margin-bottom: 10px;
   text-align: center;
-  position: relative;
 }
 .section-title::after {
   content: "";
   display: block;
   width: 60px;
   height: 3px;
-  background: #1976d2; /* Blue underline */
+  background: #1976d2;
   margin: 10px auto 0;
   border-radius: 2px;
 }
@@ -300,27 +287,25 @@ counters.forEach(counter => observer.observe(counter));
   text-align: center;
 }
 
-/* Services Row */
-.services-row {
-  max-width: 1200px;
-  margin: 0 auto;
+/* One-line Services Row */
+.services-row-one-line {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
+  overflow-x: auto; /* allows horizontal scroll on smaller screens */
+  padding-bottom: 10px;
 }
 
 /* Service Cards */
 .service-card {
+  min-width: 220px;
   border-radius: 12px;
-  padding: 30px 20px;
+  padding: 25px 15px;
   text-align: center;
   color: #fff;
   font-weight: 600;
-  transition: all 0.3s ease;
-  width: 260px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex-shrink: 0; /* prevent shrinking */
 }
 
 .card-red {
@@ -332,7 +317,7 @@ counters.forEach(counter => observer.observe(counter));
 
 .service-card h3 {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.15em;
 }
 
 .service-card:hover {
@@ -351,7 +336,7 @@ counters.forEach(counter => observer.observe(counter));
 
 /* Responsive */
 @media(max-width:768px){
-  .service-card { width: 90%; }
+  .service-card { min-width: 180px; }
 }
 </style>
 
@@ -642,6 +627,7 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
 
