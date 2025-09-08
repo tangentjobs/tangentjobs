@@ -211,64 +211,40 @@ counters.forEach(counter => observer.observe(counter));
 </script>
 
 <!-- Our Services Section -->
-<div class="container-fluid pt-5" style="background:#f9f9f9; padding:80px 20px;">
-  <div class="container text-center" style="max-width:1000px;">
+<div class="container-fluid py-5" style="background:#f9f9f9;">
+  <div class="text-center mb-5">
+    <h2 class="section-title">OUR SERVICES</h2>
+    <p class="section-desc">
+      We provide comprehensive recruitment and HR solutions tailored for your business.
+    </p>
+  </div>
 
-    <!-- Section Header -->
-    <div class="row justify-content-center mb-5">
-      <div class="col-12">
-        <h2 class="section-title">OUR SERVICES</h2>
-        <p class="section-desc">
-          We provide comprehensive recruitment and HR solutions tailored for your business.
-        </p>
-      </div>
+  <div class="services-row" style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
+    <div class="service-card fadeInUp">
+      <h3>Overseas Recruitment</h3>
     </div>
-
-    <!-- Services Grid -->
-    <div class="row justify-content-center g-4">
-      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-        <div class="service-card fadeInUp" style="animation-delay:0.2s;">
-          <h3>Overseas Recruitment</h3>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-        <div class="service-card fadeInUp" style="animation-delay:0.4s;">
-          <h3>Local Recruitment & Staffing</h3>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-        <div class="service-card fadeInUp" style="animation-delay:0.6s;">
-          <h3>Skilled, Semi-skilled & Unskilled Manpower Supply</h3>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-        <div class="service-card fadeInUp" style="animation-delay:0.8s;">
-          <h3>HR Consultancy & Workforce Planning</h3>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-        <div class="service-card fadeInUp" style="animation-delay:1s;">
-          <h3>Executive Search & Head Hunting</h3>
-        </div>
-      </div>
+    <div class="service-card fadeInUp">
+      <h3>Local Recruitment & Staffing</h3>
     </div>
-
+    <div class="service-card fadeInUp">
+      <h3>Skilled, Semi-skilled & Unskilled Manpower Supply</h3>
+    </div>
+    <div class="service-card fadeInUp">
+      <h3>HR Consultancy & Workforce Planning</h3>
+    </div>
+    <div class="service-card fadeInUp">
+      <h3>Executive Search & Head Hunting</h3>
+    </div>
   </div>
 </div>
 
 <style>
-/* Section Header */
 .section-title {
   font-size: 2.5em;
   color: #003366;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
-
 .section-title::after {
   content: "";
   display: block;
@@ -278,7 +254,6 @@ counters.forEach(counter => observer.observe(counter));
   margin: 10px auto 0;
   border-radius: 2px;
 }
-
 .section-desc {
   font-size: 1.1em;
   color: #555;
@@ -287,7 +262,11 @@ counters.forEach(counter => observer.observe(counter));
   line-height: 1.5;
 }
 
-/* Service Card */
+.services-row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .service-card {
   background: #fff;
   border-radius: 12px;
@@ -296,40 +275,32 @@ counters.forEach(counter => observer.observe(counter));
   color: #003366;
   font-weight: 500;
   transition: all 0.3s ease;
-  width: 100%;
-  max-width: 280px;
+  width: 260px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   border: 1px solid #e0e0e0;
 }
-
 .service-card h3 {
   margin: 0;
   font-size: 1.15em;
 }
-
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 
-/* Animation */
 @keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
 }
-
 .fadeInUp {
   animation: fadeInUp 0.8s ease forwards;
 }
 
-/* Responsive */
 @media(max-width:768px){
-  .service-card {
-    max-width: 90%;
-    margin-bottom: 20px;
-  }
+  .service-card { width: 90%; }
 }
 </style>
+
 
 <!-- Industries Section -->
 <section id="sectors">
@@ -549,6 +520,7 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
 
