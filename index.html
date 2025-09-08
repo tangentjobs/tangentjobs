@@ -70,10 +70,10 @@
 
 <!-- Header -->
 <header>
-  <div class="logo" style="display:flex; align-items:center;">
-    <img src="https://via.placeholder.com/60x60/ff3333/ffffff?text=L" alt="Logo">
-    <h1>My Website</h1>
-  </div>
+  <div class="logo" style="display:flex; align-items:center; gap:15px;">
+    <img src="images/tangent-logo.jpeg" alt="Logo" style="width:80px; height:auto;">
+    <h1 style="font-size:2.2em; color:#003366; margin:0;">Tangent Group</h1>
+</div>
   <nav style="display:flex; align-items:center; gap:20px;">
     <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Home</a>
     <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">About</a>
@@ -232,17 +232,17 @@ counters.forEach(counter => observer.observe(counter));
 </script>
 
 <!-- Our Services Section -->
-<div class="container-fluid pt-5" style="background:#f4f4f4; padding:60px 20px;">
+<div class="container-fluid pt-5" style="background:#f4f4f4; padding:80px 20px;">
   <div class="container" style="max-width:1200px; text-align:center;">
 
     <!-- Section Header -->
     <div class="row justify-content-center mb-5">
       <div class="col-12">
-        <h2 style="font-size:2.2em; color:#003366; margin-bottom:10px; font-weight:700;">
+        <h2 class="section-title">
           OUR SERVICES
         </h2>
-        <p style="font-size:1.1em; color:#555; margin:0;">
-          We provide comprehensive recruitment and HR solutions
+        <p class="section-desc">
+          We provide comprehensive recruitment and HR solutions tailored for your business
         </p>
       </div>
     </div>
@@ -284,9 +284,37 @@ counters.forEach(counter => observer.observe(counter));
 </div>
 
 <style>
+/* Section Header */
+.section-title {
+  font-size: 2.4em;
+  color: #003366;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #0077b6;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.section-desc {
+  font-size: 1.15em;
+  color: #555;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
 /* Compact Blue Transparent Glass Service Card */
 .service-card {
-  background: rgba(0, 51, 153, 0.55);  /* deep blue glass */
+  background: rgba(0, 51, 153, 0.55);
   border-radius: 14px;
   padding: 18px 24px;
   display: inline-block;
@@ -298,7 +326,7 @@ counters.forEach(counter => observer.observe(counter));
   transition: all 0.3s ease;
   opacity: 0;
   transform: translateY(40px);
-  min-width: 220px; 
+  min-width: 220px;
 }
 
 .service-card:hover {
@@ -509,6 +537,7 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
 
