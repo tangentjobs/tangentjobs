@@ -93,9 +93,50 @@ footer a:hover { text-decoration:underline;}
 <!-- Marquee -->
 <div class="marquee-container">
   <div class="marquee">
-    <span>Tangent Group - UAE • 27 Years of Excellence in Recruitment & Workforce Solutions</span>
+    <span style="font-size:1.4em; font-family:'Garamond', 'Georgia', serif; font-weight:600;">
+
+      <!-- Part 1: Blue Gradient -->
+      <span style="background: linear-gradient(90deg, #003366, #1a73e8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Tangent Group UAE - 27 Years of Excellence in Recruitment & Workforce Solutions
+      </span>
+
+      <!-- Separator -->
+      <span style="color:#ff3333; font-weight:bold; margin:0 10px;">•</span>
+
+      <!-- Part 2: Red Gradient -->
+      <span style="background: linear-gradient(90deg, #ff3333, #d62828); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        "Tangent Helps you to find Talents ... and help Talents to find you"
+      </span>
+
+    </span>
   </div>
 </div>
+
+
+
+<style>
+.highlight-text {
+  font-size: 1.5em;       /* bigger text */
+  font-weight: 700;       /* bold text */
+}
+.marquee-container {
+  background:#fff; 
+  overflow:hidden; 
+  white-space:nowrap; 
+  border-top:2px solid #003366; 
+  border-bottom:2px solid #ff3333; 
+  padding:10px 0; 
+}
+.marquee {
+  display:inline-block; 
+  padding-left:100%; 
+  animation: marquee 40s linear infinite;
+}
+@keyframes marquee {  
+  0% {transform:translateX(0%);}  
+  100% {transform:translateX(-100%);} 
+}
+</style>
 
 <!-- Page Title -->
 <section class="page-title">
