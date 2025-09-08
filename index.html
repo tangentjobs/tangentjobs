@@ -370,38 +370,69 @@ counters.forEach(counter => observer.observe(counter));
     </div>
     <div class="row" style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
       <!-- Feature Card 1 -->
-      <div style="flex:1 1 300px; max-width:300px; background:#ffffff; border-radius:15px; padding:30px 20px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center; transition:all 0.3s;">
-        <img src="images/8148138-removebg-preview.png" alt="Integrity" style="margin-bottom:15px; border-radius:50%;">
-        <h4 style="color:#003366; margin-bottom:10px;">Integrity</h4>
-        <p style="color:#555;">We uphold the highest standards of integrity in all our actions, ensuring trust with clients.</p>
+      <div class="feature-card">
+        <img src="images/8148138-removebg-preview.png" alt="Integrity" class="feature-icon">
+        <h4>Integrity</h4>
+        <p>We uphold the highest standards of integrity in all our actions, ensuring trust with clients.</p>
       </div>
       <!-- Feature Card 2 -->
-      <div style="flex:1 1 300px; max-width:300px; background:#ffffff; border-radius:15px; padding:30px 20px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center; transition:all 0.3s;">
-        <img src="images/8148138-removebg-preview.png" alt="Innovation" style="margin-bottom:15px; border-radius:50%;">
-        <h4 style="color:#003366; margin-bottom:10px;">Innovation</h4>
-        <p style="color:#555;">We continuously innovate to provide creative and efficient solutions to our clients.</p>
+      <div class="feature-card">
+        <img src="images/8148138-removebg-preview.png" alt="Innovation" class="feature-icon">
+        <h4>Innovation</h4>
+        <p>We continuously innovate to provide creative and efficient solutions to our clients.</p>
       </div>
       <!-- Feature Card 3 -->
-      <div style="flex:1 1 300px; max-width:300px; background:#ffffff; border-radius:15px; padding:30px 20px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center; transition:all 0.3s;">
-        <img src="images/8148138-removebg-preview.png" alt="Excellence" style="margin-bottom:15px; border-radius:50%;">
-        <h4 style="color:#003366; margin-bottom:10px;">Excellence</h4>
-        <p style="color:#555;">We aim for excellence in every project, delivering top-notch results for our clients.</p>
+      <div class="feature-card">
+        <img src="images/8148138-removebg-preview.png" alt="Excellence" class="feature-icon">
+        <h4>Excellence</h4>
+        <p>We aim for excellence in every project, delivering top-notch results for our clients.</p>
       </div>
     </div>
   </div>
 </div>
 
 <style>
-/* Hover animation for cards */
-.row > div:hover {
+/* Feature Card */
+.feature-card {
+  flex: 1 1 300px;
+  max-width: 300px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.feature-card h4 {
+  color: #003366;
+  margin: 15px 0 10px;
+}
+
+.feature-card p {
+  color: #555;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+/* Icon Styling */
+.feature-icon {
+  width: 60px;   /* smaller icon size */
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Hover animation */
+.feature-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
 /* Responsive */
 @media(max-width:768px){
-  .row > div {
-    flex:1 1 100%;
+  .feature-card {
+    flex: 1 1 100%;
   }
 }
 </style>
@@ -516,6 +547,7 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
 
