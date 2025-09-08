@@ -314,35 +314,122 @@ counters.forEach(counter => observer.observe(counter));
 </style>
 
 <!-- Industries Section -->
-<section id="sectors">
-  <h2>Industries We Serve</h2>
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
-    <div class="industry-card">
-      <img src="images/eng.jpg" alt="Engineering">
-      <h3>Engineering & Contracting Sector</h3>
-    </div>
-    <div class="industry-card">
-      <img src="images/cosnt2.jpg" alt="Interior Decoration">
-      <h3>Interior Decoration</h3>
-    </div>
-    <div class="industry-card">
-      <img src="images/hospitality.jpeg" alt="FMCG & Hospitality">
-      <h3>FMCG & Hospitality</h3>
-    </div>
-    <div class="industry-card">
-      <img src="images/Guard.jpg" alt="Security & Cleaning">
-      <h3>Security & Cleaning Sector</h3>
-    </div>
-    <div class="industry-card">
-      <img src="images/office.jpeg" alt="Security & Cleaning">
-      <h3>Office Management</h3>
-    </div>
-    <div class="industry-card">
-      <img src="images/hospitality2.jpg" alt="Security & Cleaning">
-      <h3>Oil & Gas Field</h3>
+<section id="sectors" style="overflow:hidden; padding:60px 0; background:#f4f4f4;">
+  <h2 style="text-align:center; font-size:2.5em; margin-bottom:40px; color:#003366;">Industries We Serve</h2>
+
+  <div class="scrolling-industries">
+    <div class="industry-track">
+      <div class="industry-card">
+        <img src="images/eng.jpg" alt="Engineering">
+        <h3>Engineering & Contracting Sector</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/cosnt2.jpg" alt="Interior Decoration">
+        <h3>Interior Decoration</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/hospitality.jpeg" alt="FMCG & Hospitality">
+        <h3>FMCG & Hospitality</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/Guard.jpg" alt="Security & Cleaning">
+        <h3>Security & Cleaning Sector</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/office.jpeg" alt="Office Management">
+        <h3>Office Management</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/hospitality2.jpg" alt="Oil & Gas Field">
+        <h3>Oil & Gas Field</h3>
+      </div>
+
+      <!-- Duplicate for seamless scroll -->
+      <div class="industry-card">
+        <img src="images/eng.jpg" alt="Engineering">
+        <h3>Engineering & Contracting Sector</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/cosnt2.jpg" alt="Interior Decoration">
+        <h3>Interior Decoration</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/hospitality.jpeg" alt="FMCG & Hospitality">
+        <h3>FMCG & Hospitality</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/Guard.jpg" alt="Security & Cleaning">
+        <h3>Security & Cleaning Sector</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/office.jpeg" alt="Office Management">
+        <h3>Office Management</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/hospitality2.jpg" alt="Oil & Gas Field">
+        <h3>Oil & Gas Field</h3>
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+/* Scrolling wrapper */
+.scrolling-industries {
+  overflow: hidden;
+  width: 100%;
+}
+
+.industry-track {
+  display: flex;
+  gap: 30px;
+  animation: scrollIndustries 25s linear infinite;
+}
+
+@keyframes scrollIndustries {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* move half width for seamless loop */
+}
+
+/* Industry Card */
+.industry-card {
+  flex: 0 0 250px;
+  max-width: 250px;
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  transition:all 0.4s ease;
+  cursor:pointer;
+}
+
+.industry-card:hover {
+  transform:translateY(-8px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.industry-card img {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.industry-card h3 {
+  padding:15px;
+  margin:0;
+  font-size:1.2em;
+  color:#003366;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .industry-card {
+    flex: 0 0 200px;
+    max-width: 200px;
+  }
+}
+</style>
+
 <!-- Why Choose Us / Core Values Section -->
 <div class="container-fluid pt-5" style="background:#f4f4f4; padding-top:60px; padding-bottom:60px;">
   <div class="container" style="max-width:1200px; margin:0 auto;">
@@ -531,6 +618,7 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
 
