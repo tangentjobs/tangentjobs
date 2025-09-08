@@ -69,13 +69,15 @@
 <body>
 
 <!-- Header -->
-<header>
-  <div class="logo" style="display:flex; align-items:center; gap:20px;">
-    <img src="images/tangent-logo.jpeg" alt="Logo" style="width:120px; height:auto;"> <!-- Increased width -->
-    <h1 style="font-size:3em; color:#003366; margin:0;">Tangent Group</h1> <!-- Increased font size -->
+<header style="display:flex; align-items:center; justify-content:space-between; padding:20px 40px; background:#fff; border-bottom:2px solid #003366;">
+  <!-- Logo + Heading -->
+  <div class="logo-heading" style="display:flex; align-items:center; gap:20px;">
+    <img src="images/tangent-logo.jpeg" alt="Logo" style="width:120px; height:auto;"> <!-- bigger logo -->
+    <h1 style="font-size:3em; color:#003366; margin:0;">Tangent Group</h1> <!-- bigger heading -->
   </div>
-</header>
-  <nav style="display:flex; align-items:center; gap:20px;">
+
+  <!-- Navigation Menu -->
+  <nav style="display:flex; align-items:center; gap:25px; flex-wrap:nowrap;">
     <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Home</a>
     <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">About</a>
     <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Our Services</a>
@@ -84,6 +86,7 @@
     <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Contact</a>
   </nav>
 </header>
+
 
 <script>
 function highlightNav(el){
@@ -124,7 +127,7 @@ window.addEventListener('load', animateOnScroll);
 <div class="marquee-container">
   <div class="marquee">
     <span class="highlight-text">Tangent Group - UAE</span>
-    <span class="highlight-text">27 Years of Excellence in Recruitment & Workforce Solutions</span>
+    <span class="highlight-text">• 27 Years of Excellence in Recruitment & Workforce Solutions</span>
   </div>
 </div>
 
@@ -132,10 +135,10 @@ window.addEventListener('load', animateOnScroll);
 .highlight-text {
   font-size: 1.5em;       /* make text bigger */
   font-weight: 700;       /* bold text */
-  color: #d62828;         /* optional: make color stand out */
+  color: #d62828;         /* highlight color */
+  margin-right: 30px;     /* spacing between items */
 }
 </style>
-
 
 <!-- About Us & Stats -->
 <section class="about-section" style="padding:60px 20px; text-align:center; background:#f4f4f4;">
