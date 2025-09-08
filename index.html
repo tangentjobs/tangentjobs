@@ -264,7 +264,7 @@ counters.forEach(counter => observer.observe(counter));
 <style>
 .section-title {
   font-size: 2.5em;
-  color: #d32f2f; /* Red */
+  color: #003366; /* dark blue heading */
   font-weight: 700;
   margin-bottom: 10px;
   text-align: center;
@@ -274,16 +274,16 @@ counters.forEach(counter => observer.observe(counter));
   display: block;
   width: 60px;
   height: 3px;
-  background: #0d1b2a; /* Dark Blue underline */
+  background: #0077b6;
   margin: 10px auto 0;
   border-radius: 2px;
 }
 .section-desc {
   font-size: 1.1em;
-  color: #333;
+  color: #555;
   max-width: 650px;
   margin: 0 auto 40px;
-  line-height: 1.6;
+  line-height: 1.5;
   text-align: center;
 }
 
@@ -292,19 +292,20 @@ counters.forEach(counter => observer.observe(counter));
   display: flex;
   justify-content: center;
   gap: 20px;
-  overflow-x: auto; /* horizontal scroll on small screens */
+  overflow-x: auto;
   padding-bottom: 10px;
 }
 
-/* Service Cards: all same red → dark blue gradient */
+/* Transparent Cards with Red Outline and Dark Blue Text */
 .service-card {
   min-width: 220px;
   border-radius: 12px;
   padding: 25px 15px;
   text-align: center;
-  color: #fff;
-  font-weight: 600;
-  background: linear-gradient(135deg, #d32f2f, #0d1b2a); /* Red to Dark Blue gradient */
+  color: #003366; /* dark blue text */
+  font-weight: 500;
+  background: transparent; /* fully transparent */
+  border: 2px solid #d32f2f; /* red outline */
   transition: transform 0.3s, box-shadow 0.3s;
   flex-shrink: 0;
 }
@@ -315,8 +316,8 @@ counters.forEach(counter => observer.observe(counter));
 }
 
 .service-card:hover {
-  transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 
 /* Animation */
@@ -333,6 +334,7 @@ counters.forEach(counter => observer.observe(counter));
   .service-card { min-width: 180px; }
 }
 </style>
+
 
 <section id="sectors" style="overflow:hidden; padding:60px 0; background:#f4f4f4;">
   <h2 style="text-align:center; font-size:2.5em; margin-bottom:40px; color:#003366;">Industries We Serve</h2>
@@ -620,6 +622,7 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
 
