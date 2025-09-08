@@ -410,6 +410,133 @@ function scrollIndustries() {
 scrollIndustries();
 </script>
 
+ <!-- Global Presence Section -->
+<section id="offices" class="global-presence py-5" style="background:#f2f2f2;">
+  <div class="container text-center mb-5">
+    <h2 class="section-title">Our Global Presence</h2>
+    <p><strong>Main Office:</strong> UAE</p>
+    <p><strong>Branch Offices:</strong> India, Nepal, Pakistan, Bangladesh, Africa</p>
+    <p><strong>Associate Offices:</strong> Philippines, Sri Lanka, Indonesia, Myanmar, Egypt, Sudan, Ghana, Kenya, Uganda</p>
+  </div>
+
+  <div class="offices-row">
+    <!-- Dubai -->
+    <div class="office-circle fadeInUp">
+      <img src="images/tangent-logo.jpeg" alt="Dubai Office">
+      <h4>Dubai</h4>
+    </div>
+
+    <!-- India -->
+    <div class="office-circle fadeInUp">
+      <img src="//img1.wsimg.com/isteam/ip/99b47a99-a7c3-401e-85a9-2fc598b723b9/TANGENT%20HR%20CONNEXIONS%20PVT%20LTD%20-%20INDIA.png" alt="India Office">
+      <h4>India</h4>
+    </div>
+
+    <!-- Nepal -->
+    <div class="office-circle fadeInUp">
+      <img src="//img1.wsimg.com/isteam/ip/99b47a99-a7c3-401e-85a9-2fc598b723b9/THR%20NEPAL%20-%20LOGO.png" alt="Nepal Office">
+      <h4>Nepal</h4>
+    </div>
+
+    <!-- Bangladesh -->
+    <div class="office-circle fadeInUp">
+      <img src="//img1.wsimg.com/isteam/ip/99b47a99-a7c3-401e-85a9-2fc598b723b9/THR%20BANGLA%20-%20LOGO.png" alt="Bangladesh Office">
+      <h4>Bangladesh</h4>
+    </div>
+
+    <!-- Pakistan -->
+    <div class="office-circle fadeInUp">
+      <img src="//img1.wsimg.com/isteam/ip/99b47a99-a7c3-401e-85a9-2fc598b723b9/THR%20PAK%20-%20LOGO.png" alt="Pakistan Office">
+      <h4>Pakistan</h4>
+    </div>
+  </div>
+</section>
+
+<style>
+.section-title {
+  font-size: 2.5em;
+  color: #003366; /* dark blue */
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#offices p {
+  color: #003366;
+  font-size: 1em;
+  margin: 3px 0;
+}
+
+/* Offices Row */
+.offices-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 30px auto 0;
+}
+
+/* Circular Office Images with Transparent Background */
+.office-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 3px solid #003366; /* dark blue outline */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  padding: 5px;
+  background: transparent; /* fully transparent, no background color */
+  color: #003366; /* text color */
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(0, 51, 102, 0.3); /* subtle glow on outline */
+}
+
+.office-circle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover; /* fit image fully inside circle */
+}
+
+.office-circle h4 {
+  font-size: 0.95em;
+  text-align: center;
+  margin-top: 5px;
+  color: #003366; /* ensure text is visible */
+}
+
+/* Hover effect */
+.office-circle:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0,51,102,0.5); /* glow intensifies on hover */
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+.fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .office-circle {
+    width: 100px;
+    height: 100px;
+  }
+  .office-circle img {
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
+
+
 <!-- Why Choose Us / Core Values Section -->
 <div class="container-fluid pt-5" style="background:#f4f4f4; padding-top:60px; padding-bottom:60px;">
   <div class="container" style="max-width:1200px; margin:0 auto;">
@@ -651,6 +778,7 @@ footer .social-icons a:active {
 
 </body>
 </html>
+
 
 
 
