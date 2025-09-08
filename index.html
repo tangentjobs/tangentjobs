@@ -146,12 +146,19 @@ window.addEventListener('load', animateOnScroll);
 </div>
 
 <!-- Marquee -->
-<div class="marquee-container">
-  <div class="marquee">
-    <span>Tangent Group - UAE</span>
-    <span>27 Years of Excellence in Recruitment & Workforce Solutions!</span>
+<div class="marquee-container" style="background:#003366; padding:10px 0; overflow:hidden; white-space:nowrap;">
+  <div class="marquee" style="display:inline-block; animation:scroll-left 15s linear infinite; font-size:1.1em; color:#fff; font-weight:600;">
+    <span style="margin-right:50px;">✨ Tangent Group - UAE ✨</span>
+    <span style="margin-right:50px;">🏆 27 Years of Excellence in Recruitment & Workforce Solutions! 🌍</span>
   </div>
 </div>
+
+<style>
+@keyframes scroll-left {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+</style>
 
 <!-- About Us & Stats -->
 <section class="about-section" style="padding:60px 20px; text-align:center; background:#f4f4f4;">
@@ -505,5 +512,6 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
