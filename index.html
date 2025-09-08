@@ -133,19 +133,38 @@ window.addEventListener('load', animateOnScroll);
 <!-- Marquee -->
 <div class="marquee-container">
   <div class="marquee">
-    <span class="highlight-text">Tangent Group - UAE</span>
-    <span class="highlight-text">• 27 Years of Excellence in Recruitment & Workforce Solutions</span>
+    <span class="highlight-text">
+      <span style="color:#0077b6;">Tangent Group - UAE</span> 
+      • 
+      <span style="color:#d62828;">27 Years of Excellence in Recruitment & Workforce Solutions</span>
+    </span>
   </div>
 </div>
 
 <style>
 .highlight-text {
-  font-size: 1.5em;       /* make text bigger */
+  font-size: 1.5em;       /* bigger text */
   font-weight: 700;       /* bold text */
-  color: #d62828;         /* highlight color */
-  margin-right: 30px;     /* spacing between items */
+}
+.marquee-container {
+  background:#fff; 
+  overflow:hidden; 
+  white-space:nowrap; 
+  border-top:2px solid #003366; 
+  border-bottom:2px solid #ff3333; 
+  padding:10px 0; 
+}
+.marquee {
+  display:inline-block; 
+  padding-left:100%; 
+  animation: marquee 15s linear infinite;
+}
+@keyframes marquee {  
+  0% {transform:translateX(0%);}  
+  100% {transform:translateX(-100%);} 
 }
 </style>
+
 
 <section class="about-section" style="padding:30px 20px 60px 20px; background:#f4f4f4; text-align:center;">
   <!-- Reduced top padding from 60px → 30px -->
@@ -584,6 +603,7 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
 
