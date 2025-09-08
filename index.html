@@ -317,40 +317,77 @@ counters.forEach(counter => observer.observe(counter));
 <section id="sectors" style="overflow:hidden; padding:60px 0; background:#f4f4f4;">
   <h2 style="text-align:center; font-size:2.5em; margin-bottom:40px; color:#003366;">Industries We Serve</h2>
 
-  <div class="scrolling-industries-js">
-    <div class="industry-card">
-      <img src="images/eng.jpg" alt="Engineering">
-      <h3>Engineering & Contracting Sector</h3>
-    </div>
-    <div class="industry-card">
-      <img src="images/cosnt2.jpg" alt="Interior Decoration">
-      <h3>Interior Decoration</h3>
-    </div>
-    <div class="industry-card">
-      <img src="images/hospitality.jpeg" alt="FMCG & Hospitality">
-      <h3>FMCG & Hospitality</h3>
-    </div>
-    <div class="industry-card">
-      <img src="images/Guard.jpg" alt="Security & Cleaning">
-      <h3>Security & Cleaning Sector</h3>
-    </div>
-    <div class="industry-card">
-      <img src="images/office.jpeg" alt="Office Management">
-      <h3>Office Management</h3>
-    </div>
-    <div class="industry-card">
-      <img src="images/hospitality2.jpg" alt="Oil & Gas Field">
-      <h3>Oil & Gas Field</h3>
+  <div class="scrolling-industries">
+    <div class="scroll-track">
+      <!-- Original cards -->
+      <div class="industry-card">
+        <img src="images/eng.jpg" alt="Engineering">
+        <h3>Engineering & Contracting Sector</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/cosnt2.jpg" alt="Interior Decoration">
+        <h3>Interior Decoration</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/hospitality.jpeg" alt="FMCG & Hospitality">
+        <h3>FMCG & Hospitality</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/Guard.jpg" alt="Security & Cleaning">
+        <h3>Security & Cleaning Sector</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/office.jpeg" alt="Office Management">
+        <h3>Office Management</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/hospitality2.jpg" alt="Oil & Gas Field">
+        <h3>Oil & Gas Field</h3>
+      </div>
+      <!-- Duplicate cards for seamless loop -->
+      <div class="industry-card">
+        <img src="images/eng.jpg" alt="Engineering">
+        <h3>Engineering & Contracting Sector</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/cosnt2.jpg" alt="Interior Decoration">
+        <h3>Interior Decoration</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/hospitality.jpeg" alt="FMCG & Hospitality">
+        <h3>FMCG & Hospitality</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/Guard.jpg" alt="Security & Cleaning">
+        <h3>Security & Cleaning Sector</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/office.jpeg" alt="Office Management">
+        <h3>Office Management</h3>
+      </div>
+      <div class="industry-card">
+        <img src="images/hospitality2.jpg" alt="Oil & Gas Field">
+        <h3>Oil & Gas Field</h3>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-.scrolling-industries-js {
-  display: flex;
-  gap: 30px;
+.scrolling-industries {
   overflow: hidden;
   width: 100%;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 30px;
+  animation: scrollLoop 20s linear infinite;
+}
+
+@keyframes scrollLoop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* scroll half width (since we duplicated) */
 }
 
 .industry-card {
@@ -377,21 +414,6 @@ counters.forEach(counter => observer.observe(counter));
 }
 </style>
 
-<script>
-const container = document.querySelector('.scrolling-industries-js');
-let scrollAmount = 0;
-
-function scrollCards() {
-  scrollAmount += 1; // speed of scrolling
-  if(scrollAmount >= container.scrollWidth - container.clientWidth){
-    scrollAmount = 0; // reset scroll to start
-  }
-  container.scrollLeft = scrollAmount;
-  requestAnimationFrame(scrollCards);
-}
-
-scrollCards();
-</script>
 
 <!-- Why Choose Us / Core Values Section -->
 <div class="container-fluid pt-5" style="background:#f4f4f4; padding-top:60px; padding-bottom:60px;">
@@ -581,6 +603,7 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
 
