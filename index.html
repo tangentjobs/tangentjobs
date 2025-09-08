@@ -211,48 +211,46 @@ counters.forEach(counter => observer.observe(counter));
 </script>
 
 <!-- Our Services Section -->
-<div class="container-fluid pt-5" style="background:#f4f4f4; padding:100px 20px;">
-  <div class="container" style="max-width:1200px; text-align:center;">
+<div class="container-fluid pt-5" style="background:#f9f9f9; padding:80px 20px;">
+  <div class="container text-center" style="max-width:1000px;">
 
     <!-- Section Header -->
     <div class="row justify-content-center mb-5">
-      <div class="col-12 col-md-8">
-        <h2 class="section-title">
-          OUR SERVICES
-        </h2>
+      <div class="col-12">
+        <h2 class="section-title">OUR SERVICES</h2>
         <p class="section-desc">
-          We provide comprehensive recruitment and HR solutions tailored for your business
+          We provide comprehensive recruitment and HR solutions tailored for your business.
         </p>
       </div>
     </div>
 
     <!-- Services Grid -->
     <div class="row justify-content-center g-4">
-      <div class="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
         <div class="service-card fadeInUp" style="animation-delay:0.2s;">
           <h3>Overseas Recruitment</h3>
         </div>
       </div>
 
-      <div class="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
         <div class="service-card fadeInUp" style="animation-delay:0.4s;">
           <h3>Local Recruitment & Staffing</h3>
         </div>
       </div>
 
-      <div class="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
         <div class="service-card fadeInUp" style="animation-delay:0.6s;">
           <h3>Skilled, Semi-skilled & Unskilled Manpower Supply</h3>
         </div>
       </div>
 
-      <div class="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
         <div class="service-card fadeInUp" style="animation-delay:0.8s;">
           <h3>HR Consultancy & Workforce Planning</h3>
         </div>
       </div>
 
-      <div class="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
         <div class="service-card fadeInUp" style="animation-delay:1s;">
           <h3>Executive Search & Head Hunting</h3>
         </div>
@@ -265,72 +263,73 @@ counters.forEach(counter => observer.observe(counter));
 <style>
 /* Section Header */
 .section-title {
-  font-size: 2.6em;
+  font-size: 2.5em;
   color: #003366;
   font-weight: 700;
-  position: relative;
-  display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .section-title::after {
   content: "";
   display: block;
-  width: 70px;
-  height: 4px;
+  width: 60px;
+  height: 3px;
   background: #0077b6;
-  margin: 15px auto 0;
+  margin: 10px auto 0;
   border-radius: 2px;
 }
 
 .section-desc {
-  font-size: 1.15em;
+  font-size: 1.1em;
   color: #555;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto 40px;
+  line-height: 1.5;
 }
 
 /* Service Card */
 .service-card {
-  background: rgba(0, 51, 153, 0.55);
-  border-radius: 14px;
+  background: #fff;
+  border-radius: 12px;
   padding: 25px 20px;
   text-align: center;
-  color: #fff;
+  color: #003366;
+  font-weight: 500;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-  opacity: 0;
-  transform: translateY(40px);
   width: 100%;
   max-width: 280px;
-}
-
-.service-card:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-  background: rgba(0, 51, 153, 0.65);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid #e0e0e0;
 }
 
 .service-card h3 {
   margin: 0;
   font-size: 1.15em;
-  font-weight: 600;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 
 /* Animation */
 @keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(40px); }
+  0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
 .fadeInUp {
-  animation: fadeInUp 1s ease forwards;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .service-card {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
 }
 </style>
-
 
 <!-- Industries Section -->
 <section id="sectors">
@@ -368,7 +367,7 @@ counters.forEach(counter => observer.observe(counter));
     <div class="row" style="text-align:center; margin-bottom:50px;">
       <h2 style="font-size:2em; color:#ff3333; margin-top:0;">Why Choose Us</h2>
     </div>
-    <div class="row" style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
+    <div class="row" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
       <!-- Feature Card 1 -->
       <div class="feature-card">
         <img src="images/8148138-removebg-preview.png" alt="Integrity" class="feature-icon">
@@ -394,48 +393,51 @@ counters.forEach(counter => observer.observe(counter));
 <style>
 /* Feature Card */
 .feature-card {
-  flex: 1 1 300px;
-  max-width: 300px;
+  flex: 1 1 260px;           /* smaller width */
+  max-width: 260px;
   background: #ffffff;
-  border-radius: 15px;
-  padding: 30px 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 20px 15px;        /* decreased padding */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
   transition: all 0.3s;
 }
 
 .feature-card h4 {
   color: #003366;
-  margin: 15px 0 10px;
+  margin: 10px 0 8px;
+  font-size: 1.1em;
 }
 
 .feature-card p {
   color: #555;
-  font-size: 0.95em;
-  line-height: 1.5;
+  font-size: 0.9em;
+  line-height: 1.4;
 }
 
 /* Icon Styling */
 .feature-icon {
-  width: 60px;   /* smaller icon size */
-  height: 60px;
+  width: 50px;   /* smaller icon */
+  height: 50px;
   object-fit: contain;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 /* Hover animation */
 .feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 /* Responsive */
 @media(max-width:768px){
   .feature-card {
     flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 </style>
+
 
 <!-- Our Clients Section (Single Line Moving Logos) -->
 <section id="clients" style="padding:60px 20px; background:#ffffff; overflow:hidden; text-align:center;">
@@ -547,6 +549,7 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
 
