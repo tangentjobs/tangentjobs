@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tangent Group - Recruitment Agency UAE</title>
+<title>Blue & Red Website</title>
 <style>
   * { box-sizing: border-box; margin:0; padding:0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
   body { background:#f5f5f5; color:#333;}
@@ -68,46 +68,22 @@
 </head>
 <body>
 
+<!-- Header -->
 <header>
-  <div class="logo" style="display:flex; align-items:center; gap:15px;">
-  <img src="images/tangent-logo.jpeg" alt="Logo" style="height:80px; width:auto;">
-  <h1 style="font-size:2.5em; margin:0; color:#003366; font-weight:700;">
-    Tangent Group
-  </h1>
-</div>
+  <div class="logo" style="display:flex; align-items:center;">
+    <img src="https://via.placeholder.com/60x60/ff3333/ffffff?text=L" alt="Logo">
+    <h1>My Website</h1>
+  </div>
   <nav>
     <a href="#" onclick="highlightNav(this)">Home</a>
     <a href="#" onclick="highlightNav(this)">About</a>
-    <a href="#" onclick="highlightNav(this)">Our Services</a>
-    <a href="#" onclick="highlightNav(this)">Board Of Direcrors</a>
-    <a href="#" onclick="highlightNav(this)">Job Openings</a>
+    <a href="#" onclick="highlightNav(this)">Services</a>
     <a href="#" onclick="highlightNav(this)">Contact</a>
-    <!-- Load Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<div style="text-align:center; margin-top:15px;">
-  <a href="#" title="Facebook" 
-     style="margin-left:15px; color:#003366; font-size:20px; text-decoration:none; transition:0.3s;">
-     <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="#" title="Twitter" 
-     style="margin-left:15px; color:#003366; font-size:20px; text-decoration:none; transition:0.3s;">
-     <i class="fab fa-twitter"></i>
-  </a>
-  <a href="#" title="Instagram" 
-     style="margin-left:15px; color:#003366; font-size:20px; text-decoration:none; transition:0.3s;">
-     <i class="fab fa-instagram"></i>
-  </a>
-</div>
-
-<script>
-  // Inline hover effect using JS since we don’t use external CSS
-  document.querySelectorAll("div a").forEach(el => {
-    el.addEventListener("mouseenter", () => el.style.color = "#ff3333");
-    el.addEventListener("mouseleave", () => el.style.color = "#003366");
-  });
-</script>
-
+    <div class="social-icons">
+      <a href="#" title="Facebook">&#xf09a;</a>
+      <a href="#" title="Twitter">&#xf099;</a>
+      <a href="#" title="Instagram">&#xf16d;</a>
+    </div>
   </nav>
 </header>
 
@@ -116,8 +92,7 @@ function highlightNav(el){
   const links=document.querySelectorAll('header nav a');
   links.forEach(link=>link.style.backgroundColor='');
   el.style.backgroundColor='#ffcc00';
-} i need no come next line logo heading menau icon all are in same line 
-
+}
 
 // Scroll animation for sections
 function animateOnScroll() {
@@ -139,41 +114,22 @@ window.addEventListener('load', animateOnScroll);
 <!-- Slider -->
 <div class="slider">
   <div class="slides">
-    <img src="images/TANGENT HOME PAGE.jpg" alt="Slide 1">
-    <img src="images/cosnt2.jpg" alt="Slide 2">
-    <img src="images/eng.jpg" alt="Slide 3">
-    <img src="images/hospitality.jpeg" alt="Slide 4">
-    <img src="images/Guard.jpg" alt="Slide 5">
+    <img src="https://via.placeholder.com/1200x250/003366/ffffff?text=Slide+1" alt="Slide 1">
+    <img src="https://via.placeholder.com/1200x250/ff3333/ffffff?text=Slide+2" alt="Slide 2">
+    <img src="https://via.placeholder.com/1200x250/3366ff/ffffff?text=Slide+3" alt="Slide 3">
+    <img src="https://via.placeholder.com/1200x250/ff9900/ffffff?text=Slide+4" alt="Slide 4">
+    <img src="https://via.placeholder.com/1200x250/00cc99/ffffff?text=Slide+5" alt="Slide 5">
   </div>
 </div>
 
 <!-- Marquee -->
-<div class="marquee-container" style="background:#003366; padding:10px 0; overflow:hidden; white-space:nowrap;">
-  <div class="marquee" style="display:inline-block; animation:scroll-left 15s linear infinite; font-size:1.1em; color:#fff; font-weight:600;">
-    <span style="margin-right:50px; background:#ffcc00; color:#003366; padding:2px 6px; border-radius:4px;">
-      ✨ Tangent Group - UAE ✨
-    </span>
-    <span style="margin-right:50px; background:#ffcc00; color:#003366; padding:2px 6px; border-radius:4px;">
-      🏆 27 Years of Excellence in Recruitment & Workforce Solutions! 🌍
-    </span>
+<div class="marquee-container">
+  <div class="marquee">
+    <span>🔥 Latest Updates: Check our new services!</span>
+    <span>🌟 Offer: 30% off this month!</span>
+    <span>🚀 Subscribe for updates!</span>
   </div>
 </div>
-
-<style>
-@keyframes scroll-left {
-  0%   { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-</style>
-
-
-<style>
-@keyframes scroll-left {
-  0%   { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-</style>
-
 <!-- About Us & Stats -->
 <section class="about-section" style="padding:60px 20px; text-align:center; background:#f4f4f4;">
   <h2 style="font-size:2.5em; color:#003366; margin-bottom:40px;">About Us</h2>
@@ -526,6 +482,7 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
 
