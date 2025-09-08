@@ -117,6 +117,32 @@ footer a:hover { text-decoration:underline;}
 </div>
 
 
+
+<style>
+.highlight-text {
+  font-size: 1.5em;       /* bigger text */
+  font-weight: 700;       /* bold text */
+}
+.marquee-container {
+  background:#fff; 
+  overflow:hidden; 
+  white-space:nowrap; 
+  border-top:2px solid #003366; 
+  border-bottom:2px solid #ff3333; 
+  padding:10px 0; 
+}
+.marquee {
+  display:inline-block; 
+  padding-left:100%; 
+  animation: marquee 40s linear infinite;
+}
+@keyframes marquee {  
+  0% {transform:translateX(0%);}  
+  100% {transform:translateX(-100%);} 
+}
+</style>
+
+
 <!-- Services Row One Line -->
 <section id="services" style="padding:60px 0; background:#f4f4f4;">
   <h2 style="text-align:center; color:#003366; margin-bottom:30px;">Our Services</h2>
