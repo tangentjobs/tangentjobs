@@ -68,46 +68,55 @@
 </head>
 <body>
 
-<!-- Header -->
-<header style="display:flex; align-items:center; justify-content:space-between; padding:15px 30px; background:#fff; flex-wrap:wrap;">
-  <!-- Logo + Heading -->
-  <div style="display:flex; align-items:center; gap:15px;">
-    <img src="images/tangent-logo.jpeg" alt="Logo" style="height:80px; width:auto;">
-    <h1 style="font-size:2.5em; margin:0; color:#003366; font-weight:700;">Tangent Group</h1>
-  </div>
+<header>
+  <div class="logo" style="display:flex; align-items:center; gap:15px;">
+  <img src="images/tangent-logo.jpeg" alt="Logo" style="height:80px; width:auto;">
+  <h1 style="font-size:2.5em; margin:0; color:#003366; font-weight:700;">
+    Tangent Group
+  </h1>
+</div>
+  <nav>
+    <a href="#" onclick="highlightNav(this)">Home</a>
+    <a href="#" onclick="highlightNav(this)">About</a>
+    <a href="#" onclick="highlightNav(this)">Our Services</a>
+    <a href="#" onclick="highlightNav(this)">Board Of Direcrors</a>
+    <a href="#" onclick="highlightNav(this)">Job Openings</a>
+    <a href="#" onclick="highlightNav(this)">Contact</a>
+    <!-- Load Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Navigation Menu -->
-  <nav style="display:flex; align-items:center; gap:20px;">
-    <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Home</a>
-    <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">About</a>
-    <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Our Services</a>
-    <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Board Of Directors</a>
-    <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Job Openings</a>
-    <a href="#" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Contact</a>
-  </nav>
-
-  <!-- Social Icons -->
-  <div style="display:flex; align-items:center; gap:15px;">
-    <a href="#" title="Facebook" style="color:#003366; font-size:20px; text-decoration:none; transition:0.3s;"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" title="Twitter" style="color:#003366; font-size:20px; text-decoration:none; transition:0.3s;"><i class="fab fa-twitter"></i></a>
-    <a href="#" title="Instagram" style="color:#003366; font-size:20px; text-decoration:none; transition:0.3s;"><i class="fab fa-instagram"></i></a>
-  </div>
-</header>
+<div style="text-align:center; margin-top:15px;">
+  <a href="#" title="Facebook" 
+     style="margin-left:15px; color:#003366; font-size:20px; text-decoration:none; transition:0.3s;">
+     <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="#" title="Twitter" 
+     style="margin-left:15px; color:#003366; font-size:20px; text-decoration:none; transition:0.3s;">
+     <i class="fab fa-twitter"></i>
+  </a>
+  <a href="#" title="Instagram" 
+     style="margin-left:15px; color:#003366; font-size:20px; text-decoration:none; transition:0.3s;">
+     <i class="fab fa-instagram"></i>
+  </a>
+</div>
 
 <script>
-  // Highlight nav links on click
-  function highlightNav(el){
-    const links=document.querySelectorAll('header nav a');
-    links.forEach(link=>link.style.backgroundColor='');
-    el.style.backgroundColor='#ffcc00';
-  }
-
-  // Inline hover effect for social icons
-  document.querySelectorAll("header div a").forEach(el => {
+  // Inline hover effect using JS since we don’t use external CSS
+  document.querySelectorAll("div a").forEach(el => {
     el.addEventListener("mouseenter", () => el.style.color = "#ff3333");
     el.addEventListener("mouseleave", () => el.style.color = "#003366");
   });
 </script>
+
+  </nav>
+</header>
+
+<script>
+function highlightNav(el){
+  const links=document.querySelectorAll('header nav a');
+  links.forEach(link=>link.style.backgroundColor='');
+  el.style.backgroundColor='#ffcc00';
+} i need no come next line logo heading menau icon all are in same line 
 
 
 // Scroll animation for sections
@@ -517,6 +526,7 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
 
