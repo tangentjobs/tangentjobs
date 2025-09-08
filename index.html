@@ -669,140 +669,230 @@ scrollIndustries();
 
 <!-- Footer Section -->
 <footer style="background:#003366; color:#fff; padding:50px 20px; width:100%;">
-  <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; max-width:1200px; margin:0 auto;">
-
-    <!-- Tangent Group Info with Logo (Center) -->
-    <div style="flex:1; min-width:220px; text-align:center;">
-      <img src="images/tangent-logo.jpeg" alt="Tangent Group Logo" style="width:100px; height:auto; margin-bottom:10px;">
-      <h3 style="color:#ff3333; font-size:1.3em; margin-bottom:8px;">Tangent Group</h3>
-      <p style="color:#fff; font-size:0.95em; margin:0; line-height:1.5;">
-        Global HR Solutions Partner
-      </p>
+  <div class="footer-container">
+    
+    <!-- Tangent Group Info (Center) -->
+    <div class="footer-column center-column">
+      <img src="images/tangent-logo.jpeg" alt="Tangent Group Logo" class="footer-logo">
+      <h3 class="footer-title">Tangent Group</h3>
+      <p class="footer-desc">Global HR Solutions Partner</p>
     </div>
 
     <!-- Quick Links (Left aligned) -->
-<div style="flex:1; min-width:220px; text-align:left;">
-  <h3 style="color:#ff3333; font-size:1.3em; margin-bottom:20px; text-align:left;">
-    Quick Links
-  </h3>
-  <nav style="display:flex; flex-direction:column; gap:6px; text-align:left;">
-    <a href="#" style="color:#003366; text-decoration:none;">Home</a>
-    <a href="#" style="color:#003366; text-decoration:none;">About</a>
-    <a href="#" style="color:#003366; text-decoration:none;">Our Services</a>
-    <a href="#" style="color:#003366; text-decoration:none;">Board Of Directors</a>
-    <a href="#" style="color:#003366; text-decoration:none;">Job Openings</a>
-    <a href="#" style="color:#003366; text-decoration:none;">Contact</a>
-  </nav>
-</div>
-
+    <div class="footer-column">
+      <h3 class="footer-title">Quick Links</h3>
+      <nav class="footer-nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Our Services</a>
+        <a href="#">Board Of Directors</a>
+        <a href="#">Job Openings</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
 
     <!-- Contact Info (Left aligned) -->
-    <div style="flex:1; min-width:220px; text-align:left;">
-      <h3 style="color:#ff3333; font-size:1.3em; margin-bottom:20px;">Contact Us</h3>
-      <div style="display:flex; flex-direction:column; gap:15px;">
-
-        <!-- Phone -->
-        <div style="display:flex; align-items:center; gap:12px;">
-          <div style="width:50px; height:50px; border-radius:50%; background:linear-gradient(135deg,#003366,#ff3333); color:#fff; display:flex; align-items:center; justify-content:center; font-size:22px;">
-            <i class="fas fa-phone"></i>
-          </div>
-          <p style="margin:0; font-size:1em;">+971 4 3979686 | 04 - 3465669</p>
+    <div class="footer-column">
+      <h3 class="footer-title">Contact Us</h3>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <p>+971 4 3979686 | 04 - 3465669</p>
         </div>
-
-        <!-- Email -->
-        <div style="display:flex; align-items:center; gap:12px;">
-          <div style="width:50px; height:50px; border-radius:50%; background:linear-gradient(135deg,#003366,#ff3333); color:#fff; display:flex; align-items:center; justify-content:center; font-size:22px;">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <p style="margin:0; font-size:1em;"><a href="mailto:hrteam@emirates.net.ae" style="color:#fff; text-decoration:none;">hrteam@emirates.net.ae</a></p>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <p><a href="mailto:hrteam@emirates.net.ae">hrteam@emirates.net.ae</a></p>
         </div>
-
-        <!-- Website -->
-        <div style="display:flex; align-items:center; gap:12px;">
-          <div style="width:50px; height:50px; border-radius:50%; background:linear-gradient(135deg,#003366,#ff3333); color:#fff; display:flex; align-items:center; justify-content:center; font-size:22px;">
-            <i class="fas fa-globe"></i>
-          </div>
-          <p style="margin:0; font-size:1em;"><a href="http://www.tangentdubai.com" target="_blank" style="color:#fff; text-decoration:none;">www.tangentdubai.com</a></p>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-globe"></i></div>
+          <p><a href="http://www.tangentdubai.com" target="_blank">www.tangentdubai.com</a></p>
         </div>
-
-        <!-- Address -->
-        <div style="display:flex; align-items:center; gap:12px;">
-          <div style="width:50px; height:50px; border-radius:50%; background:linear-gradient(135deg,#003366,#ff3333); color:#fff; display:flex; align-items:center; justify-content:center; font-size:22px;">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <p style="margin:0; font-size:1em;">Fortune Tower - DMCC, JLT, Dubai</p>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <p>Fortune Tower - DMCC, JLT, Dubai</p>
         </div>
-
       </div>
     </div>
 
   </div>
 
   <!-- Footer Bottom -->
- <!-- Font Awesome 6 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <div style="border-top:1px solid rgba(255,255,255,0.2); margin-top:30px; padding-top:15px; display:flex; justify-content:center; align-items:center; gap:40px; flex-wrap:wrap; font-size:0.85em; color:#e0e0e0; max-width:1200px; margin:30px auto 0 auto;">
+  <div class="footer-bottom">
     <span>&copy; 2025 Tangent Group. All Rights Reserved.</span>
-    <div class="social-icons" style="display:flex; gap:20px; justify-content:center;">
-      <a href="https://www.facebook.com/profile.php?id=61577614177171" target="_blank" style="color:#ff3333; font-size:26px;">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/rahuldxbcareers2u/" target="_blank" style="color:#003366; font-size:26px;">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="https://www.instagram.com/tangent_hr_solution/" target="_blank" style="color:#ff3333; font-size:26px;">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.tiktok.com/@tangenthrjobs?lang=en" target="_blank" style="color:#003366; font-size:26px;">
-        <i class="fa-brands fa-tiktok"></i>
-      </a>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61577614177171" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.linkedin.com/in/rahuldxbcareers2u/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/tangent_hr_solution/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@tangenthrjobs?lang=en" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
     </div>
   </div>
 </footer>
 
-
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
 <style>
-/* Quick Links hover */
-footer nav a {
-  color:#fff;
-  text-decoration:none;
-  transition:0.3s;
-}
-footer nav a:hover,
-footer nav a:active {
-  color:#ffcc00; /* yellow on hover/click */
+/* Footer container and columns */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
 }
 
-/* Social Icons hover */
-footer .social-icons a {
-  transition:0.3s;
+.footer-column {
+  flex: 1;
+  min-width: 220px;
 }
-footer .social-icons a:hover,
-footer .social-icons a:active {
-  color:#ffcc00; /* yellow on hover/click */
+
+.center-column {
+  text-align: center;
+}
+
+/* Footer logo and titles */
+.footer-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-title {
+  color: #ff3333;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.center-column .footer-title {
+  text-align: center;
+}
+
+.footer-desc {
+  color: #fff;
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Quick Links */
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-nav a:hover,
+.footer-nav a:active {
+  color: #ffcc00; /* yellow on hover */
+}
+
+/* Contact Info */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 1em;
+  color: #fff;
+}
+
+.contact-item a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-item a:hover {
+  color: #ffcc00;
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#003366,#ff3333);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 30px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  font-size: 0.85em;
+  color: #e0e0e0;
+}
+
+/* Social Icons */
+.footer-bottom .social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.footer-bottom .social-icons a {
+  color: #ff3333;
+  font-size: 26px;
+  transition: 0.3s;
+}
+
+.footer-bottom .social-icons a:hover {
+  color: #ffcc00;
 }
 
 /* Responsive */
 @media (max-width:768px) {
-  footer > div:first-child, 
-  footer > div:last-child {
-    flex-direction:column;
-    align-items:center;
-    gap:20px;
-    text-align:center;
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
 
-  footer nav, 
-  footer .contact-info {
-    text-align:center;
-    align-items:center;
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-title {
+    text-align: center !important;
+  }
+
+  .footer-nav, .contact-info {
+    align-items: center;
+    text-align: center;
   }
 }
 </style>
 
+
 </body>
 </html>
+
 
 
 
