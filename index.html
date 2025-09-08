@@ -506,48 +506,48 @@ scrollIndustries();
 
 <!-- Footer Section -->
 <footer style="background:#003366; color:#fff; padding:40px 20px;">
-  <!-- Main Footer Row: 3 sections side by side -->
-  <div style="display:flex; justify-content:space-between; align-items:flex-start; max-width:1200px; margin:0 auto; flex-wrap:wrap; gap:20px;">
+  <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px;">
 
-    <!-- Tangent Group -->
-    <div style="flex:1; min-width:200px; text-align:center;">
-      <span style="color:#ff3333; font-weight:600; font-size:1.1em;">Tangent Group</span>
-      <p style="margin:5px 0 0 0; font-size:0.9em; color:#fff;">Global HR Solutions Partner</p>
+    <!-- Tangent Group Info -->
+    <div style="flex:1; min-width:220px; text-align:center;">
+      <h3 style="color:#ff3333; font-size:1.3em; margin-bottom:8px;">Tangent Group</h3>
+      <p style="color:#fff; font-size:0.95em; margin:0;">Global HR Solutions Partner</p>
     </div>
 
     <!-- Quick Links -->
-    <div style="flex:1; min-width:200px; text-align:center;">
-      <span style="color:#ff3333; font-weight:600; font-size:1.1em;">Quick Links</span>
-      <p style="margin:5px 0 0 0; font-size:0.9em;">
-  <a href="#" style="color:#fff; text-decoration:none;">Home</a><br>
-  <a href="#" style="color:#fff; text-decoration:none;">About</a><br>
-  <a href="#" style="color:#fff; text-decoration:none;">Our Services</a><br>
-  <a href="#" style="color:#fff; text-decoration:none;">Board Of Directors</a><br>
-  <a href="#" style="color:#fff; text-decoration:none;">Job Openings</a><br>
-  <a href="#" style="color:#fff; text-decoration:none;">Contact</a>
-</p>
+    <div style="flex:1; min-width:220px; text-align:center;">
+      <h3 style="color:#ff3333; font-size:1.3em; margin-bottom:8px;">Quick Links</h3>
+      <nav style="display:flex; flex-direction:column; gap:6px;">
+        <a href="#" style="color:#fff; text-decoration:none;">Home</a>
+        <a href="#" style="color:#fff; text-decoration:none;">About</a>
+        <a href="#" style="color:#fff; text-decoration:none;">Our Services</a>
+        <a href="#" style="color:#fff; text-decoration:none;">Board Of Directors</a>
+        <a href="#" style="color:#fff; text-decoration:none;">Job Openings</a>
+        <a href="#" style="color:#fff; text-decoration:none;">Contact</a>
+      </nav>
     </div>
 
-    <!-- Contact Us with Icons -->
-    <div style="flex:1; min-width:200px; text-align:center;">
-  <span style="color:#ff3333; font-weight:600; font-size:1.1em;">Contact Us</span>
-  <p style="margin:5px 0 0 0; font-size:0.9em; color:#fff;">
-    📞 +971 4 3979686 | 04 - 3465669<br>
-    ✉️ hrteam@emirates.net.ae<br>
-    🌐 <a href="http://www.tangentdubai.com" style="color:#fff; text-decoration:none;">www.tangentdubai.com</a><br>
-    📍 Dubai, UAE
-  </p>
-</div>
+    <!-- Contact Info -->
+    <div style="flex:1; min-width:220px; text-align:center;">
+      <h3 style="color:#ff3333; font-size:1.3em; margin-bottom:8px;">Contact Us</h3>
+      <p style="color:#fff; font-size:0.95em; margin:0; line-height:1.6;">
+        📞 +971 4 3979686 | 04 - 3465669<br>
+        ✉️ hrteam@emirates.net.ae<br>
+        🌐 <a href="http://www.tangentdubai.com" style="color:#fff; text-decoration:none;">www.tangentdubai.com</a><br>
+        📍 Dubai, UAE
+      </p>
+    </div>
+
   </div>
 
-  <!-- Footer Bottom: separate line -->
-  <div style="border-top:1px solid rgba(255,255,255,0.2); margin-top:20px; padding-top:10px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; font-size:0.85em; color:#e0e0e0; max-width:1200px; margin:20px auto 0 auto;">
+  <!-- Footer Bottom -->
+  <div style="border-top:1px solid rgba(255,255,255,0.2); margin-top:25px; padding-top:15px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; font-size:0.85em; color:#e0e0e0; max-width:1200px; margin-left:auto; margin-right:auto;">
     <span>&copy; 2025 Tangent Group. All Rights Reserved.</span>
     <div class="social-icons" style="display:flex; gap:15px; justify-content:center;">
-      <a href="#" style="color:#fff; font-size:16px; text-decoration:none;">&#xf09a;</a>
-      <a href="#" style="color:#fff; font-size:16px; text-decoration:none;">&#xf099;</a>
-      <a href="#" style="color:#fff; font-size:16px; text-decoration:none;">&#xf16d;</a>
-      <a href="#" style="color:#fff; font-size:16px; text-decoration:none;">&#xf0e1;</a>
+      <a href="#" style="color:#fff; font-size:18px; text-decoration:none;">&#xf09a;</a>
+      <a href="#" style="color:#fff; font-size:18px; text-decoration:none;">&#xf099;</a>
+      <a href="#" style="color:#fff; font-size:18px; text-decoration:none;">&#xf16d;</a>
+      <a href="#" style="color:#fff; font-size:18px; text-decoration:none;">&#xf0e1;</a>
     </div>
   </div>
 </footer>
@@ -560,21 +560,31 @@ footer a:hover {
   color:#ff3333;
   text-decoration:underline;
 }
+
+/* Responsive Footer */
 @media (max-width:768px) {
   footer > div:first-child {
     flex-direction:column;
+    align-items:center;
+    gap:20px;
     text-align:center;
-    gap:15px;
   }
+
   .social-icons {
     margin-top:10px;
+  }
+
+  footer > div:last-child {
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
   }
 }
 </style>
 
-
 </body>
 </html>
+
 
 
 
