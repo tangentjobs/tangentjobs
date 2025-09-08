@@ -415,17 +415,20 @@ scrollIndustries();
   <div class="container text-center mb-5">
     <h2 class="section-title">Our Global Presence</h2>
     <p><strong>Main Office:</strong> UAE</p>
-    <p><strong>Branch Offices:</strong> India, Nepal, Pakistan, Bangladesh, Africa</p>
+    <p><strong>Branch Offices:</strong> India, Nepal, Pakistan, Bangladesh</p>
     <p><strong>Associate Offices:</strong> Philippines, Sri Lanka, Indonesia, Myanmar, Egypt, Sudan, Ghana, Kenya, Uganda</p>
   </div>
 
+  <!-- Branch Offices Row -->
   <div class="offices-row">
-    <!-- Dubai -->
+    <!-- Dubai (Main Office) under the row -->
+  <div class="offices-row justify-center mt-4">
     <div class="office-circle fadeInUp">
       <img src="images/tangent-logo.jpeg" alt="Dubai Office">
       <h4>Dubai</h4>
     </div>
-
+  </div>
+   
     <!-- India -->
     <div class="office-circle fadeInUp">
       <img src="//img1.wsimg.com/isteam/ip/99b47a99-a7c3-401e-85a9-2fc598b723b9/TANGENT%20HR%20CONNEXIONS%20PVT%20LTD%20-%20INDIA.png" alt="India Office">
@@ -458,18 +461,20 @@ scrollIndustries();
   color: #003366; /* dark blue */
   font-weight: 700;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 #offices p {
   color: #003366;
   font-size: 1em;
   margin: 3px 0;
+  text-align: center; /* center-align all text */
 }
 
 /* Offices Row */
 .offices-row {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* center all circles */
   flex-wrap: wrap;
   gap: 40px;
   max-width: 1200px;
@@ -535,7 +540,6 @@ scrollIndustries();
   }
 }
 </style>
-
 
 <!-- Why Choose Us / Core Values Section -->
 <div class="container-fluid pt-5" style="background:#f4f4f4; padding-top:60px; padding-bottom:60px;">
@@ -778,6 +782,7 @@ footer .social-icons a:active {
 
 </body>
 </html>
+
 
 
 
