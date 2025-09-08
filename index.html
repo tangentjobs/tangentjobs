@@ -246,7 +246,7 @@ counters.forEach(counter => observer.observe(counter));
 <div class="container-fluid py-5" style="background:#f2f2f2;">
   <div style="text-align:center; margin-bottom:50px;">
   <h2 class="section-title" style="font-size:2.5em; color:#003366; margin-bottom:20px;">OUR SERVICES</h2>
-  <p class="section-desc" style="font-size:1.3em; color:#555; max-width:800px; margin:0 auto; line-height:1.6;">
+  <p class="section-desc" style="font-size:1.5em; color:#555; max-width:800px; margin:0 auto; line-height:1.6;">
     We provide comprehensive recruitment and HR solutions tailored for your business.
   </p>
 </div>
@@ -355,7 +355,7 @@ counters.forEach(counter => observer.observe(counter));
       </div>
       <div class="industry-card">
         <img src="images/Guard.jpg" alt="Security & Cleaning">
-        <h3>Security & Cleaning Sector</h3>
+        <h3>Security & Cleaning </h3>
       </div>
       <div class="industry-card">
         <img src="images/office.jpeg" alt="Office Management">
@@ -419,8 +419,14 @@ scrollIndustries();
     <p class="office-desc"><strong>Associate Offices:</strong> Philippines, Sri Lanka, Indonesia, Myanmar, Egypt, Sudan, Ghana, Kenya, Uganda</p>
   </div>
 
-  <!-- Branch Offices Row -->
+  <!-- Offices Row -->
   <div class="offices-row">
+    <!-- Dubai (Main Office) -->
+    <div class="office-circle fadeInUp">
+      <img src="images/tangent-logo.jpeg" alt="Dubai Office">
+      <h4>Dubai</h4>
+    </div>
+
     <!-- India -->
     <div class="office-circle fadeInUp">
       <img src="//img1.wsimg.com/isteam/ip/99b47a99-a7c3-401e-85a9-2fc598b723b9/TANGENT%20HR%20CONNEXIONS%20PVT%20LTD%20-%20INDIA.png" alt="India Office">
@@ -445,20 +451,12 @@ scrollIndustries();
       <h4>Pakistan</h4>
     </div>
   </div>
-
-  <!-- Dubai (Main Office) under the row -->
-  <div class="offices-row justify-center mt-4">
-    <h3 class="dubai-title">Dubai</h3>
-    <div class="office-circle fadeInUp">
-      <img src="images/tangent-logo.jpeg" alt="Dubai Office">
-    </div>
-  </div>
 </section>
 
 <style>
 .section-title {
   font-size: 2.5em;
-  color: #003366; /* dark blue */
+  color: #003366;
   font-weight: 700;
   margin-bottom: 20px;
   text-align: center;
@@ -466,62 +464,56 @@ scrollIndustries();
 
 .office-desc {
   color: #003366;
-  font-size: 1.2em; /* bigger description */
-  margin: 5px 0;
+  font-size: 1.3em; /* bigger description */
+  margin: 8px 0;
   text-align: center;
 }
 
-/* Dubai heading outside the circle */
-.dubai-title {
-  color: #003366;
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-/* Offices Row */
 .offices-row {
   display: flex;
-  justify-content: center; /* center all circles */
+  justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
   max-width: 1200px;
   margin: 30px auto 0;
   align-items: center;
-  flex-direction: row;
 }
 
-/* Circular Office Images with Transparent Background */
 .office-circle {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  border: 3px solid #003366; /* dark blue outline */
+  border: 3px solid #003366;
   border-radius: 50%;
   width: 120px;
   height: 120px;
   padding: 5px;
-  background: transparent; /* fully transparent, no background color */
+  background: transparent;
   transition: transform 0.3s, box-shadow 0.3s;
   flex-shrink: 0;
-  box-shadow: 0 0 10px rgba(0, 51, 102, 0.3); /* subtle glow on outline */
+  box-shadow: 0 0 10px rgba(0, 51, 102, 0.3);
 }
 
 .office-circle img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  object-fit: cover; /* fit image fully inside circle */
+  object-fit: cover;
 }
 
-/* Hover effect */
+.office-circle h4 {
+  font-size: 1.2em; /* bigger office name */
+  color: #003366;
+  margin: 5px 0 0 0;
+  text-align: center;
+}
+
 .office-circle:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(0,51,102,0.5); /* glow intensifies on hover */
+  box-shadow: 0 0 15px rgba(0,51,102,0.5);
 }
 
-/* Animation */
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px);}
   100% { opacity: 1; transform: translateY(0);}
@@ -540,11 +532,12 @@ scrollIndustries();
     width: 100%;
     height: 100%;
   }
-  .dubai-title {
+  .office-circle h4 {
     font-size: 1em;
   }
 }
 </style>
+
 
 <!-- Why Choose Us / Core Values Section -->
 <div class="container-fluid pt-5" style="background:#f4f4f4; padding-top:60px; padding-bottom:60px;">
@@ -808,6 +801,7 @@ footer .social-icons a:active {
 
 </body>
 </html>
+
 
 
 
