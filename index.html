@@ -71,7 +71,7 @@
 <!-- Header -->
 <header>
   <div class="logo" style="display:flex; align-items:center;">
-    <img src="https://via.placeholder.com/60x60/ff3333/ffffff?text=L" alt="Logo">
+    <img src="images/tangent-logo.jpeg" alt="Logo">
     <h1>Tangent Group</h1>
   </div>
   <nav>
@@ -116,37 +116,42 @@ window.addEventListener('load', animateOnScroll);
 <!-- Slider -->
 <div class="slider">
   <div class="slides">
-    <img src="https://via.placeholder.com/1200x250/003366/ffffff?text=Slide+1" alt="Slide 1">
-    <img src="https://via.placeholder.com/1200x250/ff3333/ffffff?text=Slide+2" alt="Slide 2">
-    <img src="https://via.placeholder.com/1200x250/3366ff/ffffff?text=Slide+3" alt="Slide 3">
-    <img src="https://via.placeholder.com/1200x250/ff9900/ffffff?text=Slide+4" alt="Slide 4">
-    <img src="https://via.placeholder.com/1200x250/00cc99/ffffff?text=Slide+5" alt="Slide 5">
+    <img src="images/TANGENT HOME PAGE.jpg" alt="Slide 1">
+    <img src="images/cosnt2.jpg" alt="Slide 2">
+    <img src="images/eng.jpg" alt="Slide 3">
+    <img src="images/hospitality.jpeg" alt="Slide 4">
+    <img src="images/Guard.jpg" alt="Slide 5">
   </div>
 </div>
 
 <!-- Marquee -->
 <div class="marquee-container">
   <div class="marquee">
-    <span>ðŸ”¥ Tangent Group - UAE</span>
-    <span>ðŸŒŸ 27 Years of Excellence in Recruitment & Workforce Solutions!</span>
+    <span>Tangent Group - UAE</span>
+    <span>27 Years of Excellence in Recruitment & Workforce Solutions!</span>
   </div>
 </div>
 
 <!-- About Us & Stats -->
 <section class="about-section" style="padding:60px 20px; text-align:center; background:#f4f4f4;">
   <h2 style="font-size:2.5em; color:#003366; margin-bottom:40px;">About Us</h2>
-  <p style="font-size:1.2em; max-width:800px; margin:0 auto 60px auto; color:#333;">
-    Founded 27 years ago in the UAE, Tangent Group is a trusted recruitment 
-agency specializing in overseas and local manpower supply. Over the years, we have 
-successfully deployed more than We are the world leaders in an innovative workforce, a 
-single stop solution provider for all the Business related needs inclusive but not limited
-to HR & Recruitment. Tangent connects the human potentials to the power of business advisory for 
-clients and candidates. We serve both large and small organizations across all industry sectors through different brands. Tangent operates a worldwide network of offices in different continents ,“A Global reach with a local touch”
+  <p style="font-size:1.2em; max-width:800px; margin:0 auto 20px auto; color:#333; text-align:justify; line-height:1.6;">
+    Founded 27 years ago in the UAE, <strong>Tangent Group</strong> is a trusted recruitment agency 
+    specializing in overseas and local manpower supply. Over the years, we have successfully deployed 
+    thousands of candidates and established ourselves as world leaders in providing innovative workforce solutions. 
+    As a single-stop provider for all business-related needs, including HR & Recruitment, Tangent connects human potential 
+    with the power of business advisory for both clients and candidates. We proudly serve organizations of all sizes 
+    across various industry sectors through our specialized brands and maintain a worldwide network of offices across 
+    continents — <em>“A global reach with a local touch.”</em>
+</p>
 
-Our team provide strategic business consulting, application services, technology solutions 
-and Management Services.We have extensive experience in successfully executing HR and Recruitment projects throughout the UAE and other GCC countries including Oman, Qatar, Saudi Arabia and Kuwait. <strong>35,000 employees</strong> across the UAE in various industries. Our reputation is built on integrity, professionalism, and a global network of talent partners.
-  </p>
-
+<p style="font-size:1.2em; max-width:800px; margin:0 auto; color:#333; text-align:justify; line-height:1.6;">
+    Our team provides strategic business consulting, application services, technology solutions, 
+    and management services. With extensive experience in executing HR and recruitment projects across 
+    the UAE and GCC countries including Oman, Qatar, Saudi Arabia, and Kuwait, we continue to deliver 
+    exceptional results. Today, we manage over <strong>35,000 employees</strong> across diverse industries in the UAE. 
+    Our reputation is built on integrity, professionalism, and a strong global network of talent partners.
+</p>
   <div class="stats" style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap;">
     
     <!-- Circle 1 -->
@@ -216,33 +221,33 @@ counters.forEach(counter => observer.observe(counter));
     </div>
 
     <!-- Services Grid -->
-    <div class="row g-4 justify-content-center">
+    <div class="row g-4 justify-content-center text-center">
 
-      <div class="col-md-6 col-lg-4">
+      <div class="col-auto">
         <div class="service-card fadeInUp" style="animation-delay:0.2s;">
           <h3>Overseas Recruitment</h3>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
+      <div class="col-auto">
         <div class="service-card fadeInUp" style="animation-delay:0.4s;">
           <h3>Local Recruitment & Staffing</h3>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
+      <div class="col-auto">
         <div class="service-card fadeInUp" style="animation-delay:0.6s;">
           <h3>Skilled, Semi-skilled & Unskilled Manpower Supply</h3>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
+      <div class="col-auto">
         <div class="service-card fadeInUp" style="animation-delay:0.8s;">
           <h3>HR Consultancy & Workforce Planning</h3>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
+      <div class="col-auto">
         <div class="service-card fadeInUp" style="animation-delay:1s;">
           <h3>Executive Search & Head Hunting</h3>
         </div>
@@ -257,7 +262,8 @@ counters.forEach(counter => observer.observe(counter));
 .service-card {
   background: rgba(0, 51, 153, 0.55);  /* deep blue glass */
   border-radius: 14px;
-  padding: 20px 18px;
+  padding: 18px 24px;  /* smaller, compact */
+  display: inline-block;  /* shrink to content */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0,0,0,0.25);
@@ -266,6 +272,7 @@ counters.forEach(counter => observer.observe(counter));
   transition: all 0.3s ease;
   opacity: 0;
   transform: translateY(40px);
+  min-width: 220px; /* keeps consistency */
 }
 
 .service-card:hover {
@@ -276,7 +283,7 @@ counters.forEach(counter => observer.observe(counter));
 
 .service-card h3 {
   margin: 0;
-  font-size: 1.25em;
+  font-size: 1.1em;
   font-weight: 600;
 }
 
@@ -291,56 +298,32 @@ counters.forEach(counter => observer.observe(counter));
 }
 </style>
 
-<script>
-// Scroll-trigger animation
-document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll(".fadeInUp");
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.animationPlayState = "running";
-      }
-    });
-  }, { threshold: 0.2 });
-
-  elements.forEach(el => {
-    el.style.animationPlayState = "paused"; // Pause until in view
-    observer.observe(el);
-  });
-});
-</script>
-
-
-
-
-
 <!-- Industries Section -->
 <section id="sectors">
   <h2>Industries We Serve</h2>
   <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
     <div class="industry-card">
-      <img src="https://via.placeholder.com/250x160/003366/ffffff?text=Engineering" alt="Engineering">
+      <img src="images/eng.jpg" alt="Engineering">
       <h3>Engineering & Contracting Sector</h3>
     </div>
     <div class="industry-card">
-      <img src="https://via.placeholder.com/250x160/ff3333/ffffff?text=Interior" alt="Interior Decoration">
+      <img src="images/cosnt2.jpg" alt="Interior Decoration">
       <h3>Interior Decoration</h3>
     </div>
     <div class="industry-card">
-      <img src="https://via.placeholder.com/250x160/3366ff/ffffff?text=Hospitality" alt="FMCG & Hospitality">
+      <img src="images/hospitality.jpeg" alt="FMCG & Hospitality">
       <h3>FMCG & Hospitality</h3>
     </div>
     <div class="industry-card">
-      <img src="https://via.placeholder.com/250x160/ff9900/ffffff?text=Security" alt="Security & Cleaning">
+      <img src="images/Guard.jpg" alt="Security & Cleaning">
       <h3>Security & Cleaning Sector</h3>
     </div>
     <div class="industry-card">
-      <img src="https://via.placeholder.com/250x160/ff9900/ffffff?text=Security" alt="Security & Cleaning">
+      <img src="images/office.jpeg" alt="Security & Cleaning">
       <h3>Office Management</h3>
     </div>
     <div class="industry-card">
-      <img src="https://via.placeholder.com/250x160/ff9900/ffffff?text=Security" alt="Security & Cleaning">
+      <img src="images/hospitality2.jpg" alt="Security & Cleaning">
       <h3>Oil & Gas Field</h3>
     </div>
   </div>
@@ -354,19 +337,19 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="row" style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
       <!-- Feature Card 1 -->
       <div style="flex:1 1 300px; max-width:300px; background:#ffffff; border-radius:15px; padding:30px 20px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center; transition:all 0.3s;">
-        <img src="https://via.placeholder.com/100x100/003366/ffffff?text=1" alt="Integrity" style="margin-bottom:15px; border-radius:50%;">
+        <img src="images/8148138-removebg-preview.png" alt="Integrity" style="margin-bottom:15px; border-radius:50%;">
         <h4 style="color:#003366; margin-bottom:10px;">Integrity</h4>
         <p style="color:#555;">We uphold the highest standards of integrity in all our actions, ensuring trust with clients.</p>
       </div>
       <!-- Feature Card 2 -->
       <div style="flex:1 1 300px; max-width:300px; background:#ffffff; border-radius:15px; padding:30px 20px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center; transition:all 0.3s;">
-        <img src="https://via.placeholder.com/100x100/ff3333/ffffff?text=2" alt="Innovation" style="margin-bottom:15px; border-radius:50%;">
+        <img src="images/8148138-removebg-preview.png" alt="Innovation" style="margin-bottom:15px; border-radius:50%;">
         <h4 style="color:#003366; margin-bottom:10px;">Innovation</h4>
         <p style="color:#555;">We continuously innovate to provide creative and efficient solutions to our clients.</p>
       </div>
       <!-- Feature Card 3 -->
       <div style="flex:1 1 300px; max-width:300px; background:#ffffff; border-radius:15px; padding:30px 20px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center; transition:all 0.3s;">
-        <img src="https://via.placeholder.com/100x100/3366ff/ffffff?text=3" alt="Excellence" style="margin-bottom:15px; border-radius:50%;">
+        <img src="images/8148138-removebg-preview.png" alt="Excellence" style="margin-bottom:15px; border-radius:50%;">
         <h4 style="color:#003366; margin-bottom:10px;">Excellence</h4>
         <p style="color:#555;">We aim for excellence in every project, delivering top-notch results for our clients.</p>
       </div>
@@ -394,16 +377,16 @@ document.addEventListener("DOMContentLoaded", () => {
   <h2 style="font-size:2.5em; margin-bottom:40px; color:#003366;">Our Clients</h2>
   <div class="clients-wrapper" style="display:flex; width:200%; animation:clientsMove 20s linear infinite;">
     <!-- Logos repeated for seamless loop -->
-    <img src="https://via.placeholder.com/150x80/003366/ffffff?text=Client+1" alt="Client 1" style="margin:0 30px;">
-    <img src="https://via.placeholder.com/150x80/ff3333/ffffff?text=Client+2" alt="Client 2" style="margin:0 30px;">
-    <img src="https://via.placeholder.com/150x80/3366ff/ffffff?text=Client+3" alt="Client 3" style="margin:0 30px;">
-    <img src="https://via.placeholder.com/150x80/ff9900/ffffff?text=Client+4" alt="Client 4" style="margin:0 30px;">
-    <img src="https://via.placeholder.com/150x80/00cc99/ffffff?text=Client+5" alt="Client 5" style="margin:0 30px;">
-    <img src="https://via.placeholder.com/150x80/003366/ffffff?text=Client+6" alt="Client 6" style="margin:0 30px;">
+    <img src="images/AL NOOR.png" alt="Client 1" style="margin:0 30px;">
+    <img src="images/ASTER.jpg" alt="Client 2" style="margin:0 30px;">
+    <img src="images/AVARI HOTEL.png" alt="Client 3" style="margin:0 30px;">
+    <img src="images/CARNIVAL.png" alt="Client 4" style="margin:0 30px;">
+    <img src="images/CONCORD HOTEL.png" alt="Client 5" style="margin:0 30px;">
+    <img src="images/Guard.jpg" alt="Client 6" style="margin:0 30px;">
     <!-- Repeat logos for smooth loop -->
-    <img src="https://via.placeholder.com/150x80/003366/ffffff?text=Client+1" alt="Client 1" style="margin:0 30px;">
-    <img src="https://via.placeholder.com/150x80/ff3333/ffffff?text=Client+2" alt="Client 2" style="margin:0 30px;">
-    <img src="https://via.placeholder.com/150x80/3366ff/ffffff?text=Client+3" alt="Client 3" style="margin:0 30px;">
+    <img src="images/LIFE PHARMACY.png" alt="Client 1" style="margin:0 30px;">
+    <img src="images/SIGMA STEEL.png" alt="Client 2" style="margin:0 30px;">
+    <img src="images/AL NOOR.png" alt="Client 3" style="margin:0 30px;">
   </div>
 </section>
 
@@ -443,24 +426,25 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="flex:1; min-width:200px; text-align:center;">
       <span style="color:#ff3333; font-weight:600; font-size:1.1em;">Quick Links</span>
       <p style="margin:5px 0 0 0; font-size:0.9em;">
-        <a href="#" style="color:#fff; text-decoration:none;">Home</a> | 
-        <a href="#" style="color:#fff; text-decoration:none;">About</a> | 
-        <a href="#" style="color:#fff; text-decoration:none;">Services</a> | 
-        <a href="#" style="color:#fff; text-decoration:none;">Contact</a>
-      </p>
+  <a href="#" style="color:#fff; text-decoration:none;">Home</a><br>
+  <a href="#" style="color:#fff; text-decoration:none;">About</a><br>
+  <a href="#" style="color:#fff; text-decoration:none;">Our Services</a><br>
+  <a href="#" style="color:#fff; text-decoration:none;">Board Of Directors</a><br>
+  <a href="#" style="color:#fff; text-decoration:none;">Job Openings</a><br>
+  <a href="#" style="color:#fff; text-decoration:none;">Contact</a>
+</p>
     </div>
 
     <!-- Contact Us with Icons -->
     <div style="flex:1; min-width:200px; text-align:center;">
-      <span style="color:#ff3333; font-weight:600; font-size:1.1em;">Contact Us</span>
-      <p style="margin:5px 0 0 0; font-size:0.9em; color:#fff;">
-        ðŸ“ž +971 4 3979686 | 04 - 3465669<br>
-        âœ‰ï¸ hrteam@emirates.net.ae<br>
-        ðŸŒ <a href="http://www.tangentdubai.com" style="color:#fff; text-decoration:none;">www.tangentdubai.com</a><br>
-        ðŸ“ Dubai, UAE
-      </p>
-    </div>
-
+  <span style="color:#ff3333; font-weight:600; font-size:1.1em;">Contact Us</span>
+  <p style="margin:5px 0 0 0; font-size:0.9em; color:#fff;">
+    📞 +971 4 3979686 | 04 - 3465669<br>
+    ✉️ hrteam@emirates.net.ae<br>
+    🌐 <a href="http://www.tangentdubai.com" style="color:#fff; text-decoration:none;">www.tangentdubai.com</a><br>
+    📍 Dubai, UAE
+  </p>
+</div>
   </div>
 
   <!-- Footer Bottom: separate line -->
@@ -498,3 +482,4 @@ footer a:hover {
 
 </body>
 </html>
+
