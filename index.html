@@ -414,21 +414,13 @@ scrollIndustries();
 <section id="offices" class="global-presence py-5" style="background:#f2f2f2;">
   <div class="container text-center mb-5">
     <h2 class="section-title">Our Global Presence</h2>
-    <p><strong>Main Office:</strong> UAE</p>
-    <p><strong>Branch Offices:</strong> India, Nepal, Pakistan, Bangladesh</p>
-    <p><strong>Associate Offices:</strong> Philippines, Sri Lanka, Indonesia, Myanmar, Egypt, Sudan, Ghana, Kenya, Uganda</p>
+    <p class="office-desc"><strong>Main Office:</strong> UAE</p>
+    <p class="office-desc"><strong>Branch Offices:</strong> India, Nepal, Pakistan, Bangladesh</p>
+    <p class="office-desc"><strong>Associate Offices:</strong> Philippines, Sri Lanka, Indonesia, Myanmar, Egypt, Sudan, Ghana, Kenya, Uganda</p>
   </div>
 
   <!-- Branch Offices Row -->
   <div class="offices-row">
-    <!-- Dubai (Main Office) under the row -->
-  <div class="offices-row justify-center mt-4">
-    <div class="office-circle fadeInUp">
-      <img src="images/tangent-logo.jpeg" alt="Dubai Office">
-      <h4>Dubai</h4>
-    </div>
-  </div>
-   
     <!-- India -->
     <div class="office-circle fadeInUp">
       <img src="//img1.wsimg.com/isteam/ip/99b47a99-a7c3-401e-85a9-2fc598b723b9/TANGENT%20HR%20CONNEXIONS%20PVT%20LTD%20-%20INDIA.png" alt="India Office">
@@ -453,6 +445,14 @@ scrollIndustries();
       <h4>Pakistan</h4>
     </div>
   </div>
+
+  <!-- Dubai (Main Office) under the row -->
+  <div class="offices-row justify-center mt-4">
+    <h3 class="dubai-title">Dubai</h3>
+    <div class="office-circle fadeInUp">
+      <img src="images/tangent-logo.jpeg" alt="Dubai Office">
+    </div>
+  </div>
 </section>
 
 <style>
@@ -464,11 +464,19 @@ scrollIndustries();
   text-align: center;
 }
 
-#offices p {
+.office-desc {
   color: #003366;
-  font-size: 1em;
-  margin: 3px 0;
-  text-align: center; /* center-align all text */
+  font-size: 1.2em; /* bigger description */
+  margin: 5px 0;
+  text-align: center;
+}
+
+/* Dubai heading outside the circle */
+.dubai-title {
+  color: #003366;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 /* Offices Row */
@@ -479,6 +487,8 @@ scrollIndustries();
   gap: 40px;
   max-width: 1200px;
   margin: 30px auto 0;
+  align-items: center;
+  flex-direction: row;
 }
 
 /* Circular Office Images with Transparent Background */
@@ -493,7 +503,6 @@ scrollIndustries();
   height: 120px;
   padding: 5px;
   background: transparent; /* fully transparent, no background color */
-  color: #003366; /* text color */
   transition: transform 0.3s, box-shadow 0.3s;
   flex-shrink: 0;
   box-shadow: 0 0 10px rgba(0, 51, 102, 0.3); /* subtle glow on outline */
@@ -504,13 +513,6 @@ scrollIndustries();
   height: 100%;
   border-radius: 50%;
   object-fit: cover; /* fit image fully inside circle */
-}
-
-.office-circle h4 {
-  font-size: 0.95em;
-  text-align: center;
-  margin-top: 5px;
-  color: #003366; /* ensure text is visible */
 }
 
 /* Hover effect */
@@ -537,6 +539,9 @@ scrollIndustries();
   .office-circle img {
     width: 100%;
     height: 100%;
+  }
+  .dubai-title {
+    font-size: 1em;
   }
 }
 </style>
@@ -802,6 +807,7 @@ footer .social-icons a:active {
 
 </body>
 </html>
+
 
 
 
