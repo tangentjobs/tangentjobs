@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services - Tangent Group UAE</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<style>
+* { box-sizing:border-box; margin:0; padding:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+body { background:#f5f5f5; color:#333; }
 
+/* Header */
+header { background:#fff; padding:20px 50px; display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #003366;}
+.logo-heading { display:flex; align-items:center; gap:25px;}
+.logo-heading img { width:140px; height:auto;}
+.logo-heading h1 { font-size:3.3em; font-weight:700; margin:0; background:linear-gradient(45deg,#003366,#ff3333); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+nav { display:flex; align-items:center; gap:30px;}
+nav a { color:#003366; text-decoration:none; font-weight:600; padding:5px 10px; border-radius:5px; transition:0.3s;}
+nav a:hover { text-decoration:underline;}
+nav a.active { background:#ffcc00; }
+
+/* Marquee */
+.marquee-container { background:#fff; overflow:hidden; white-space:nowrap; border-top:2px solid #003366; border-bottom:2px solid #ff3333; padding:10px 0; }
+.marquee { display:inline-block; padding-left:100%; animation: marquee 15s linear infinite;}
+.marquee span { margin-right:50px; font-weight:bold; color:#003366; font-size:1.5em;}
+@keyframes marquee { 0% {transform:translateX(0%);} 100% {transform:translateX(-100%);} }
+
+/* Services Cards in One Line */
+.services-row-one-line { display:flex; justify-content:center; gap:20px; overflow-x:auto; padding-bottom:10px;}
+.service-card { min-width:220px; border-radius:12px; padding:25px 15px; text-align:center; color:#003366; font-weight:500; background:transparent; border:2px solid #d32f2f; transition:transform 0.3s, box-shadow 0.3s; flex-shrink:0;}
+.service-card h3 { margin:0; font-size:1.15em; }
+.service-card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.08);}
+@keyframes fadeInUp { 0% { opacity: 0; transform: translateY(20px);} 100% { opacity: 1; transform: translateY(0);} }
+.fadeInUp { animation: fadeInUp 0.8s ease forwards; }
+
+/* Industries Section */
+#sectors { overflow:hidden; padding:60px 0; background:#f4f4f4;}
+#sectors h2 { text-align:center; font-size:2.5em; margin-bottom:40px; color:#003366; }
+.scrolling-container { overflow:hidden; white-space:nowrap; }
+.scrolling-track { display:inline-flex; gap:30px; }
+.industry-card { flex:0 0 250px; max-width:250px; background:white; border-radius:15px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:center;}
+.industry-card img { width:100%; height:160px; object-fit:cover;}
+.industry-card h3 { padding:15px; margin:0; font-size:1.2em; color:#003366; }
+
+/* Global Presence Section */
+.global-presence { padding:60px 20px; text-align:center; background: linear-gradient(135deg, #003366, #ff3333); color:white;}
+.global-presence h2 { font-size:2.5em; margin-bottom:30px; }
+.global-presence p { font-size:1.1em; margin:10px 0; line-height:1.5;}
+
+/* Footer */
+footer { background:#003366; color:white; padding:30px 40px; text-align:center;}
+footer a { color:#ff3333; text-decoration:none; margin:0 10px;}
+footer a:hover { text-decoration:underline;}
+.social-icons a { margin:0 10px; color:#fff; font-size:20px; transition:0.3s;}
+.social-icons a:hover { color:#ff3333;}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo-heading">
+    <img src="images/tangent-logo.jpeg" alt="Logo">
+    <h1>Tangent Group</h1>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html" class="active">Our Services</a>
+    <a href="directors.html">Board Of Directors</a>
+    <a href="jobs.html">Job Openings</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- Marquee -->
+<div class="marquee-container">
+  <div class="marquee">
+    <span style="font-size:1.4em; font-family:'Garamond', 'Georgia', serif; font-weight:600;">
+
+      <!-- Part 1: Blue Gradient -->
+      <span style="background: linear-gradient(90deg, #003366, #1a73e8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Tangent Group UAE - 27 Years of Excellence in Recruitment & Workforce Solutions
+      </span>
+
+      <!-- Separator -->
+      <span style="color:#ff3333; font-weight:bold; margin:0 10px;">•</span>
+
+      <!-- Part 2: Red Gradient -->
+      <span style="background: linear-gradient(90deg, #ff3333, #d62828); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Tangent Helps you to find Talents ... and help Talents to find you
+      </span>
+
+    </span>
+  </div>
+</div>
+
+
+<!-- Services Row One Line -->
+<section id="services" style="padding:60px 0; background:#f4f4f4;">
+  <h2 style="text-align:center; color:#003366; margin-bottom:30px;">Our Services</h2>
+  <div class="services-row-one-line">
+    <div class="service-card fadeInUp"><h3>Overseas Recruitment</h3></div>
+    <div class="service-card fadeInUp"><h3>Local Recruitment & Staffing</h3></div>
+    <div class="service-card fadeInUp"><h3>Skilled & Unskilled Manpower Supply</h3></div>
+    <div class="service-card fadeInUp"><h3>HR Consultancy & Workforce Planning</h3></div>
+    <div class="service-card fadeInUp"><h3>Executive Search & Head Hunting</h3></div>
+  </div>
+</section>
+
+<!-- Industries Section -->
+<section id="sectors">
+  <h2>Industries We Serve</h2>
+  <div class="scrolling-container">
+    <div class="scrolling-track">
+      <div class="industry-card"><img src="images/eng.jpg" alt="Engineering"><h3>Engineering & Contracting</h3></div>
+      <div class="industry-card"><img src="images/cosnt2.jpg" alt="Interior Decoration"><h3>Interior Decoration</h3></div>
+      <div class="industry-card"><img src="images/hospitality.jpeg" alt="FMCG & Hospitality"><h3>FMCG & Hospitality</h3></div>
+      <div class="industry-card"><img src="images/Guard.jpg" alt="Security & Cleaning"><h3>Security & Cleaning</h3></div>
+      <div class="industry-card"><img src="images/office.jpeg" alt="Office Management"><h3>Office Management</h3></div>
+      <div class="industry-card"><img src="images/hospitality2.jpg" alt="Oil & Gas"><h3>Oil & Gas Field</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- Global Presence Section Redesigned (Single Gradient Theme) -->
+<section class="global-presence" style="padding:60px 20px; background:#f4f4f4; text-align:center;">
+  <h2 style="font-size:2.8em; color:#003366; margin-bottom:50px;">Our Global Presence</h2>
+  
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px; max-width:1200px; margin:0 auto;">
+    
+    <!-- Main Office Card -->
+    <div style="flex:1 1 250px; max-width:300px; background:linear-gradient(135deg,#003366,#0055aa); color:white; border-radius:15px; padding:30px 20px; box-shadow:0 8px 20px rgba(0,0,0,0.2); transition:transform 0.3s;">
+      <i class="fas fa-building" style="font-size:2.5em; margin-bottom:15px;"></i>
+      <h3 style="margin-bottom:15px;">Main Office</h3>
+      <p>UAE</p>
+    </div>
+    
+    <!-- Branch Offices Card -->
+    <div style="flex:1 1 250px; max-width:300px; background:linear-gradient(135deg,#003366,#0055aa); color:white; border-radius:15px; padding:30px 20px; box-shadow:0 8px 20px rgba(0,0,0,0.2); transition:transform 0.3s;">
+      <i class="fas fa-network-wired" style="font-size:2.5em; margin-bottom:15px;"></i>
+      <h3 style="margin-bottom:15px;">Branch Offices</h3>
+      <p>India, Nepal, Pakistan, Bangladesh</p>
+    </div>
+    
+    <!-- Associate Offices Card -->
+    <div style="flex:1 1 250px; max-width:300px; background:linear-gradient(135deg,#003366,#0055aa); color:white; border-radius:15px; padding:30px 20px; box-shadow:0 8px 20px rgba(0,0,0,0.2); transition:transform 0.3s;">
+      <i class="fas fa-globe" style="font-size:2.5em; margin-bottom:15px;"></i>
+      <h3 style="margin-bottom:15px;">Associate Offices</h3>
+      <p>Philippines, Sri Lanka, Indonesia, Myanmar, Egypt, Sudan, Ghana, Kenya, Uganda</p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.global-presence div:hover { transform:translateY(-8px); }
+</style>
+
+
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Tangent Group. All Rights Reserved.</p>
+  <br>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+  </div>
+</footer>
+
+<script>
+/* Scrolling Industries */
+const track = document.querySelector('.scrolling-track');
+let scrollAmount = 0;
+function scrollIndustries() {
+  scrollAmount += 1; 
+  if(scrollAmount >= track.scrollWidth - track.parentElement.offsetWidth) {
+    scrollAmount = 0;
+  }
+  track.style.transform = `translateX(-${scrollAmount}px)`;
+  requestAnimationFrame(scrollIndustries);
+}
+scrollIndustries();
+</script>
+
+</body>
+</html>
