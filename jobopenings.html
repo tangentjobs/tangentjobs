@@ -164,59 +164,72 @@ footer a:hover { text-decoration:underline;}
 </style>
 
 <!-- Job Openings Section -->
-<section style="padding:60px 20px; background:#f4f4f4; text-align:center;">
-  <h2 style="color:#003366; font-size:2.5em; margin-bottom:20px;">Job Openings</h2>
-  <p style="max-width:700px; margin:0 auto 40px; color:#555;">Apply now to join Tangent Group. Fill out the form below and attach your CV.</p>
+<section style="padding:40px 20px; background:#f4f4f4; text-align:center;">
+
+  <!-- Scrolling Posters Section -->
+  <div style="max-width:1000px; margin:0 auto 40px; overflow:hidden;">
+    <h3 style="color:#003366; margin-bottom:25px; font-size:2em;">Current Job Openings</h3>
+    <div style="display:flex; gap:20px; animation:scrollPosters 30s linear infinite;">
+      <div style="flex:0 0 auto; width:300px;"><img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1" style="width:100%; border-radius:15px;"></div>
+      <div style="flex:0 0 auto; width:300px;"><img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2" style="width:100%; border-radius:15px;"></div>
+      <div style="flex:0 0 auto; width:300px;"><img src="images/Blue Modern Professional Job Hiring (4).png" alt="Opening 3" style="width:100%; border-radius:15px;"></div>
+      <!-- Repeat posters to make continuous scroll -->
+      <div style="flex:0 0 auto; width:300px;"><img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1" style="width:100%; border-radius:15px;"></div>
+      <div style="flex:0 0 auto; width:300px;"><img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2" style="width:100%; border-radius:15px;"></div>
+      <div style="flex:0 0 auto; width:300px;"><img src="images/Blue Modern Professional Job Hiring (4).png" alt="Opening 3" style="width:100%; border-radius:15px;"></div>
+    </div>
+  </div>
 
   <!-- Apply Form Section -->
-<div style="max-width:600px; width:90%; margin:0 auto 20px; background:white; padding:15px 20px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.08); text-align:left;">
-  <h3 style="color:#003366; font-size:1.8em; margin-bottom:15px; text-align:center;">Apply for a Job</h3>
-  <form action="mailto:dxbcareers27@gmail.com" method="POST" enctype="multipart/form-data" style="display:flex; flex-direction:column; gap:10px;">
-    
-    <label for="name" style="font-weight:600; color:#003366;">Full Name</label>
-    <input type="text" id="name" name="name" required placeholder="Enter your full name" 
-           style="padding:10px; border-radius:8px; border:1px solid #ccc; font-size:1em; outline:none; width:100%;">
-    
-    <label for="email" style="font-weight:600; color:#003366;">Email</label>
-    <input type="email" id="email" name="email" required placeholder="Enter your email"
-           style="padding:10px; border-radius:8px; border:1px solid #ccc; font-size:1em; outline:none; width:100%;">
+  <div style="max-width:600px; width:90%; margin:0 auto; background:white; padding:25px 30px; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); text-align:left;">
+    <h3 style="color:#003366; font-size:1.8em; margin-bottom:20px; text-align:center;">Apply for a Job</h3>
+    <form action="mailto:dxbcareers27@gmail.com" method="POST" enctype="multipart/form-data" style="display:flex; flex-direction:column; gap:15px;">
+      
+      <label for="name" style="font-weight:600; color:#003366;">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your full name" 
+             style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; width:100%;">
 
-    <label for="phone" style="font-weight:600; color:#003366;">Phone Number</label>
-    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number"
-           style="padding:10px; border-radius:8px; border:1px solid #ccc; font-size:1em; outline:none; width:100%;">
+      <label for="email" style="font-weight:600; color:#003366;">Email</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email"
+             style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; width:100%;">
 
-    <label for="position" style="font-weight:600; color:#003366;">Position</label>
-    <select id="position" name="position" required 
-            style="padding:10px; border-radius:8px; border:1px solid #ccc; font-size:1em; outline:none; width:100%;">
-      <option value="">-- Select Position --</option>
-      <option value="Recruitment Specialist">Recruitment Specialist</option>
-      <option value="HR Manager">HR Manager</option>
-      <option value="Admin Executive">Admin Executive</option>
-      <option value="Finance Officer">Finance Officer</option>
-      <option value="Other">Other</option>
-    </select>
+      <label for="phone" style="font-weight:600; color:#003366;">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number"
+             style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; width:100%;">
 
-    <label for="cv" style="font-weight:600; color:#003366;">Upload CV</label>
-    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required
-           style="padding:10px; border-radius:8px; border:1px solid #ccc; font-size:1em; width:100%;">
+      <label for="position" style="font-weight:600; color:#003366;">Position</label>
+      <select id="position" name="position" required 
+              style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; width:100%;">
+        <option value="">-- Select Position --</option>
+        <option value="Recruitment Specialist">Recruitment Specialist</option>
+        <option value="HR Manager">HR Manager</option>
+        <option value="Admin Executive">Admin Executive</option>
+        <option value="Finance Officer">Finance Officer</option>
+        <option value="Other">Other</option>
+      </select>
 
-    <button type="submit" 
-            style="padding:12px; border:none; border-radius:10px; background:linear-gradient(135deg,#003366,#ff3333); color:white; font-weight:600; font-size:1.1em; cursor:pointer; transition:0.3s;">
-      Apply Now
-    </button>
-  </form>
-</div>
+      <label for="cv" style="font-weight:600; color:#003366;">Upload CV</label>
+      <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required
+             style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; width:100%;">
 
-  <!-- Openings Posters Section -->
-  <div style="max-width:700px; margin:0 auto;">
-  <h3 style="color:#003366; margin-bottom:20px;">Current Job Openings</h3>
-  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;">
-    <div><img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1" style="width:100%; border-radius:10px;"></div>
-    <div><img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2" style="width:100%; border-radius:10px;"></div>
-    <div><img src="images/Blue Modern Professional Job Hiring (4).png" alt="Opening 3" style="width:100%; border-radius:10px;"></div>
+      <button type="submit" 
+              style="padding:14px; border:none; border-radius:10px; background:linear-gradient(135deg,#003366,#ff3333); color:white; font-weight:600; font-size:1.1em; cursor:pointer; transition:0.3s;">
+        Apply Now
+      </button>
+    </form>
   </div>
-</div>
+
+  <!-- Scrolling Animation -->
+  <style>
+    @keyframes scrollPosters {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); } /* scroll half the content for continuous loop */
+    }
+    .scrolling-track { animation: scrollPosters 30s linear infinite; }
+  </style>
+
 </section>
+
 
 
 <!-- Footer -->
