@@ -167,19 +167,19 @@ footer a:hover { text-decoration:underline;}
 <section style="padding:40px 20px; background:#f4f4f4; text-align:center;">
 
   <!-- Posters Section -->
-  <div style="max-width:1000px; margin:0 auto 40px;">
+  <div style="max-width:100%; margin:0 auto 40px; overflow:hidden;">
     <h3 style="color:#003366; margin-bottom:20px; font-size:2em;">Current Job Openings</h3>
-    <div style="overflow:hidden; width:100%;">
-      <div style="display:flex; gap:30px; animation:scroll 25s linear infinite;">
-        <img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1" style="width:320px; height:220px; border-radius:10px; object-fit:cover;">
-        <img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2" style="width:320px; height:220px; border-radius:10px; object-fit:cover;">
-        <img src="images/Blue Modern Professional Job Hiring (4).png" alt="Opening 3" style="width:320px; height:220px; border-radius:10px; object-fit:cover;">
-        
-        <!-- Repeat for seamless scroll -->
-        <img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1" style="width:320px; height:220px; border-radius:10px; object-fit:cover;">
-        <img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2" style="width:320px; height:220px; border-radius:10px; object-fit:cover;">
-        <img src="images/Blue Modern Professional Job Hiring (4).png" alt="Opening 3" style="width:320px; height:220px; border-radius:10px; object-fit:cover;">
-      </div>
+    
+    <div style="display:flex; gap:30px; width:max-content; animation:scroll-left 30s linear infinite;">
+      <!-- Posters: larger size for marquee -->
+      <img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1" style="width:350px; height:230px; border-radius:10px; object-fit:cover;">
+      <img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2" style="width:350px; height:230px; border-radius:10px; object-fit:cover;">
+      <img src="images/Blue Modern Professional Job Hiring (4).png" alt="Opening 3" style="width:350px; height:230px; border-radius:10px; object-fit:cover;">
+      
+      <!-- Repeat posters for smooth infinite scroll -->
+      <img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1" style="width:350px; height:230px; border-radius:10px; object-fit:cover;">
+      <img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2" style="width:350px; height:230px; border-radius:10px; object-fit:cover;">
+      <img src="images/Blue Modern Professional Job Hiring (4).png" alt="Opening 3" style="width:350px; height:230px; border-radius:10px; object-fit:cover;">
     </div>
   </div>
 
@@ -223,19 +223,19 @@ footer a:hover { text-decoration:underline;}
   </div>
 
   <style>
-    @keyframes scroll {
+    @keyframes scroll-left {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
-    div[style*="animation:scroll"] {
-      display: flex;
-      gap: 30px;
-      animation: scroll 25s linear infinite;
+
+    div[style*="animation:scroll-left"] {
+      display:flex;
+      gap:30px;
+      width:max-content;
+      animation: scroll-left 30s linear infinite;
     }
   </style>
 </section>
-
-
 
 <!-- Footer -->
 <footer>
