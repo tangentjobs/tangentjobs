@@ -76,13 +76,31 @@ footer a:hover { text-decoration:underline;}
     <h1>TANGENT GROUP</h1>
   </div>
 <!-- Navigation Menu -->
-<nav style="display:flex; align-items:center; gap:30px; flex-wrap:nowrap;">
-  <a href="index.html" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Home</a>
-  <a href="about.html" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">About</a>
-  <a href="ourservice.html" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Our Services</a>
-  <a href="boardofdirectors.html" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Our Team</a>
-  <a href="jobopenings.html" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Job Openings</a>
-  <a href="contactus.html" onclick="highlightNav(this)" style="text-decoration:none; color:#003366; font-weight:600;">Contact</a>
+<nav style="display:flex; align-items:center; gap:30px; flex-wrap:nowrap; justify-content:center; padding:15px 0;">
+  <a href="index.html" onclick="highlightNav(this)" 
+     style="text-decoration:none; font-weight:600; font-size:1.5em; padding:8px 15px; border-radius:8px; transition:0.3s; background:linear-gradient(135deg,#003366,#ff3333); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+    Home
+  </a>
+  <a href="about.html" onclick="highlightNav(this)" 
+     style="text-decoration:none; font-weight:600; font-size:1.5em; padding:8px 15px; border-radius:8px; transition:0.3s; background:linear-gradient(135deg,#003366,#ff3333); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+    About
+  </a>
+  <a href="ourservice.html" onclick="highlightNav(this)" 
+     style="text-decoration:none; font-weight:600; font-size:1.5em; padding:8px 15px; border-radius:8px; transition:0.3s; background:linear-gradient(135deg,#003366,#ff3333); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+    Our Services
+  </a>
+  <a href="boardofdirectors.html" onclick="highlightNav(this)" 
+     style="text-decoration:none; font-weight:600; font-size:1.5em; padding:8px 15px; border-radius:8px; transition:0.3s; background:linear-gradient(135deg,#003366,#ff3333); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+    Our Team
+  </a>
+  <a href="jobopenings.html" onclick="highlightNav(this)" 
+     style="text-decoration:none; font-weight:600; font-size:1.5em; padding:8px 15px; border-radius:8px; transition:0.3s; background:linear-gradient(135deg,#003366,#ff3333); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+    Job Openings
+  </a>
+  <a href="contactus.html" onclick="highlightNav(this)" 
+     style="text-decoration:none; font-weight:600; font-size:1.5em; padding:8px 15px; border-radius:8px; transition:0.3s; background:linear-gradient(135deg,#003366,#ff3333); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+    Contact
+  </a>
 </nav>
 </header>
 
@@ -151,51 +169,51 @@ footer a:hover { text-decoration:underline;}
   <p style="max-width:700px; margin:0 auto 40px; color:#555;">Apply now to join Tangent Group. Fill out the form below and attach your CV.</p>
 
   <!-- Apply Form Section -->
-  <div style="max-width:500px; margin:0 auto 60px; background:white; padding:40px 30px; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); text-align:left;">
-    <h3 style="color:#003366; font-size:1.8em; margin-bottom:25px; text-align:center;">Apply for a Job</h3>
-    <form action="mailto:dxbcareers27@gmail.com" method="POST" enctype="multipart/form-data" style="display:flex; flex-direction:column; gap:20px;">
-      
-      <label for="name" style="font-weight:600; color:#003366;">Full Name</label>
-      <input type="text" id="name" name="name" required placeholder="Enter your full name" 
-             style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; outline:none; width:100%;">
-      
-      <label for="email" style="font-weight:600; color:#003366;">Email</label>
-      <input type="email" id="email" name="email" required placeholder="Enter your email"
-             style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; outline:none; width:100%;">
+  <!-- Apply Form Section -->
+<div style="max-width:450px; margin:0 auto 20px; background:white; padding:10px 20px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.08); text-align:left;">
+  <h3 style="color:#003366; font-size:1.8em; margin-bottom:15px; text-align:center;">Apply for a Job</h3>
+  <form action="mailto:dxbcareers27@gmail.com" method="POST" enctype="multipart/form-data" style="display:flex; flex-direction:column; gap:10px;">
+    
+    <label for="name" style="font-weight:600; color:#003366;">Full Name</label>
+    <input type="text" id="name" name="name" required placeholder="Enter your full name" 
+           style="padding:10px; border-radius:8px; border:1px solid #ccc; font-size:1em; outline:none; width:100%;">
+    
+    <label for="email" style="font-weight:600; color:#003366;">Email</label>
+    <input type="email" id="email" name="email" required placeholder="Enter your email"
+           style="padding:10px; border-radius:8px; border:1px solid #ccc; font-size:1em; outline:none; width:100%;">
 
-      <label for="phone" style="font-weight:600; color:#003366;">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number"
-             style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; outline:none; width:100%;">
+    <label for="phone" style="font-weight:600; color:#003366;">Phone Number</label>
+    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number"
+           style="padding:10px; border-radius:8px; border:1px solid #ccc; font-size:1em; outline:none; width:100%;">
 
-      <label for="position" style="font-weight:600; color:#003366;">Position</label>
-      <select id="position" name="position" required 
-              style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; outline:none; width:100%;">
-        <option value="">-- Select Position --</option>
-        <option value="Recruitment Specialist">Recruitment Specialist</option>
-        <option value="HR Manager">HR Manager</option>
-        <option value="Admin Executive">Admin Executive</option>
-        <option value="Finance Officer">Finance Officer</option>
-        <option value="Other">Other</option>
-      </select>
+    <label for="position" style="font-weight:600; color:#003366;">Position</label>
+    <select id="position" name="position" required 
+            style="padding:10px; border-radius:8px; border:1px solid #ccc; font-size:1em; outline:none; width:100%;">
+      <option value="">-- Select Position --</option>
+      <option value="Recruitment Specialist">Recruitment Specialist</option>
+      <option value="HR Manager">HR Manager</option>
+      <option value="Admin Executive">Admin Executive</option>
+      <option value="Finance Officer">Finance Officer</option>
+      <option value="Other">Other</option>
+    </select>
 
-      <label for="cv" style="font-weight:600; color:#003366;">Upload CV</label>
-      <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required
-             style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; width:100%;">
+    <label for="cv" style="font-weight:600; color:#003366;">Upload CV</label>
+    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required
+           style="padding:10px; border-radius:8px; border:1px solid #ccc; font-size:1em; width:100%;">
 
-      <button type="submit" 
-              style="padding:14px; border:none; border-radius:10px; background:linear-gradient(135deg,#003366,#ff3333); color:white; font-weight:600; font-size:1.1em; cursor:pointer; transition:0.3s;">
-        Apply Now
-      </button>
-    </form>
-  </div>
-
+    <button type="submit" 
+            style="padding:12px; border:none; border-radius:10px; background:linear-gradient(135deg,#003366,#ff3333); color:white; font-weight:600; font-size:1.1em; cursor:pointer; transition:0.3s;">
+      Apply Now
+    </button>
+  </form>
+</div>
   <!-- Openings Posters Section -->
   <div style="max-width:700px; margin:0 auto;">
     <h3 style="color:#003366; margin-bottom:20px;">Current Job Openings</h3>
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
       <div><img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1" style="width:100%; border-radius:10px;"></div>
       <div><img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2" style="width:100%; border-radius:10px;"></div>
-      <div style="grid-column:span 2;"><img src="Blue Modern Professional Job Hiring (4).png" alt="Opening 3" style="width:100%; border-radius:10px;"></div>
+      <div><img src="Blue Modern Professional Job Hiring (4).png" alt="Opening 3" style="width:100%; border-radius:10px;"></div>
     </div>
   </div>
 </section>
