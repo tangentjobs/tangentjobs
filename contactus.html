@@ -171,55 +171,93 @@ footer a:hover { text-decoration:underline;}
 </section>
 
 <!-- Contact Section -->
-<section class="contact-section">
-  <!-- Left Column: Contact Info -->
-  <div class="contact-left">
-    <div class="communication">
-      <div class="communication_icon"><i class="fa fa-map-marker-alt"></i></div>
-      <div>
-        <h5>UAE Address</h5>
-        <h6><b>TANGNET HR SOLUTIONS</b><br>
-        Fortune Tower - DMCC, JLT<br>
-        Dubai - UAE</h6>
-      </div>
-    </div>
-    <div class="communication">
-      <div class="communication_icon"><i class="fa fa-envelope"></i></div>
-      <div>
-        <h5>Email Address</h5>
-        <a href="mailto:info@skoverseashrconsultancy.com?subject=Enquiry from website">hrteam@emirates.net.ae</a>
-      </div>
-    </div>
-    <div class="communication">
-      <div class="communication_icon"><i class="fa fa-globe"></i></div>
-      <div>
-        <h5>Web Address</h5>
-        <a href="http://www.tangetdubai.com" target="_blank">www.tangetdubai.com</a>
-      </div>
-    </div>
-    <div class="communication">
-      <div class="communication_icon"><i class="fa fa-phone"></i></div>
-      <div>
-        <h5>Call Us</h5>
-        <h6><b>Mob:</b> <a href="tel:+971544565955">
-+971 4 3979686 | 04 - 3465669</a></h6>
-      </div>
-    </div>
-  </div>
+<section style="padding:60px 20px; background:#f4f4f4;">
+  <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; gap:40px;">
 
-  <!-- Right Column: Form -->
-  <div class="contact-right">
-    <h3>Reach Us</h3>
-    <form action="mailto:dxbcareers27@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="text" name="subject" placeholder="Subject" required>
-      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
+    <!-- Left Column: Contact Info -->
+    <div style="flex:1; min-width:300px; background:white; padding:30px; border-radius:15px; box-shadow:0 6px 20px rgba(0,0,0,0.08);">
+      <h2 style="color:#003366; margin-bottom:25px;">Contact Information</h2>
+
+      <!-- UAE Address -->
+      <div style="display:flex; align-items:flex-start; gap:15px; margin-bottom:20px;">
+        <div style="color:#ff3333; font-size:1.5em;"><i class="fa fa-map-marker-alt"></i></div>
+        <div>
+          <h5 style="margin:0; color:#003366;">UAE Address</h5>
+          <p style="margin:5px 0; color:#555; line-height:1.6;">
+            <b>TANGNET HR SOLUTIONS</b><br>
+            Fortune Tower - DMCC, JLT<br>
+            Dubai - UAE
+          </p>
+        </div>
+      </div>
+
+      <!-- India Address -->
+      <div style="display:flex; align-items:flex-start; gap:15px; margin-bottom:20px;">
+        <div style="color:#ff3333; font-size:1.5em;"><i class="fa fa-map-marker"></i></div>
+        <div>
+          <h5 style="margin:0; color:#003366;">India Address</h5>
+          <p style="margin:5px 0; color:#555; line-height:1.6;">
+            Kochi, Ernakulam, Kerala 682026, India <br>
+            Tangent HR Connexions Pvt. Ltd
+          </p>
+        </div>
+      </div>
+
+      <!-- Grouped: Email, Web, Phone -->
+      <div style="margin-top:30px; border-top:1px solid #ddd; padding-top:20px;">
+        <div style="display:flex; align-items:flex-start; gap:15px; margin-bottom:15px;">
+          <div style="color:#ff3333; font-size:1.5em;"><i class="fa fa-envelope"></i></div>
+          <div>
+            <h5 style="margin:0; color:#003366;">Email</h5>
+            <a href="mailto:hrteam@emirates.net.ae" style="color:#555; text-decoration:none;">hrteam@emirates.net.ae</a>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:flex-start; gap:15px; margin-bottom:15px;">
+          <div style="color:#ff3333; font-size:1.5em;"><i class="fa fa-globe"></i></div>
+          <div>
+            <h5 style="margin:0; color:#003366;">Website</h5>
+            <a href="http://www.tangetdubai.com" target="_blank" style="color:#555; text-decoration:none;">www.tangetdubai.com</a>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:flex-start; gap:15px;">
+          <div style="color:#ff3333; font-size:1.5em;"><i class="fa fa-phone"></i></div>
+          <div>
+            <h5 style="margin:0; color:#003366;">Phone</h5>
+            <p style="margin:5px 0; color:#555;">
+              <a href="tel:+97143979686" style="color:#555; text-decoration:none;">+971 4 3979686</a> | 
+              <a href="tel:+97143465669" style="color:#555; text-decoration:none;">04 - 3465669</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Form -->
+    <div style="flex:1; min-width:350px; background:white; padding:30px; border-radius:15px; box-shadow:0 6px 20px rgba(0,0,0,0.08);">
+      <h2 style="color:#003366; margin-bottom:25px; text-align:center;">Reach Us</h2>
+      <form action="mailto:dxbcareers27@gmail.com" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:15px;">
+        <input type="text" name="name" placeholder="Your Name" required 
+               style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; width:100%;">
+        <input type="email" name="email" placeholder="Your Email" required 
+               style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; width:100%;">
+        <input type="tel" name="phone" placeholder="Phone Number" required 
+               style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; width:100%;">
+        <input type="text" name="subject" placeholder="Subject" required 
+               style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; width:100%;">
+        <textarea name="message" rows="6" placeholder="Your Message" required 
+                  style="padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; width:100%; resize:none;"></textarea>
+        <button type="submit" 
+                style="padding:14px; border:none; border-radius:10px; background:linear-gradient(135deg,#003366,#ff3333); color:white; font-weight:600; font-size:1.1em; cursor:pointer; transition:0.3s;">
+          Submit
+        </button>
+      </form>
+    </div>
+
   </div>
 </section>
+
 
 <!-- Footer -->
 <footer>
