@@ -432,10 +432,11 @@ scrollIndustries();
   </div>
 
   <!-- Offices Row -->
+<section>
   <div class="offices-row">
     <!-- Dubai (Main Office) -->
     <div class="office-circle fadeInUp">
-      <img src="images/WhatsApp Image 2025-09-08 at 5.33.46 PM (1).jpeg" alt="Dubai Office">
+      <img src="images/WhatsApp_Image_2025-06-24_at_4.40.22_PM-removebg-preview.png" alt="Dubai Office">
       <h4>Dubai</h4>
     </div>
 
@@ -476,7 +477,7 @@ scrollIndustries();
 
 .office-desc {
   color: #003366;
-  font-size: 1.3em; /* bigger description */
+  font-size: 1.3em;
   margin: 8px 0;
   text-align: center;
 }
@@ -485,9 +486,9 @@ scrollIndustries();
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 50px;
   max-width: 1200px;
-  margin: 30px auto 0;
+  margin: 40px auto 0;
   align-items: center;
 }
 
@@ -495,16 +496,16 @@ scrollIndustries();
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   border: 3px solid #003366;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  padding: 5px;
+  width: 150px;   /* bigger circle */
+  height: 150px;  /* bigger circle */
+  padding: 8px;
   background: transparent;
   transition: transform 0.3s, box-shadow 0.3s;
   flex-shrink: 0;
-  box-shadow: 0 0 10px rgba(0, 51, 102, 0.3);
+  box-shadow: 0 0 12px rgba(0, 51, 102, 0.3);
 }
 
 .office-circle img {
@@ -515,15 +516,15 @@ scrollIndustries();
 }
 
 .office-circle h4 {
-  font-size: 1.2em; /* bigger office name */
+  font-size: 1.3em;
   color: #003366;
-  margin: 5px 0 0 0;
+  margin: 8px 0 0 0;
   text-align: center;
 }
 
 .office-circle:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(0,51,102,0.5);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 18px rgba(0,51,102,0.6);
 }
 
 @keyframes fadeInUp {
@@ -537,18 +538,15 @@ scrollIndustries();
 /* Responsive */
 @media(max-width:768px){
   .office-circle {
-    width: 100px;
-    height: 100px;
-  }
-  .office-circle img {
-    width: 100%;
-    height: 100%;
+    width: 120px;
+    height: 120px;
   }
   .office-circle h4 {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 }
 </style>
+
 
 <!-- Why Choose Us / Core Values Section -->
 <div class="container-fluid pt-5" style="background:#f4f4f4; padding-top:60px; padding-bottom:60px;">
@@ -924,6 +922,7 @@ scrollIndustries();
 
 </body>
 </html>
+
 
 
 
