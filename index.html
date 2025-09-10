@@ -553,10 +553,10 @@ div[style*="border:2px solid #d32f2f"]:hover {
 
 
 <!-- Our Clients Section (All Logos, Big, Click Zoom) -->
-<section id="clients" style="padding:60px 20px; background:#ffffff; overflow:hidden; text-align:center;">
+<section id="clients" style="padding:60px 20px; background:#ffffff; text-align:center; overflow:hidden;">
   <h2 style="font-size:2.5em; margin-bottom:40px; color:#003366;">Our Clients</h2>
 
-  <div class="clients-marquee" style="display:flex; width:max-content; animation:scrollClients 50s linear infinite; gap:80px; align-items:center;">
+  <div class="clients-marquee" style="display:flex; width:max-content; animation:scrollClients 40s linear infinite; gap:80px; align-items:center;">
     <!-- All client logos -->
     <img src="images/FSG.jpg" alt="FSG" class="client-logo">
     <img src="images/SECURITAS.jpg" alt="SECURITAS" class="client-logo">
@@ -641,25 +641,36 @@ div[style*="border:2px solid #d32f2f"]:hover {
   </div>
 
   <style>
+    .clients-marquee {
+      white-space: nowrap;
+    }
+
     .clients-marquee img {
-      height: 150px; /* big logos */
+      height: 150px; /* bigger logos */
       object-fit: contain;
       cursor: pointer;
-      transition: transform 0.3s;
     }
 
-    .clients-marquee.paused {
-      animation-play-state: paused;
-    }
-
-    .client-logo.zoomed {
-      transform: scale(1.8);
-      z-index: 10;
-    }
-
+    /* Scrolling animation */
     @keyframes scrollClients {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
+    }
+
+    /* Blink animation for clicked logo */
+    .blink {
+      animation: blink 1s infinite alternate;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.2; }
+      100% { opacity: 1; }
+    }
+
+    /* Pause marquee */
+    .paused {
+      animation-play-state: paused !important;
     }
 
     @media (max-width: 768px) {
@@ -675,17 +686,12 @@ div[style*="border:2px solid #d32f2f"]:hover {
 
     logos.forEach(logo => {
       logo.addEventListener('click', () => {
-        marquee.classList.add('paused');
-        logos.forEach(l => l.classList.remove('zoomed'));
-        logo.classList.add('zoomed');
+        const isPaused = marquee.classList.toggle('paused'); // toggle scroll pause
+        logos.forEach(l => l.classList.remove('blink')); // remove blink from all
+        if(isPaused) {
+          logo.classList.add('blink'); // blink only clicked logo
+        }
       });
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!e.target.classList.contains('client-logo')) {
-        marquee.classList.remove('paused');
-        logos.forEach(l => l.classList.remove('zoomed'));
-      }
     });
   </script>
 </section>
@@ -927,6 +933,7 @@ div[style*="border:2px solid #d32f2f"]:hover {
 
 </body>
 </html>
+
 
 
 
