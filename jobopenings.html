@@ -186,7 +186,7 @@ footer a:hover { text-decoration:underline;}
   </div>
 </div>
 
-<!-- CSS for animation and zoom -->
+<!-- CSS for marquee animation -->
 <style>
   @keyframes scroll-left {
     0% { transform: translateX(0); }
@@ -196,49 +196,30 @@ footer a:hover { text-decoration:underline;}
   #marquee {
     animation: scroll-left 30s linear infinite;
   }
-
-  .zoomed {
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
-    z-index: 10;
-  }
 </style>
 
-<!-- JS for pause + zoom -->
+<!-- JS to pause/resume on click or scroll -->
 <script>
   const marquee = document.getElementById('marquee');
-  const images = marquee.querySelectorAll('img');
   let paused = false;
-  let zoomedImg = null;
 
-  images.forEach(img => {
+  // Pause/resume on image click
+  marquee.querySelectorAll('img').forEach(img => {
     img.addEventListener('click', () => {
-      if (!paused) {
-        // Pause marquee and zoom clicked image
-        marquee.style.animationPlayState = 'paused';
-        img.classList.add('zoomed');
-        paused = true;
-        zoomedImg = img;
-      } else {
-        // Resume marquee and remove zoom
-        marquee.style.animationPlayState = 'running';
-        if (zoomedImg) zoomedImg.classList.remove('zoomed');
-        paused = false;
-        zoomedImg = null;
-      }
+      paused = !paused;
+      marquee.style.animationPlayState = paused ? 'paused' : 'running';
     });
   });
 
-  // Optional: resume on any scroll
+  // Resume on scroll
   window.addEventListener('scroll', () => {
     if (paused) {
-      marquee.style.animationPlayState = 'running';
-      if (zoomedImg) zoomedImg.classList.remove('zoomed');
       paused = false;
-      zoomedImg = null;
+      marquee.style.animationPlayState = 'running';
     }
   });
 </script>
+
 
   <!-- Apply Form Section -->
 <div style="max-width:1000px; width:100%; margin:0 auto 50px; background:white; padding:40px 30px; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); text-align:left;">
