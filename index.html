@@ -265,93 +265,56 @@ counters.forEach(counter => observer.observe(counter));
 <!-- Our Services Section -->
 <div class="container-fluid py-5" style="background:#f2f2f2;">
   <div style="text-align:center; margin-bottom:50px;">
-    <h2 class="section-title" style="font-size:2.5em; color:#003366; margin-bottom:20px;">OUR SERVICES</h2>
-    <p class="section-desc" style="font-size:1.9em; color:#555; margin:0 auto; line-height:1.6; white-space:nowrap; text-align:center;">
+    <h2 style="font-size:2.5em; color:#003366; font-weight:700; margin-bottom:10px; text-align:center; position:relative;">
+      OUR SERVICES
+      <span style="display:block; width:60px; height:3px; background:#0077b6; margin:10px auto 0; border-radius:2px;"></span>
+    </h2>
+    <p style="font-size:1.1em; color:#555; max-width:650px; margin:0 auto 40px; line-height:1.5; text-align:center;">
       We provide comprehensive recruitment and HR solutions tailored for your business.
     </p>
   </div>
-</div>
+
   <!-- Services Cards in One Line -->
-  <div class="services-row-one-line">
-    <div class="service-card fadeInUp"><h3>Overseas Recruitment</h3></div>
-    <div class="service-card fadeInUp"><h3>Local Recruitment & Staffing</h3></div>
-    <div class="service-card fadeInUp"><h3>Skilled & Unskilled Manpower Supply</h3></div>
-    <div class="service-card fadeInUp"><h3>HR Consultancy & Workforce Planning</h3></div>
-    <div class="service-card fadeInUp"><h3>Executive Search & Head Hunting</h3></div>
+  <div style="display:flex; justify-content:center; gap:20px; overflow-x:auto; padding-bottom:10px; scroll-behavior:smooth;">
+    <div style="min-width:220px; border-radius:12px; padding:25px 15px; text-align:center; color:#003366; font-weight:500; background:transparent; border:2px solid #d32f2f; flex-shrink:0; transition:transform 0.3s, box-shadow 0.3s; animation:fadeInUp 0.8s ease forwards;">
+      <h3 style="margin:0; font-size:1.15em;">Overseas Recruitment</h3>
+    </div>
+    <div style="min-width:220px; border-radius:12px; padding:25px 15px; text-align:center; color:#003366; font-weight:500; background:transparent; border:2px solid #d32f2f; flex-shrink:0; transition:transform 0.3s, box-shadow 0.3s; animation:fadeInUp 0.8s ease forwards;">
+      <h3 style="margin:0; font-size:1.15em;">Local Recruitment & Staffing</h3>
+    </div>
+    <div style="min-width:220px; border-radius:12px; padding:25px 15px; text-align:center; color:#003366; font-weight:500; background:transparent; border:2px solid #d32f2f; flex-shrink:0; transition:transform 0.3s, box-shadow 0.3s; animation:fadeInUp 0.8s ease forwards;">
+      <h3 style="margin:0; font-size:1.15em;">Skilled & Unskilled Manpower Supply</h3>
+    </div>
+    <div style="min-width:220px; border-radius:12px; padding:25px 15px; text-align:center; color:#003366; font-weight:500; background:transparent; border:2px solid #d32f2f; flex-shrink:0; transition:transform 0.3s, box-shadow 0.3s; animation:fadeInUp 0.8s ease forwards;">
+      <h3 style="margin:0; font-size:1.15em;">HR Consultancy & Workforce Planning</h3>
+    </div>
+    <div style="min-width:220px; border-radius:12px; padding:25px 15px; text-align:center; color:#003366; font-weight:500; background:transparent; border:2px solid #d32f2f; flex-shrink:0; transition:transform 0.3s, box-shadow 0.3s; animation:fadeInUp 0.8s ease forwards;">
+      <h3 style="margin:0; font-size:1.15em;">Executive Search & Head Hunting</h3>
+    </div>
   </div>
 </div>
 
+<!-- Inline Animation Keyframes -->
 <style>
-.section-title {
-  font-size: 2.5em;
-  color: #003366; /* dark blue heading */
-  font-weight: 700;
-  margin-bottom: 10px;
-  text-align: center;
-}
-.section-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #0077b6;
-  margin: 10px auto 0;
-  border-radius: 2px;
-}
-.section-desc {
-  font-size: 1.1em;
-  color: #555;
-  max-width: 650px;
-  margin: 0 auto 40px;
-  line-height: 1.5;
-  text-align: center;
-}
-
-/* One-line Services Row */
-.services-row-one-line {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-}
-
-/* Transparent Cards with Red Outline and Dark Blue Text */
-.service-card {
-  min-width: 220px;
-  border-radius: 12px;
-  padding: 25px 15px;
-  text-align: center;
-  color: #003366; /* dark blue text */
-  font-weight: 500;
-  background: transparent; /* fully transparent */
-  border: 2px solid #d32f2f; /* red outline */
-  transition: transform 0.3s, box-shadow 0.3s;
-  flex-shrink: 0;
-}
-
-.service-card h3 {
-  margin: 0;
-  font-size: 1.15em;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-}
-
-/* Animation */
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px);}
   100% { opacity: 1; transform: translateY(0);}
 }
-.fadeInUp {
-  animation: fadeInUp 0.8s ease forwards;
+
+/* Hover effect for all service cards */
+div[style*="border:2px solid #d32f2f"]:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 
 /* Responsive */
 @media(max-width:768px){
-  .service-card { min-width: 180px; }
+  div[style*="min-width:220px"] {
+    min-width:180px;
+    padding:20px 10px;
+  }
+  h2 { font-size:2em; }
+  p { font-size:1em; }
 }
 </style>
 
@@ -928,6 +891,7 @@ counters.forEach(counter => observer.observe(counter));
 
 </body>
 </html>
+
 
 
 
