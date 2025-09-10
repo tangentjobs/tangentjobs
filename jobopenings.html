@@ -167,16 +167,32 @@ footer a:hover { text-decoration:underline;}
 <section style="padding:40px 20px; background:#f4f4f4; text-align:center;">
 
   <!-- Scrolling Posters Section -->
-  <div style="max-width:1000px; margin:0 auto 40px; overflow:hidden;">
-    <h3 style="color:#003366; margin-bottom:25px; font-size:2em;">Current Job Openings</h3>
-    <div style="display:flex; gap:20px; animation:scrollPosters 30s linear infinite;">
-      <div style="flex:0 0 auto; width:300px;"><img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1" style="width:100%; border-radius:15px;"></div>
-      <div style="flex:0 0 auto; width:300px;"><img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2" style="width:100%; border-radius:15px;"></div>
-      <div style="flex:0 0 auto; width:300px;"><img src="images/Blue Modern Professional Job Hiring (4).png" alt="Opening 3" style="width:100%; border-radius:15px;"></div>
-      <!-- Repeat posters to make continuous scroll -->
-      <div style="flex:0 0 auto; width:300px;"><img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1" style="width:100%; border-radius:15px;"></div>
-      <div style="flex:0 0 auto; width:300px;"><img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2" style="width:100%; border-radius:15px;"></div>
-      <div style="flex:0 0 auto; width:300px;"><img src="images/Blue Modern Professional Job Hiring (4).png" alt="Opening 3" style="width:100%; border-radius:15px;"></div>
+  <div style="max-width:900px; margin:0 auto 30px; overflow:hidden;">
+    <h3 style="color:#003366; margin-bottom:20px; font-size:2em;">Current Job Openings</h3>
+    <div style="position:relative; width:100%; height:180px; overflow:hidden;">
+
+      <!-- Left to Right Scroll -->
+      <div style="display:flex; gap:15px; position:absolute; white-space:nowrap; animation:scrollRight 20s linear infinite;">
+        <img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1" style="width:250px; border-radius:10px;">
+        <img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2" style="width:250px; border-radius:10px;">
+        <img src="images/Blue Modern Professional Job Hiring (4).png" alt="Opening 3" style="width:250px; border-radius:10px;">
+        <!-- Repeat for seamless scroll -->
+        <img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1" style="width:250px; border-radius:10px;">
+        <img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2" style="width:250px; border-radius:10px;">
+        <img src="images/Blue Modern Professional Job Hiring (4).png" alt="Opening 3" style="width:250px; border-radius:10px;">
+      </div>
+
+      <!-- Right to Left Scroll -->
+      <div style="display:flex; gap:15px; position:absolute; white-space:nowrap; top:100px; animation:scrollLeft 25s linear infinite;">
+        <img src="images/Blue Modern Professional Job Hiring (4).png" alt="Opening 3" style="width:250px; border-radius:10px;">
+        <img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2" style="width:250px; border-radius:10px;">
+        <img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1" style="width:250px; border-radius:10px;">
+        <!-- Repeat -->
+        <img src="images/Blue Modern Professional Job Hiring (4).png" alt="Opening 3" style="width:250px; border-radius:10px;">
+        <img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2" style="width:250px; border-radius:10px;">
+        <img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1" style="width:250px; border-radius:10px;">
+      </div>
+
     </div>
   </div>
 
@@ -219,16 +235,19 @@ footer a:hover { text-decoration:underline;}
     </form>
   </div>
 
-  <!-- Scrolling Animation -->
+  <!-- Scrolling Animations -->
   <style>
-    @keyframes scrollPosters {
+    @keyframes scrollLeft {
       0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); } /* scroll half the content for continuous loop */
+      100% { transform: translateX(-50%); }
     }
-    .scrolling-track { animation: scrollPosters 30s linear infinite; }
+    @keyframes scrollRight {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
   </style>
-
 </section>
+
 
 
 
