@@ -171,20 +171,74 @@ footer a:hover { text-decoration:underline;}
   </p>
 
   <!-- Marquee Posters (Instagram size) -->
-  <div style="overflow:hidden; margin-bottom:50px;">
-    <div style="display:flex; width:max-content; gap:20px; animation:scroll-left 30s linear infinite;">
-      <img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1"
-           style="width:400px; height:400px; border-radius:15px; object-fit:cover;">
-      <img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2"
-           style="width:400px; height:400px; border-radius:15px; object-fit:cover;">
-      <img src="images/Blue Modern Professional Job Hiring (4).png" alt="Opening 3"
-           style="width:400px; height:400px; border-radius:15px; object-fit:cover;">
-      <img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 4"
-           style="width:400px; height:400px; border-radius:15px; object-fit:cover;">
-      <img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 5"
-           style="width:400px; height:400px; border-radius:15px; object-fit:cover;">
-    </div>
+<div style="overflow:hidden; margin-bottom:50px;">
+  <div id="marquee" style="display:flex; width:max-content; gap:20px; animation:scroll-left 30s linear infinite;">
+    <img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 1"
+         style="width:400px; height:400px; border-radius:15px; object-fit:cover; cursor:pointer;">
+    <img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 2"
+         style="width:400px; height:400px; border-radius:15px; object-fit:cover; cursor:pointer;">
+    <img src="images/Blue Modern Professional Job Hiring (4).png" alt="Opening 3"
+         style="width:400px; height:400px; border-radius:15px; object-fit:cover; cursor:pointer;">
+    <img src="images/Blue and Yellow Modern We Are Hiring Instagram Post (8).png" alt="Opening 4"
+         style="width:400px; height:400px; border-radius:15px; object-fit:cover; cursor:pointer;">
+    <img src="images/White and Blue Modern Business Agency Facebook Post (3).png" alt="Opening 5"
+         style="width:400px; height:400px; border-radius:15px; object-fit:cover; cursor:pointer;">
   </div>
+</div>
+
+<!-- CSS for animation and zoom -->
+<style>
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* adjust based on number of images */
+  }
+
+  #marquee {
+    animation: scroll-left 30s linear infinite;
+  }
+
+  .zoomed {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    z-index: 10;
+  }
+</style>
+
+<!-- JS for pause + zoom -->
+<script>
+  const marquee = document.getElementById('marquee');
+  const images = marquee.querySelectorAll('img');
+  let paused = false;
+  let zoomedImg = null;
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      if (!paused) {
+        // Pause marquee and zoom clicked image
+        marquee.style.animationPlayState = 'paused';
+        img.classList.add('zoomed');
+        paused = true;
+        zoomedImg = img;
+      } else {
+        // Resume marquee and remove zoom
+        marquee.style.animationPlayState = 'running';
+        if (zoomedImg) zoomedImg.classList.remove('zoomed');
+        paused = false;
+        zoomedImg = null;
+      }
+    });
+  });
+
+  // Optional: resume on any scroll
+  window.addEventListener('scroll', () => {
+    if (paused) {
+      marquee.style.animationPlayState = 'running';
+      if (zoomedImg) zoomedImg.classList.remove('zoomed');
+      paused = false;
+      zoomedImg = null;
+    }
+  });
+</script>
 
   <!-- Apply Form Section -->
 <div style="max-width:1000px; width:100%; margin:0 auto 50px; background:white; padding:40px 30px; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); text-align:left;">
