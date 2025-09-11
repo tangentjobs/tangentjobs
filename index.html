@@ -641,6 +641,12 @@ div[style*="border:2px solid #d32f2f"]:hover {
   </div>
 
   <style>
+  /* Scrolling animation */
+  @keyframes scrollClients {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* adjust if needed */
+  }
+
   /* Blink animation for clicked logo */
   .blink {
     animation: blink 1s infinite alternate;
@@ -657,11 +663,11 @@ div[style*="border:2px solid #d32f2f"]:hover {
     animation-play-state: paused !important;
   }
 
-  /* Responsive for logos if needed */
+  /* Logos style */
   .clients-marquee img {
     cursor: pointer;
     object-fit: contain;
-    height: 150px; /* adjust as needed */
+    height: 150px; 
   }
 
   @media (max-width: 768px) {
@@ -930,6 +936,7 @@ div[style*="border:2px solid #d32f2f"]:hover {
 
 </body>
 </html>
+
 
 
 
