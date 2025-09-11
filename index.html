@@ -641,64 +641,79 @@ div[style*="border:2px solid #d32f2f"]:hover {
   </div>
 
   <style>
-    .clients-marquee {
-      white-space: nowrap;
-    }
+  .clients-marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollClients 30s linear infinite; /* slow scroll */
+  }
 
+  .clients-marquee img {
+    height: 150px; /* bigger logos */
+    object-fit: contain;
+    cursor: pointer;
+    margin: 0 20px;
+  }
+
+  /* Scrolling animation */
+  @keyframes scrollClients {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Blink animation for clicked logo */
+  .blink {
+    animation: blink 1s infinite alternate;
+  }
+
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+  }
+
+  /* Pause marquee */
+  .paused {
+    animation-play-state: paused !important;
+  }
+
+  @media (max-width: 768px) {
     .clients-marquee img {
-      height: 150px; /* bigger logos */
-      object-fit: contain;
-      cursor: pointer;
+      height: 100px;
     }
+  }
+</style>
 
-    /* Scrolling animation */
-    @keyframes scrollClients {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+<div class="clients-marquee">
+  <img src="logo1.png" class="client-logo" alt="Logo 1">
+  <img src="logo2.png" class="client-logo" alt="Logo 2">
+  <img src="logo3.png" class="client-logo" alt="Logo 3">
+  <!-- Add more logos -->
+</div>
 
-    /* Blink animation for clicked logo */
-    .blink {
-      animation: blink 1s infinite alternate;
-    }
+<script>
+  const marquee = document.querySelector('.clients-marquee');
+  const logos = document.querySelectorAll('.client-logo');
 
-    @keyframes blink {
-      0% { opacity: 1; }
-      50% { opacity: 0.2; }
-      100% { opacity: 1; }
-    }
-
-    /* Pause marquee */
-    .paused {
-      animation-play-state: paused !important;
-    }
-
-    @media (max-width: 768px) {
-      .clients-marquee img {
-        height: 100px;
-      }
-    }
-  </style>
-
-  <script>
-    const marquee = document.querySelector('.clients-marquee');
-    const logos = document.querySelectorAll('.client-logo');
-
-    logos.forEach(logo => {
-      logo.addEventListener('click', () => {
-        const isPaused = marquee.classList.toggle('paused'); // toggle scroll pause
-        logos.forEach(l => l.classList.remove('blink')); // remove blink from all
-        if(isPaused) {
-          logo.classList.add('blink'); // blink only clicked logo
-        }
-      });
+  logos.forEach(logo => {
+    logo.addEventListener('click', e => {
+      e.stopPropagation(); // prevent body click immediately resuming
+      marquee.classList.add('paused'); // pause marquee
+      logos.forEach(l => l.classList.remove('blink')); // remove blink from all
+      logo.classList.add('blink'); // blink clicked one
     });
-  </script>
-</section>
+  });
 
+  // Resume scroll if user clicks anywhere else or scrolls
+  document.addEventListener('click', () => {
+    marquee.classList.remove('paused');
+    logos.forEach(l => l.classList.remove('blink'));
+  });
 
-
-
+  window.addEventListener('scroll', () => {
+    marquee.classList.remove('paused');
+    logos.forEach(l => l.classList.remove('blink'));
+  });
+</script>
 
 <!-- Footer Section -->
 <footer style="background:#003366; color:#fff; padding:50px 20px; width:100%;">
@@ -933,6 +948,7 @@ div[style*="border:2px solid #d32f2f"]:hover {
 
 </body>
 </html>
+
 
 
 
