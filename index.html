@@ -641,25 +641,6 @@ div[style*="border:2px solid #d32f2f"]:hover {
   </div>
 
   <style>
-  .clients-marquee {
-    display: inline-block;
-    white-space: nowrap;
-    animation: scrollClients 30s linear infinite; /* slow scroll */
-  }
-
-  .clients-marquee img {
-    height: 150px; /* bigger logos */
-    object-fit: contain;
-    cursor: pointer;
-    margin: 0 20px;
-  }
-
-  /* Scrolling animation */
-  @keyframes scrollClients {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-
   /* Blink animation for clicked logo */
   .blink {
     animation: blink 1s infinite alternate;
@@ -676,6 +657,13 @@ div[style*="border:2px solid #d32f2f"]:hover {
     animation-play-state: paused !important;
   }
 
+  /* Responsive for logos if needed */
+  .clients-marquee img {
+    cursor: pointer;
+    object-fit: contain;
+    height: 150px; /* adjust as needed */
+  }
+
   @media (max-width: 768px) {
     .clients-marquee img {
       height: 100px;
@@ -683,32 +671,26 @@ div[style*="border:2px solid #d32f2f"]:hover {
   }
 </style>
 
-<div class="clients-marquee">
-  <img src="logo1.png" class="client-logo" alt="Logo 1">
-  <img src="logo2.png" class="client-logo" alt="Logo 2">
-  <img src="logo3.png" class="client-logo" alt="Logo 3">
-  <!-- Add more logos -->
-</div>
-
 <script>
   const marquee = document.querySelector('.clients-marquee');
-  const logos = document.querySelectorAll('.client-logo');
+  const logos = marquee.querySelectorAll('img'); // all logos inside the marquee
 
   logos.forEach(logo => {
     logo.addEventListener('click', e => {
-      e.stopPropagation(); // prevent body click immediately resuming
+      e.stopPropagation(); // prevent immediate resume
       marquee.classList.add('paused'); // pause marquee
       logos.forEach(l => l.classList.remove('blink')); // remove blink from all
-      logo.classList.add('blink'); // blink clicked one
+      logo.classList.add('blink'); // blink clicked logo
     });
   });
 
-  // Resume scroll if user clicks anywhere else or scrolls
+  // Resume marquee if user clicks anywhere else
   document.addEventListener('click', () => {
     marquee.classList.remove('paused');
     logos.forEach(l => l.classList.remove('blink'));
   });
 
+  // Resume marquee if user scrolls
   window.addEventListener('scroll', () => {
     marquee.classList.remove('paused');
     logos.forEach(l => l.classList.remove('blink'));
@@ -948,6 +930,7 @@ div[style*="border:2px solid #d32f2f"]:hover {
 
 </body>
 </html>
+
 
 
 
