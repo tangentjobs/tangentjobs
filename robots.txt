@@ -1,1 +1,10 @@
+# Allow all search engines to crawl main site
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /wp-login.php
+Disallow: /wp-admin/
+Allow: /
 
+# Link to your sitemap
+Sitemap: https://www.tangentdubai.com/sitemap.xml
