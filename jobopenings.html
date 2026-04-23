@@ -241,26 +241,27 @@ footer a:hover { text-decoration:underline;}
 </script>
 
 
-  <!-- Apply Form Section -->
+<!-- Apply Form Section -->
 <div style="max-width:1000px; width:100%; margin:0 auto 50px; background:white; padding:40px 30px; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); text-align:left;">
   <h2 style="color:#003366; font-size:2.2em; margin-bottom:25px; text-align:center;">Apply for a Job</h2>
-  <form action="mailto:dxbcareers2u@gmail.com" method="POST" enctype="multipart/form-data" style="display:flex; flex-direction:column; gap:18px;">
-    
+
+  <div id="form-area" style="display:flex; flex-direction:column; gap:18px;">
+
     <label for="name" style="font-weight:600; color:#003366;">Full Name</label>
-    <input type="text" id="name" name="name" required placeholder="Enter your full name" 
-           style="padding:14px; border-radius:8px; border:1px solid #ccc; font-size:1.1em; width:100%;">
-    
+    <input type="text" id="name" name="name" required placeholder="Enter your full name"
+           style="padding:14px; border-radius:8px; border:1px solid #ccc; font-size:1.1em; width:100%; box-sizing:border-box;">
+
     <label for="email" style="font-weight:600; color:#003366;">Email</label>
     <input type="email" id="email" name="email" required placeholder="Enter your email"
-           style="padding:14px; border-radius:8px; border:1px solid #ccc; font-size:1.1em; width:100%;">
+           style="padding:14px; border-radius:8px; border:1px solid #ccc; font-size:1.1em; width:100%; box-sizing:border-box;">
 
     <label for="phone" style="font-weight:600; color:#003366;">Phone Number</label>
     <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number"
-           style="padding:14px; border-radius:8px; border:1px solid #ccc; font-size:1.1em; width:100%;">
+           style="padding:14px; border-radius:8px; border:1px solid #ccc; font-size:1.1em; width:100%; box-sizing:border-box;">
 
     <label for="position" style="font-weight:600; color:#003366;">Position</label>
-    <select id="position" name="position" required 
-            style="padding:14px; border-radius:8px; border:1px solid #ccc; font-size:1.1em; width:100%;">
+    <select id="position" name="position" required
+            style="padding:14px; border-radius:8px; border:1px solid #ccc; font-size:1.1em; width:100%; box-sizing:border-box;">
       <option value="">-- Select Position --</option>
       <option value="Security Guard">Security Guard</option>
       <option value="Factory Helper">Factory Helper</option>
@@ -271,38 +272,103 @@ footer a:hover { text-decoration:underline;}
 
     <label for="cv" style="font-weight:600; color:#003366;">Upload CV</label>
     <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required
-           style="padding:14px; border-radius:8px; border:1px solid #ccc; font-size:1.1em; width:100%;">
+           style="padding:14px; border-radius:8px; border:1px solid #ccc; font-size:1.1em; width:100%; box-sizing:border-box;">
 
-    <button type="submit" 
+    <div id="error-msg" style="display:none; padding:12px 16px; border-radius:8px; background:#fff0f0; border:1px solid #ffcccc; color:#cc0000; font-size:1em;"></div>
+
+    <button type="button" onclick="submitApplication()"
             style="padding:16px; border:none; border-radius:10px; background:linear-gradient(135deg,#003366,#ff3333); color:white; font-weight:600; font-size:1.2em; cursor:pointer; transition:0.3s;">
       Apply Now
     </button>
-  </form>
+  </div>
+
+  <div id="success-msg" style="display:none; text-align:center; padding:40px 20px;">
+    <div style="font-size:3em; margin-bottom:16px;">✅</div>
+    <h3 style="color:#003366; font-size:1.8em; margin-bottom:10px;">Application Submitted!</h3>
+    <p style="color:#555; font-size:1.1em;" id="success-detail"></p>
+  </div>
 </div>
 
+<style>
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  div[style*="animation:scroll-left"] {
+    display:flex;
+    gap:20px;
+    width:max-content;
+    animation: scroll-left 30s linear infinite;
+  }
+  @media(max-width:1024px){
+    div[style*="animation:scroll-left"] img { width:300px; height:300px; }
+  }
+  @media(max-width:768px){
+    div[style*="animation:scroll-left"] img { width:200px; height:200px; }
+  }
+</style>
 
-  <style>
-    @keyframes scroll-left {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+<script>
+async function submitApplication() {
+  const name     = document.getElementById('name').value.trim();
+  const email    = document.getElementById('email').value.trim();
+  const phone    = document.getElementById('phone').value.trim();
+  const position = document.getElementById('position').value;
+  const cvInput  = document.getElementById('cv');
+  const errorEl  = document.getElementById('error-msg');
 
-    div[style*="animation:scroll-left"] {
-      display:flex;
-      gap:20px;
-      width:max-content;
-      animation: scroll-left 30s linear infinite;
-    }
+  errorEl.style.display = 'none';
 
-    /* Responsive Instagram size */
-    @media(max-width:1024px){
-      div[style*="animation:scroll-left"] img { width:300px; height:300px; }
-    }
+  if (!name)            return showError('Please enter your full name.');
+  if (!email || !email.includes('@')) return showError('Please enter a valid email.');
+  if (!phone)           return showError('Please enter your phone number.');
+  if (!position)        return showError('Please select a position.');
+  if (!cvInput.files.length) return showError('Please upload your CV.');
 
-    @media(max-width:768px){
-      div[style*="animation:scroll-left"] img { width:200px; height:200px; }
+  const btn = document.querySelector('#form-area button');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  const fd = new FormData();
+  fd.append('access_key', '4df6fd22-4507-416a-9a18-a3255b8c5127');
+  fd.append('subject',    'New Job Application — ' + position);
+  fd.append('from_name',  name);
+  fd.append('email',      email);
+  fd.append('message',
+    'Name: '     + name     + '\n' +
+    'Email: '    + email    + '\n' +
+    'Phone: '    + phone    + '\n' +
+    'Position: ' + position
+  );
+  fd.append('attachment', cvInput.files[0], cvInput.files[0].name);
+
+  try {
+    const res  = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
+    const data = await res.json();
+
+    if (data.success) {
+      document.getElementById('form-area').style.display  = 'none';
+      document.getElementById('success-msg').style.display = 'block';
+      document.getElementById('success-detail').textContent =
+        'Thank you ' + name + '! Your application for ' + position + ' has been received. We will be in touch soon.';
+    } else {
+      showError('Submission failed: ' + (data.message || 'Please try again.'));
+      btn.textContent = 'Apply Now';
+      btn.disabled = false;
     }
-  </style>
+  } catch (e) {
+    showError('Network error. Please check your connection and try again.');
+    btn.textContent = 'Apply Now';
+    btn.disabled = false;
+  }
+}
+
+function showError(msg) {
+  const el = document.getElementById('error-msg');
+  el.textContent = msg;
+  el.style.display = 'block';
+}
+</script>
 </section>
 
 
